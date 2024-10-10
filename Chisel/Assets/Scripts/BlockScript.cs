@@ -9,17 +9,18 @@ using UnityEngine;
      * Description: This code is written for individual block behaviours such as changing color, disappearing, and checking for
      * nearby block colors to see if they should change too.
      * 
-     * Last Changed by: Nicolas Kaplan
-     * Last Date Changed: 2024-10-08
+     * Last Changed by: Evan Robertson
+     * Last Date Changed: 2024-10-10
      * 
      * 
      *   -> 1.0 - Created BlockScript.cs and added basic block functionality,
      *      color changing when broken, and disappearing when a red block is broken,
      *      as well as changing adjacent block colors
      *   
+     *   -> 1.1 - Updated code to allow all blocks to reference colors from a singleton 
+     *      manager.
      *   
-     *   
-     *   v1.0
+     *   v1.1
      */
 public class BlockScript : MonoBehaviour
 {
@@ -32,6 +33,11 @@ public class BlockScript : MonoBehaviour
     private static bool isChainReactionInProgress = false;
     void Start()
     {
+        if (SettingsManager.Instance.GetColors() != null)
+        {
+            blockColorList = SettingsManager.Instance.GetColors();
+        }
+
         ChooseRandomColor();
         SetColorAndSprite();
     }
