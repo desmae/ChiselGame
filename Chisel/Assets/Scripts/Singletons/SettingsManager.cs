@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 /*
 * SettingsManager.cs
 * Created by: Evan Robertson
@@ -23,7 +24,7 @@ public class SettingsManager : PersistentSingleton<SettingsManager>
 
     public ColorPickers colorVals;
 
-    List<Color> colors = new List<Color>();
+    public List<Color> colors = new List<Color>();
 
     private void Start()
     {
@@ -37,7 +38,6 @@ public class SettingsManager : PersistentSingleton<SettingsManager>
 
     public void SetColors()
     {
-
         if (colorVals != null)
         {
             colors = colorVals.GetColors();

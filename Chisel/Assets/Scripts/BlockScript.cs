@@ -19,8 +19,10 @@ using UnityEngine;
      *   
      *   -> 1.1 - Updated code to allow all blocks to reference colors from a singleton 
      *      manager.
+     *      
+     *   -> 1.2 - blockColors now use default colors when starting the game scene
      *   
-     *   v1.1
+     *   v1.2
      */
 public class BlockScript : MonoBehaviour
 {
@@ -33,9 +35,13 @@ public class BlockScript : MonoBehaviour
     private static bool isChainReactionInProgress = false;
     void Start()
     {
-        if (SettingsManager.Instance.GetColors() != null)
+        if (SettingsManager.Instance.GetColors().Count != 0)
         {
             blockColorList = SettingsManager.Instance.GetColors();
+        }
+        else
+        {
+            blockColorList = SettingsManager.Instance.GetDefaultColors();
         }
 
         ChooseRandomColor();
