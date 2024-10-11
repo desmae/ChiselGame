@@ -9,13 +9,14 @@ using UnityEngine.SceneManagement;
 * 
 * Description: Manager class for managing all button actions in the main menu
 * 
-* Last Changed by: Evan Robertson
-* Last Date Changed: 2024-10-10
+* Last Changed by: Nicolas Kaplan
+* Last Date Changed: 2024-10-11
 * 
 * 
 *   -> 1.0 - Created MenuManager.cs
+*   -> 1.1 - Changed SceneManager.LoadScene from 0 to 1 since the build settings were changed.
 *   
-*   v1.0
+*   v1.1
 */
 public class MenuManager : MonoBehaviour
 {
@@ -29,7 +30,7 @@ public class MenuManager : MonoBehaviour
 
     public void StartGame()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
 
     public void ExitGame()

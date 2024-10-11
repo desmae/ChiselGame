@@ -9,8 +9,8 @@ using UnityEngine;
      * Description: This code is written for individual block behaviours such as changing color, disappearing, and checking for
      * nearby block colors to see if they should change too.
      * 
-     * Last Changed by: Evan Robertson
-     * Last Date Changed: 2024-10-10
+     * Last Changed by: Nicolas Kaplan
+     * Last Date Changed: 2024-10-11
      * 
      * 
      *   -> 1.0 - Created BlockScript.cs and added basic block functionality,
@@ -22,7 +22,12 @@ using UnityEngine;
      *      
      *   -> 1.2 - blockColors now use default colors when starting the game scene
      *   
-     *   v1.2
+     *   -> 1.3 - Removed excessive Debug.Log messages to clean up console.
+     *      Added blockList.Remove() functionality to make the win screen work.
+     *      An issue has also been found where orange blocks disappear instead of becoming
+     *      red. Troubleshooting required.
+     *
+     *   v1.3
      */
 public class BlockScript : MonoBehaviour
 {
@@ -30,7 +35,7 @@ public class BlockScript : MonoBehaviour
     public List<Color> blockColorList;
     public int blockHealth;
     public LayerMask blockLayer;
-
+    GameStateControl gameStateControl;
     private static HashSet<BlockScript> hitBlocks = new HashSet<BlockScript>();
     private static bool isChainReactionInProgress = false;
     void Start()
@@ -43,7 +48,9 @@ public class BlockScript : MonoBehaviour
         {
             blockColorList = SettingsManager.Instance.GetDefaultColors();
         }
-
+        
+        gameStateControl = GameObject.FindGameObjectWithTag("GameStateManager")
+        .GetComponent<GameStateControl>();
         ChooseRandomColor();
         SetColorAndSprite();
     }
@@ -147,7 +154,6 @@ public class BlockScript : MonoBehaviour
             StartCoroutine(DestroyNextFrame());
         }
         SetColorAndSprite();
-        Debug.Log($"Block at {transform.position} changed health from {oldHealth} to {blockHealth}");
 
     }
 
@@ -172,6 +178,7 @@ public class BlockScript : MonoBehaviour
     private IEnumerator DestroyNextFrame()
     {
         yield return null;
+        gameStateControl.blockList.Remove(gameObject);
         Destroy(gameObject);
     }
 
