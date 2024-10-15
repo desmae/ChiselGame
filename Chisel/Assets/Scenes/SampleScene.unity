@@ -136,6 +136,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (115)
@@ -197,6 +201,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (68)
@@ -273,6 +281,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (9)
@@ -334,6 +346,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (96)
@@ -395,6 +411,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (44)
@@ -456,6 +476,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (25)
@@ -517,6 +541,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (12)
@@ -598,6 +626,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (69)
@@ -659,6 +691,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (5)
@@ -720,6 +756,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (89)
@@ -781,6 +821,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (71)
@@ -852,6 +896,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (81)
@@ -913,6 +961,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (17)
@@ -974,6 +1026,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (88)
@@ -1035,6 +1091,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (30)
@@ -1096,6 +1156,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (79)
@@ -1162,6 +1226,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (29)
@@ -1377,6 +1445,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (33)
@@ -1438,6 +1510,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (62)
@@ -1504,6 +1580,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (75)
@@ -1565,6 +1645,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (95)
@@ -1636,6 +1720,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (97)
@@ -1702,6 +1790,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (67)
@@ -1768,6 +1860,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (10)
@@ -1973,6 +2069,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (103)
@@ -2039,6 +2139,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (26)
@@ -2100,6 +2204,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (50)
@@ -2161,6 +2269,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (22)
@@ -2222,6 +2334,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (109)
@@ -2308,6 +2424,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (112)
@@ -2369,6 +2489,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (93)
@@ -2654,6 +2778,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (43)
@@ -2715,6 +2843,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (105)
@@ -2776,6 +2908,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (32)
@@ -2842,6 +2978,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (54)
@@ -2908,6 +3048,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (41)
@@ -2969,6 +3113,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (104)
@@ -3035,6 +3183,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (114)
@@ -3111,6 +3263,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (90)
@@ -3172,6 +3328,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (16)
@@ -3233,6 +3393,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (13)
@@ -3299,6 +3463,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (63)
@@ -3360,6 +3528,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (86)
@@ -3421,6 +3593,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (82)
@@ -3487,6 +3663,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (7)
@@ -3563,6 +3743,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (84)
@@ -3644,6 +3828,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (116)
@@ -3705,6 +3893,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (70)
@@ -3766,6 +3958,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (56)
@@ -3837,6 +4033,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (77)
@@ -3898,6 +4098,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (72)
@@ -3959,6 +4163,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (8)
@@ -4085,6 +4293,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (108)
@@ -4146,6 +4358,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (113)
@@ -4212,6 +4428,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (60)
@@ -4273,6 +4493,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (28)
@@ -4339,6 +4563,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (42)
@@ -4400,6 +4628,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (58)
@@ -4568,6 +4800,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (55)
@@ -4629,6 +4865,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (99)
@@ -4690,6 +4930,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (48)
@@ -4751,6 +4995,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (94)
@@ -4965,6 +5213,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (23)
@@ -5036,6 +5288,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (20)
@@ -5102,6 +5358,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (4)
@@ -5183,6 +5443,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (40)
@@ -5249,6 +5513,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (101)
@@ -5310,6 +5578,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (98)
@@ -5371,6 +5643,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (31)
@@ -5432,6 +5708,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (52)
@@ -5493,6 +5773,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (73)
@@ -5554,6 +5838,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (53)
@@ -5698,6 +5986,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (6)
@@ -5759,6 +6051,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (24)
@@ -5820,6 +6116,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (39)
@@ -5886,6 +6186,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (83)
@@ -5947,6 +6251,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (110)
@@ -6013,6 +6321,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (45)
@@ -6074,6 +6386,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (11)
@@ -6279,6 +6595,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (27)
@@ -6340,6 +6660,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (35)
@@ -6411,6 +6735,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (49)
@@ -6482,6 +6810,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (111)
@@ -6543,6 +6875,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (87)
@@ -6604,6 +6940,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (85)
@@ -6803,6 +7143,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (34)
@@ -6864,6 +7208,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (59)
@@ -6925,6 +7273,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (47)
@@ -6991,6 +7343,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (38)
@@ -7052,6 +7408,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (92)
@@ -7123,6 +7483,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (15)
@@ -7189,6 +7553,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (64)
@@ -7255,6 +7623,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (3)
@@ -7326,6 +7698,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (46)
@@ -7387,6 +7763,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (21)
@@ -7458,6 +7838,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (2)
@@ -7524,6 +7908,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (19)
@@ -7585,6 +7973,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (36)
@@ -7735,6 +8127,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (14)
@@ -7796,6 +8192,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (91)
@@ -7862,6 +8262,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (80)
@@ -8085,6 +8489,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (107)
@@ -8151,6 +8559,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (51)
@@ -8212,6 +8624,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (102)
@@ -8278,6 +8694,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (78)
@@ -8344,6 +8764,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (76)
@@ -8405,6 +8829,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (100)
@@ -8466,6 +8894,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (106)
@@ -8527,6 +8959,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (66)
@@ -8593,6 +9029,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (61)
@@ -8758,6 +9198,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (18)
@@ -8829,6 +9273,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (57)
@@ -9222,6 +9670,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (37)
@@ -9303,6 +9755,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (74)
@@ -9379,6 +9835,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (65)
@@ -9440,6 +9900,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem (1)
@@ -9506,6 +9970,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179240975}
     m_Modifications:
+    - target: {fileID: 301235325222210078, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
     - target: {fileID: 757915621658026420, guid: bc0c669138ba2cd41acbc26de176e4e5, type: 3}
       propertyPath: m_Name
       value: Gem
