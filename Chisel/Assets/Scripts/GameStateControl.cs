@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 public class GameStateControl : MonoBehaviour
@@ -14,19 +15,30 @@ public class GameStateControl : MonoBehaviour
      *              depending on whether the player's moves are 0 or no blocks are left.
      * 
      * Last Changed by: Nicolas Kaplan
-     * Last Date Changed: 2024-10-11
+     * Last Date Changed: 2024-11-08
      * 
      * 
      *   -> 1.0 - Created GameStateControl.cs and created a basic win condition to
-                clear the screen of all blocks.
+     *           clear the screen of all blocks.
+     *   -> 1.1 - Updated code clarity such as private declarations. Added code for displaying the game over screen
+     *          as well as code for the moves display.
      *   
-     *   v1.0
+     *   v1.1
      */
     
-    GameObject[] blocks;
+    private GameObject[] blocks;
     public List<GameObject> blockList = new List<GameObject>();
-    [SerializeField] GameObject winCanvas;
-    [SerializeField] bool winCanvasOnStart = false;
+    [SerializeField] private GameObject winCanvas;
+    [SerializeField] private bool winCanvasOnStart = false;
+
+    [SerializeField] private int startingMoveCount = 0;
+    private static int moveCount;
+
+    [SerializeField] private TextMeshProUGUI movesCountLight;
+    [SerializeField] private TextMeshProUGUI movesCountDark;
+
+    [SerializeField] private GameObject gameOverCanvas;
+    [SerializeField] private bool gameOverCanvasOnStart = false;
 
     void Start()
     {
@@ -40,8 +52,41 @@ public class GameStateControl : MonoBehaviour
 
         }
 
+        if (!gameOverCanvasOnStart)
+        {
+            gameOverCanvas.SetActive(false);
+        }
+        else
+        {
+            gameOverCanvas.SetActive(true);
+
+        }
         AddBlocksToList();
+
+        SetInitialMoves();
+
+        UpdateMovesText();
     }
+    
+    void Update()
+    {
+        CheckBlocksCleared();
+        CheckMovesCount();
+        UpdateMovesText();
+    }
+
+    // Win screen & blocks
+
+    void AddBlocksToList()
+    {
+        blocks = GameObject.FindGameObjectsWithTag("Block");
+        foreach (GameObject block in blocks)
+        {
+            blockList.Add(block);
+            Debug.Log($"Added {block.name}");
+        }
+    }
+
     void DisplayWinScreen()
     {
         winCanvas.SetActive(true);
@@ -54,19 +99,41 @@ public class GameStateControl : MonoBehaviour
             DisplayWinScreen();
         }
     }
-    void Update()
+
+    // Moves methods & game over
+
+    void UpdateMovesText()
     {
-        CheckBlocksCleared();
+        movesCountDark.text = $"{moveCount}";
+        movesCountLight.text = $"{moveCount}";
     }
-    void AddBlocksToList()
+    public void DecrementMoves()
     {
-        blocks = GameObject.FindGameObjectsWithTag("Block");
-        foreach (GameObject block in blocks)
+        moveCount--; // we're only ever decreasing the moves by 1 each time.
+    }
+    public void IncrementMoves(int movesToAdd)
+    {
+        moveCount += movesToAdd;
+    }
+    public void SetInitialMoves()
+    {
+        moveCount = startingMoveCount;
+    }
+    public void DisplayGameOverScreen()
+    {
+        gameOverCanvas.SetActive(true);
+    }
+    public void CheckMovesCount()
+    {
+        if (moveCount <= 0)
         {
-            blockList.Add(block);
-            Debug.Log($"Added {block.name}");
+            // TODO Animations?
+            DisplayGameOverScreen();
         }
     }
+
+
+    // Loading methods 
     public void LoadMainMenu()
     {
         // for now we can call scenes by int, later we might need to use strings
@@ -80,4 +147,5 @@ public class GameStateControl : MonoBehaviour
     }
 
     // void LoadNextLevel()
+
 }

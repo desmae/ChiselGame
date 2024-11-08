@@ -70,3 +70,6 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+Chisel/Library/PackageCache/com.unity.toolchain.win-x86_64-linux-x86_64@2.0.9/data~/payload.tar.7z
+Chisel/Library/PackageCache/com.unity.burst@1.8.11/.Runtime/libburst-llvm-15.dylib
+Chisel/Library/PackageCache/com.unity.toolchain.linux-x86_64@2.0.9/data~/payload.tar.7z
