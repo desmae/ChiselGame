@@ -379,7 +379,6 @@
 -analyzer:"E:/Unity/2022.3.16f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 "Assets/Scripts/BlockScript.cs"
 "Assets/Scripts/GameStateControl.cs"
-"Assets/Scripts/MovesBehaviour.cs"
 "Assets/Scripts/Singletons/PersistentSingleton.cs"
 "Assets/Scripts/Singletons/SettingsManager.cs"
 "Assets/Scripts/UI/ColorPickers.cs"

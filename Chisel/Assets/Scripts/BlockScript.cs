@@ -10,7 +10,7 @@ using UnityEngine;
      * nearby block colors to see if they should change too.
      * 
      * Last Changed by: Nicolas Kaplan
-     * Last Date Changed: 2024-10-11
+     * Last Date Changed: 2024-10-12
      * 
      * 
      *   -> 1.0 - Created BlockScript.cs and added basic block functionality,
@@ -26,8 +26,10 @@ using UnityEngine;
      *      Added blockList.Remove() functionality to make the win screen work.
      *      An issue has also been found where orange blocks disappear instead of becoming
      *      red. Troubleshooting required.
+     *   -> 1.4 - Added code for reducing moves only when a block is hit. 
+     *   -> 1.5 - Particle system added to blocks as soon as they are broken.
      *
-     *   v1.3
+     *   v1.5
      */
 public class BlockScript : MonoBehaviour
 {
@@ -38,6 +40,7 @@ public class BlockScript : MonoBehaviour
     GameStateControl gameStateControl;
     private static HashSet<BlockScript> hitBlocks = new HashSet<BlockScript>();
     private static bool isChainReactionInProgress = false;
+
     void Start()
     {
         if (SettingsManager.Instance.GetColors().Count != 0)
@@ -71,6 +74,13 @@ public class BlockScript : MonoBehaviour
 
     public void OnBreak()
     {
+        ParticleSystem.EmitParams emitParams = new ParticleSystem.EmitParams
+        {
+            startColor = blockColorList[blockHealth - 1]
+        };
+
+        GetComponent<ParticleSystem>().Emit(emitParams, 1);
+
         if (hitBlocks.Contains(this))
         {
             return; 
