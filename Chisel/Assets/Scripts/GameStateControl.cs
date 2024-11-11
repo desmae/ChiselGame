@@ -22,8 +22,8 @@ public class GameStateControl : MonoBehaviour
      *           clear the screen of all blocks.
      *   -> 1.1 - Updated code clarity such as private declarations. Added code for displaying the game over screen
      *          as well as code for the moves display.
-     *   
-     *   v1.1
+     *   -> 1.2 - Added a variable and implementations to change tasks per level (text only)
+     *   v1.2
      */
     
     private GameObject[] blocks;
@@ -36,6 +36,11 @@ public class GameStateControl : MonoBehaviour
 
     [SerializeField] private TextMeshProUGUI movesCountLight;
     [SerializeField] private TextMeshProUGUI movesCountDark;
+
+    [SerializeField] private TextMeshProUGUI tasksTMP;
+    [SerializeField] private string tasksText1;
+    [SerializeField] private string tasksText2;
+    [SerializeField] private string tasksText3;
 
     [SerializeField] private GameObject gameOverCanvas;
     [SerializeField] private bool gameOverCanvasOnStart = false;
@@ -66,6 +71,8 @@ public class GameStateControl : MonoBehaviour
         SetInitialMoves();
 
         UpdateMovesText();
+
+        SetTaskText();
     }
     
     void Update()
@@ -132,6 +139,10 @@ public class GameStateControl : MonoBehaviour
         }
     }
 
+    private void SetTaskText()
+    {
+        tasksTMP.text = $"{tasksText1} \n \n {tasksText2} \n \n {tasksText3}";
+    }
 
     // Loading methods 
     public void LoadMainMenu()

@@ -10,7 +10,7 @@ using UnityEngine;
      * nearby block colors to see if they should change too.
      * 
      * Last Changed by: Nicolas Kaplan
-     * Last Date Changed: 2024-10-12
+     * Last Date Changed: 2024-11-11
      * 
      * 
      *   -> 1.0 - Created BlockScript.cs and added basic block functionality,
@@ -28,11 +28,18 @@ using UnityEngine;
      *      red. Troubleshooting required.
      *   -> 1.4 - Added code for reducing moves only when a block is hit. 
      *   -> 1.5 - Particle system added to blocks as soon as they are broken.
-     *
-     *   v1.5
+     *   -> 1.6 - Added Animations to each of the blocks with parameters to control
+     *      animation offsets and speed multipliers.
+     *   v1.6
      */
 public class BlockScript : MonoBehaviour
 {
+
+    // Animation references
+    private Animator animator;
+    private float animSpeed;
+    private float animDelay;
+
     public List<SpriteRenderer> blockSpriteList;
     public List<Color> blockColorList;
     public int blockHealth;
@@ -54,8 +61,10 @@ public class BlockScript : MonoBehaviour
         
         gameStateControl = GameObject.FindGameObjectWithTag("GameStateManager")
         .GetComponent<GameStateControl>();
+        animator = GetComponent<Animator>();
         ChooseRandomColor();
         SetColorAndSprite();
+        SetAnimationParams();
     }
 
     void Update()
@@ -74,6 +83,7 @@ public class BlockScript : MonoBehaviour
 
     public void OnBreak()
     {
+        animator.SetTrigger("GemBroken");
         ParticleSystem.EmitParams emitParams = new ParticleSystem.EmitParams
         {
             startColor = blockColorList[blockHealth - 1]
@@ -108,6 +118,11 @@ public class BlockScript : MonoBehaviour
         }
     }
 
+    private void SetAnimationParams()
+    {
+        animSpeed = Random.Range(0f, 2f);
+        animDelay = Random.Range(0f, 2f);
+    }
     private void CheckAdjacentBlocks(int originalHealth)
     {
         Vector2[] directions = { Vector2.up, Vector2.down, Vector2.left, Vector2.right };
@@ -199,4 +214,5 @@ public class BlockScript : MonoBehaviour
     {
         StopAllCoroutines();
     }
+
 }
