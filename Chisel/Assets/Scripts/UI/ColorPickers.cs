@@ -10,13 +10,14 @@ using UnityEngine.UI;
 * Description: Code used in adjusting and previewing the colors set for blocks
 * 
 * Last Changed by: Evan Robertson
-* Last Date Changed: 2024-10-10
+* Last Date Changed: 2024-11-11
 * 
 * 
 *   -> 1.0 - Created ColorPickers.cs and implemented basic UI sliders to control block colors.
 *   Default colors automatically set on startup.
+*   -> 1.1 - Sets colors during OnEnable to prevent empty array errors
 *   
-*   v1.0
+*   v1.1
 */
 public class ColorPickers : MonoBehaviour
 {
@@ -24,6 +25,14 @@ public class ColorPickers : MonoBehaviour
     [SerializeField] List<RawImage> previews = new List<RawImage>();
 
     List<Color> colors = new List<Color>();
+
+    private void OnEnable()
+    {
+        if (SettingsManager.Instance.GetColors().Count != 0)
+        {
+            colors = SettingsManager.Instance.GetColors();
+        }
+    }
 
     private void Update()
     {
@@ -49,9 +58,9 @@ public class ColorPickers : MonoBehaviour
         return colors;
     }
 
-    public void SetDefaultColors(List<Color> colors)
+    public void SetDefaultColors()
     {
-        this.colors = colors;
+        colors = new List<Color>(SettingsManager.Instance.GetDefaultColors());
         AssignSliderValues(colors);
     }
 

@@ -9,7 +9,7 @@ using UnityEngine;
      * Description: This code is written for individual block behaviours such as changing color, disappearing, and checking for
      * nearby block colors to see if they should change too.
      * 
-     * Last Changed by: Nicolas Kaplan
+     * Last Changed by: Evan Robertson
      * Last Date Changed: 2024-11-11
      * 
      * 
@@ -30,7 +30,10 @@ using UnityEngine;
      *   -> 1.5 - Particle system added to blocks as soon as they are broken.
      *   -> 1.6 - Added Animations to each of the blocks with parameters to control
      *      animation offsets and speed multipliers.
-     *   v1.6
+     *      
+     *   -> 1.7 - Empty color is now added here to prevent problems with settings, added block sfx call when breaking
+     *      
+     *   v1.7
      */
 public class BlockScript : MonoBehaviour
 {
@@ -52,13 +55,14 @@ public class BlockScript : MonoBehaviour
     {
         if (SettingsManager.Instance.GetColors().Count != 0)
         {
-            blockColorList = SettingsManager.Instance.GetColors();
+            blockColorList = new List<Color>(SettingsManager.Instance.GetColors());
+
+            if (blockColorList[0] != SettingsManager.Instance.GetEmptyColor())
+            {
+                blockColorList.Insert(0, SettingsManager.Instance.GetEmptyColor());
+            }
         }
-        else
-        {
-            blockColorList = SettingsManager.Instance.GetDefaultColors();
-        }
-        
+
         gameStateControl = GameObject.FindGameObjectWithTag("GameStateManager")
         .GetComponent<GameStateControl>();
         animator = GetComponent<Animator>();
@@ -83,6 +87,9 @@ public class BlockScript : MonoBehaviour
 
     public void OnBreak()
     {
+        //SFX
+        AudioController.Instance.PlaySFX("Click");
+
         animator.SetTrigger("GemBroken");
         ParticleSystem.EmitParams emitParams = new ParticleSystem.EmitParams
         {
