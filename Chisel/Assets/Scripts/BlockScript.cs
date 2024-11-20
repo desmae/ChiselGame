@@ -9,8 +9,8 @@ using UnityEngine;
      * Description: This code is written for individual block behaviours such as changing color, disappearing, and checking for
      * nearby block colors to see if they should change too.
      * 
-     * Last Changed by: Evan Robertson
-     * Last Date Changed: 2024-11-11
+     * Last Changed by: Aetria Rescan
+     * Last Date Changed: 2024-11-19
      * 
      * 
      *   -> 1.0 - Created BlockScript.cs and added basic block functionality,
@@ -32,6 +32,7 @@ using UnityEngine;
      *      animation offsets and speed multipliers.
      *      
      *   -> 1.7 - Empty color is now added here to prevent problems with settings, added block sfx call when breaking
+     *   -> 1.8 - Added the logic to increase the score when blocks change colour and break
      *      
      *   v1.7
      */
@@ -42,6 +43,7 @@ public class BlockScript : MonoBehaviour
     private Animator animator;
     private float animSpeed;
     private float animDelay;
+    private ScoreManager scoreManager;
 
     public List<SpriteRenderer> blockSpriteList;
     public List<Color> blockColorList;
@@ -69,6 +71,7 @@ public class BlockScript : MonoBehaviour
         ChooseRandomColor();
         SetColorAndSprite();
         SetAnimationParams();
+        scoreManager = FindObjectOfType<ScoreManager>();
     }
 
     void Update()
@@ -188,6 +191,7 @@ public class BlockScript : MonoBehaviour
             StartCoroutine(DestroyNextFrame());
         }
         SetColorAndSprite();
+        scoreManager.AddScoreForColorChange();
 
     }
 
@@ -220,6 +224,7 @@ public class BlockScript : MonoBehaviour
     private void OnDestroy()
     {
         StopAllCoroutines();
+        scoreManager.AddScoreForBlockBreak();
     }
 
 }
