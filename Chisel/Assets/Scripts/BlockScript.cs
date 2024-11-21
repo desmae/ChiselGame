@@ -9,8 +9,8 @@ using UnityEngine;
      * Description: This code is written for individual block behaviours such as changing color, disappearing, and checking for
      * nearby block colors to see if they should change too.
      * 
-     * Last Changed by: Aetria Rescan
-     * Last Date Changed: 2024-11-19
+     * Last Changed by: Nicolas Kaplan
+     * Last Date Changed: 2024-11-21
      * 
      * 
      *   -> 1.0 - Created BlockScript.cs and added basic block functionality,
@@ -33,8 +33,9 @@ using UnityEngine;
      *      
      *   -> 1.7 - Empty color is now added here to prevent problems with settings, added block sfx call when breaking
      *   -> 1.8 - Added the logic to increase the score when blocks change colour and break
+     *   -> 1.9 - Changed location of click SFX so that it only plays once, added combo system functionality
      *      
-     *   v1.7
+     *   v1.9
      */
 public class BlockScript : MonoBehaviour
 {
@@ -43,7 +44,8 @@ public class BlockScript : MonoBehaviour
     private Animator animator;
     private float animSpeed;
     private float animDelay;
-    private ScoreManager scoreManager;
+    
+    [SerializeField] private ScoreManager scoreManager;
 
     public List<SpriteRenderer> blockSpriteList;
     public List<Color> blockColorList;
@@ -52,6 +54,7 @@ public class BlockScript : MonoBehaviour
     GameStateControl gameStateControl;
     private static HashSet<BlockScript> hitBlocks = new HashSet<BlockScript>();
     private static bool isChainReactionInProgress = false;
+    private Coroutine chainEndCoroutine;
 
     void Start()
     {
@@ -82,6 +85,7 @@ public class BlockScript : MonoBehaviour
             if (hit.collider != null && hit.transform.gameObject == gameObject)
             {
                 gameStateControl.DecrementMoves();
+                AudioController.Instance.PlaySFX("Click");
 
                 OnBreak();
             }
@@ -90,10 +94,9 @@ public class BlockScript : MonoBehaviour
 
     public void OnBreak()
     {
-        //SFX
-        AudioController.Instance.PlaySFX("Click");
 
         animator.SetTrigger("GemBroken");
+        scoreManager.AddScoreForBlockBreak(100); // hard coded value, consider changing
         ParticleSystem.EmitParams emitParams = new ParticleSystem.EmitParams
         {
             startColor = blockColorList[blockHealth - 1]
@@ -118,6 +121,13 @@ public class BlockScript : MonoBehaviour
         int currentBlockHealth = blockHealth;
         ChangeBlockHealth(currentBlockHealth - 1);
 
+        scoreManager.AddScoreForBlockBreak(100);
+
+        if (chainEndCoroutine != null)
+        {
+            StopCoroutine(chainEndCoroutine);
+        }
+        chainEndCoroutine = StartCoroutine(WaitForChainEnd());
         // Check and change health of adjacent blocks
         CheckAdjacentBlocks(currentBlockHealth);
 
@@ -125,9 +135,19 @@ public class BlockScript : MonoBehaviour
         {
             // End of the chain reaction
             ResetHitBlocks();
+            scoreManager.ResetMultiplier();
         }
     }
+    private IEnumerator WaitForChainEnd()
+    {
+        yield return new WaitForSeconds(0.2f);
 
+        if (!isChainReactionInProgress)
+        {
+            scoreManager.EndCombo();
+            ResetHitBlocks();
+        }
+    }
     private void SetAnimationParams()
     {
         animSpeed = Random.Range(0f, 2f);
@@ -148,12 +168,11 @@ public class BlockScript : MonoBehaviour
 
         if (!foundAdjacentBlock)
         {
-            // This block is the end of a branch in the chain reaction
             isChainReactionInProgress = false;
         }
     }
 
-    private bool CheckAdjacentBlock(Vector2 direction, int originalHealth)
+private bool CheckAdjacentBlock(Vector2 direction, int originalHealth)
     {
         Vector2 start = transform.position;
         Vector2 end = start + direction;
@@ -224,7 +243,8 @@ public class BlockScript : MonoBehaviour
     private void OnDestroy()
     {
         StopAllCoroutines();
-        scoreManager.AddScoreForBlockBreak();
+        animator.SetTrigger("GemBroken");
+        //scoreManager.AddScoreForBlockBreak(100);
     }
 
 }

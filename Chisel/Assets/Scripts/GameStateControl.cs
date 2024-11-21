@@ -15,7 +15,7 @@ public class GameStateControl : MonoBehaviour
      *              depending on whether the player's moves are 0 or no blocks are left.
      * 
      * Last Changed by: Nicolas Kaplan
-     * Last Date Changed: 2024-11-08
+     * Last Date Changed: 2024-11-21
      * 
      * 
      *   -> 1.0 - Created GameStateControl.cs and created a basic win condition to
@@ -23,7 +23,8 @@ public class GameStateControl : MonoBehaviour
      *   -> 1.1 - Updated code clarity such as private declarations. Added code for displaying the game over screen
      *          as well as code for the moves display.
      *   -> 1.2 - Added a variable and implementations to change tasks per level (text only)
-     *   v1.2
+     *   -> 1.3 - Removed a noisy debug log line
+     *   v1.3
      */
     
     private GameObject[] blocks;
@@ -90,7 +91,6 @@ public class GameStateControl : MonoBehaviour
         foreach (GameObject block in blocks)
         {
             blockList.Add(block);
-            Debug.Log($"Added {block.name}");
         }
     }
 
