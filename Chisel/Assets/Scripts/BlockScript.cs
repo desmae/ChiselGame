@@ -34,8 +34,8 @@ using UnityEngine;
      *   -> 1.7 - Empty color is now added here to prevent problems with settings, added block sfx call when breaking
      *   -> 1.8 - Added the logic to increase the score when blocks change colour and break
      *   -> 1.9 - Changed location of click SFX so that it only plays once, added combo system functionality
-     *      
-     *   v1.9
+     *   -> 2.0 - Blocks no longer Destroy(), but instead become invisible and untouchable
+     *   v2.0
      */
 public class BlockScript : MonoBehaviour
 {
@@ -56,6 +56,7 @@ public class BlockScript : MonoBehaviour
     private static bool isChainReactionInProgress = false;
     private Coroutine chainEndCoroutine;
 
+    public static bool canBreak = true; // can blocks be broken?
     void Start()
     {
         if (SettingsManager.Instance.GetColors().Count != 0)
@@ -84,19 +85,22 @@ public class BlockScript : MonoBehaviour
             RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
             if (hit.collider != null && hit.transform.gameObject == gameObject)
             {
-                gameStateControl.DecrementMoves();
-                AudioController.Instance.PlaySFX("Click");
+                if (canBreak)
+                {
+                    gameStateControl.DecrementMoves();
+                    AudioController.Instance.PlaySFX("Click");
 
-                OnBreak();
+                    OnBreak();
+                }
             }
         }
     }
 
     public void OnBreak()
     {
-
+        int currentHealth = blockHealth;
         animator.SetTrigger("GemBroken");
-        scoreManager.AddScoreForBlockBreak(100); // hard coded value, consider changing
+        scoreManager.AddScoreForBlockBreak(100, currentHealth); // hard coded value, consider changing
         ParticleSystem.EmitParams emitParams = new ParticleSystem.EmitParams
         {
             startColor = blockColorList[blockHealth - 1]
@@ -121,7 +125,7 @@ public class BlockScript : MonoBehaviour
         int currentBlockHealth = blockHealth;
         ChangeBlockHealth(currentBlockHealth - 1);
 
-        scoreManager.AddScoreForBlockBreak(100);
+        //scoreManager.AddScoreForBlockBreak(100, blockHealth);
 
         if (chainEndCoroutine != null)
         {
@@ -140,7 +144,7 @@ public class BlockScript : MonoBehaviour
     }
     private IEnumerator WaitForChainEnd()
     {
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(0.05f);
 
         if (!isChainReactionInProgress)
         {
@@ -236,7 +240,9 @@ private bool CheckAdjacentBlock(Vector2 direction, int originalHealth)
     {
         yield return null;
         gameStateControl.blockList.Remove(gameObject);
-        Destroy(gameObject);
+        //Destroy(gameObject);
+        GetComponent<BoxCollider2D>().enabled = false;
+        GetComponent<SpriteRenderer>().enabled = false;
     }
 
     

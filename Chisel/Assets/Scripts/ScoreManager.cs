@@ -19,8 +19,9 @@ using UnityEngine.UI;
      *   will include increases in score when player completes combos.
      *   -> 1.1 Altered logic to fit UI standards better, changed scoreText to private,
      *   also added combo logic as well as UI functionality for combos.
-     *   
-     *   v1.1
+     *   -> 1.2 Changed score text to not display a + before the score anymore, added moves back system
+     *      
+     *   v1.2
      */
 public class ScoreManager : MonoBehaviour
 {
@@ -32,13 +33,21 @@ public class ScoreManager : MonoBehaviour
 
     [SerializeField] private GameObject scoreObject; // score object to instantiate when score is added.
     private int comboAccumulatedScore = 0; // tracks score per combo
+    private int currentComboCount = 0;
+    private int minimumComboForMoves = 10;
+    public delegate void OnMoveGained();
+    public static event OnMoveGained MoveGained;
     private bool isInCombo = false; // bool checks whether code is in combo at the moment
     private GameObject currentScoreObject;
     private Coroutine scoreObjectDeleteCoroutine;
+    
+    public int minimumScoreForLevel;
+
 
     [SerializeField] private TextMeshProUGUI scoreTextLight; // Use TextMeshProUGUI for the score display
     [SerializeField] private TextMeshProUGUI scoreTextDark; // Use TextMeshProUGUI for the score display
     [SerializeField] private Transform worldCanvas; // world canvas
+    
 
     void AddScore(int scoreToAdd)
     {
@@ -64,23 +73,34 @@ public class ScoreManager : MonoBehaviour
     }
 
     // Method to increase the score for breaking a block
-    public void AddScoreForBlockBreak(int scoreMultiplier)
+    public void AddScoreForBlockBreak(int scoreMultiplier, int blockHealth)
     {
         int calculatedScore = Mathf.RoundToInt(scoreMultiplier * currentMultiplier);
         if (!isInCombo)
         {
             isInCombo = true;
             comboAccumulatedScore = 0;
+            currentComboCount = 0;
         }
 
+        currentComboCount++;
         comboAccumulatedScore += calculatedScore;
         AddScore(calculatedScore);
+
+        if (currentComboCount >= minimumComboForMoves && blockHealth == 1)
+        {
+            AwardExtraMove();
+        }
 
         currentMultiplier = Mathf.Min(currentMultiplier + multiplierIncrease, maxMultiplier);
         UpdateComboBar();
         // play sound?
     }
     
+    private void AwardExtraMove()
+    {
+        MoveGained?.Invoke();
+    }
     public void EndCombo()
     {
         if (isInCombo)
@@ -89,11 +109,16 @@ public class ScoreManager : MonoBehaviour
             {
                 ScoreTooltip(comboAccumulatedScore);
             }
-
+            
             isInCombo = false;
             comboAccumulatedScore = 0;
+            currentComboCount = 0;
             ResetMultiplier();
         }
+    }
+    public int GetCurrentComboCount()
+    {
+        return currentComboCount;
     }
     public void ResetMultiplier()
     {
@@ -116,8 +141,15 @@ public class ScoreManager : MonoBehaviour
         Vector2 textPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         textPosition += new Vector2(0, -6f);
         currentScoreObject = Instantiate(scoreObject, textPosition, Quaternion.identity, worldCanvas);
+        if (currentScoreObject.GetComponent<TextMeshProUGUI>() != null) 
+        { 
+            if (currentScoreObject.GetComponent<TextMeshProUGUI>().enabled == false)
+            {
+                currentScoreObject.GetComponent<TextMeshProUGUI>().enabled = true;
+            }
+        }
         currentScoreObject.GetComponent<RectTransform>().position = textPosition;
-        scoreObject.GetComponent<TextMeshProUGUI>().text = $"+{score}";
+        scoreObject.GetComponent<TextMeshProUGUI>().text = $"{score}";
         Debug.Log($"Spawned a score tooltip @ {textPosition}");
         
         if (scoreObjectDeleteCoroutine != null)

@@ -24,14 +24,20 @@ public class GameStateControl : MonoBehaviour
      *          as well as code for the moves display.
      *   -> 1.2 - Added a variable and implementations to change tasks per level (text only)
      *   -> 1.3 - Removed a noisy debug log line
-     *   v1.3
+     *   -> 1.4 - Added canBreak static over here so players can't interact with game when gameover is on screen and
+     *   added the LoadNextLevel() functionality, and a fallback as well as changing the music to the game's song.
+     *   Finally, added animations for the moves counter.
+     *   v1.4
      */
-    
+
     private GameObject[] blocks;
     public List<GameObject> blockList = new List<GameObject>();
     [SerializeField] private GameObject winCanvas;
     [SerializeField] private bool winCanvasOnStart = false;
 
+    [SerializeField] Animator movesAnimator;
+
+    [SerializeField] private ScoreManager scoreManager;
     [SerializeField] private int startingMoveCount = 0;
     private static int moveCount;
 
@@ -48,6 +54,7 @@ public class GameStateControl : MonoBehaviour
 
     void Start()
     {
+        AudioController.Instance.PlayMusic("GameMusic");
         if (!winCanvasOnStart)
         {
             winCanvas.SetActive(false);
@@ -75,14 +82,44 @@ public class GameStateControl : MonoBehaviour
 
         SetTaskText();
     }
-    
+
     void Update()
     {
         CheckBlocksCleared();
         CheckMovesCount();
         UpdateMovesText();
+
+        if (gameOverCanvas.activeSelf)
+        {
+            BlockScript.canBreak = false;
+        }
+        else
+        {
+            BlockScript.canBreak = true;
+        }
+    }
+    private void CheckScoreOnWin()
+    {
+        if (scoreManager.score >= scoreManager.minimumScoreForLevel)
+        {
+            DisplayGameOverScreen();
+            winCanvas.SetActive(false);
+        }
+    }
+    private void OnEnable()
+    {
+        ScoreManager.MoveGained += OnMoveGained;
     }
 
+    private void OnDisable()
+    {
+        ScoreManager.MoveGained -= OnMoveGained;
+    }
+
+    private void OnMoveGained()
+    {
+        IncrementMoves(1);
+    }
     // Win screen & blocks
 
     void AddBlocksToList()
@@ -113,6 +150,7 @@ public class GameStateControl : MonoBehaviour
     {
         movesCountDark.text = $"{moveCount}";
         movesCountLight.text = $"{moveCount}";
+        movesAnimator.SetInteger("movesCount", moveCount);
     }
     public void DecrementMoves()
     {
@@ -121,6 +159,7 @@ public class GameStateControl : MonoBehaviour
     public void IncrementMoves(int movesToAdd)
     {
         moveCount += movesToAdd;
+        movesAnimator.SetTrigger("MovesAdded");
     }
     public void SetInitialMoves()
     {
@@ -157,6 +196,16 @@ public class GameStateControl : MonoBehaviour
         SceneManager.LoadScene(1);
     }
 
-    // void LoadNextLevel()
+    public void LoadNextLevel()
+    {
+        if (SceneManager.GetActiveScene().buildIndex + 1 < SceneManager.sceneCountInBuildSettings)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
+        else
+        {
+            LoadMainMenu();
+        }
+    }
 
 }
