@@ -324,6 +324,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   colourGuidePanel: {fileID: 1987569369}
+  images:
+  - {fileID: 417756093}
+  - {fileID: 710670912}
+  - {fileID: 456299502}
+  - {fileID: 1161225139}
+  - {fileID: 1860582153}
+  - {fileID: 454665969}
 --- !u!1 &135266133
 GameObject:
   m_ObjectHideFlags: 0
@@ -360,7 +367,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -335.87997, y: 16}
+  m_AnchoredPosition: {x: -335.88, y: 16}
   m_SizeDelta: {x: -671.74, y: -292.13}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &135266135
@@ -538,7 +545,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tutorialPanel: {fileID: 255469722}
-  tutorialText: {fileID: 0}
+  tutorialText: {fileID: 1268922605}
   tutorialPages:
   - 
   - 
@@ -744,7 +751,7 @@ Transform:
   m_GameObject: {fileID: 417756091}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 175.2, y: 5.9, z: -4052.5723}
+  m_LocalPosition: {x: 163.09993, y: 5.9, z: -4052.5723}
   m_LocalScale: {x: 37.873543, y: 33.86149, z: 45.02858}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -791,7 +798,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 69adde9dcbfd46d4e90aa7434b2734f6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -961,7 +968,7 @@ Transform:
   m_GameObject: {fileID: 454665967}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -155.5, y: 5.9, z: -4052.5723}
+  m_LocalPosition: {x: -167.6, y: 5.9, z: -4052.5723}
   m_LocalScale: {x: 37.873535, y: 33.86149, z: 45.02858}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1008,7 +1015,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 6aae06d16909db64d9b6c0250dd21e3d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1045,7 +1052,7 @@ Transform:
   m_GameObject: {fileID: 456299500}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 40.8, y: 5.9, z: -4052.5723}
+  m_LocalPosition: {x: 28.699934, y: 5.9, z: -4052.5723}
   m_LocalScale: {x: 37.873543, y: 33.86149, z: 45.02858}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1092,7 +1099,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 21d7dc0c2147d2c4d98125df08820af8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1515,7 +1522,7 @@ Transform:
   m_GameObject: {fileID: 710670910}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 109.3, y: 5.9, z: -4052.5723}
+  m_LocalPosition: {x: 97.199936, y: 5.9, z: -4052.5723}
   m_LocalScale: {x: 37.873543, y: 33.86149, z: 45.02858}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1562,7 +1569,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 06b178bc3d9e50b46adbda0853ca21ba, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1787,7 +1794,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tutorialPanel: {fileID: 1001328257}
-  tutorialText: {fileID: 0}
+  tutorialText: {fileID: 1328227331}
   tutorialPages:
   - 
   - 
@@ -1971,7 +1978,7 @@ Transform:
   m_GameObject: {fileID: 1161225137}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -23.7, y: 5.9, z: -4052.5723}
+  m_LocalPosition: {x: -35.800064, y: 5.9, z: -4052.5723}
   m_LocalScale: {x: 37.873543, y: 33.86149, z: 45.02858}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2018,7 +2025,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 8ead9dee30b9de8468c9bdea3dccb022, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3391,7 +3398,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tutorialPanel: {fileID: 1831170869}
-  tutorialText: {fileID: 0}
+  tutorialText: {fileID: 1469070585}
   tutorialPages:
   - 
   - 
@@ -3423,7 +3430,7 @@ Transform:
   m_GameObject: {fileID: 1860582151}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -91.7, y: 5.9, z: -4052.5723}
+  m_LocalPosition: {x: -103.800064, y: 5.9, z: -4052.5723}
   m_LocalScale: {x: 37.873543, y: 33.86149, z: 45.02858}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3470,7 +3477,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: e21c7ce703ce4684cbd1cbd423e56230, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ee9b0dfbe877c6b4e81e226e98e5cea1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3531,8 +3538,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.49527588, y: 0.540729}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -395.05, y: -302.92}
-  m_SizeDelta: {x: 2.33, y: -118.74}
+  m_AnchoredPosition: {x: -392.4, y: -309.29}
+  m_SizeDelta: {x: -0.85, y: -142.09}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1987569371
 MonoBehaviour:
@@ -3613,7 +3620,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 191.2, y: -20.99}
+  m_AnchoredPosition: {x: 191.19998, y: -20.98999}
   m_SizeDelta: {x: -671.74, y: -173.22}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2103546525
