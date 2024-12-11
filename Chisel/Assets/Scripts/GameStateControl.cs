@@ -193,7 +193,7 @@ public class GameStateControl : MonoBehaviour
 
     public void LoadCurrentLevel()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void LoadNextLevel()

@@ -385,7 +385,9 @@
 "Assets/Scripts/Singletons/PersistentSingleton.cs"
 "Assets/Scripts/Singletons/SettingsManager.cs"
 "Assets/Scripts/UI/ColorPickers.cs"
+"Assets/Scripts/UI/ColourGuideToggle.cs"
 "Assets/Scripts/UI/MenuManager.cs"
+"Assets/Scripts/UI/TutorialManager.cs"
 -langversion:9.0
 
 /deterministic
