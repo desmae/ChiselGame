@@ -1,13 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 
 public class ColourGuideToggle : MonoBehaviour
 {
     public GameObject colourGuidePanel; // Reference to the guide panel
 
-    [SerializeField] private List<SpriteRenderer> images;
+    [SerializeField] private List<RawImage> images;
 
     private bool isGuideVisible = false;
 
