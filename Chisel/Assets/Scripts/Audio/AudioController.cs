@@ -23,7 +23,7 @@ public class AudioController : PersistentSingleton<AudioController>
 
     [SerializeField] private List<AudioAsset> audioList;
 
-    private void Start()
+    private void Awake()
     {
         //Adds all AudioAssets in Resources/Audio to list
         AudioAsset[] loadedAudio = Resources.LoadAll<AudioAsset>("Audio");

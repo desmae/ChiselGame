@@ -52,6 +52,11 @@ public class GameStateControl : MonoBehaviour
     [SerializeField] private GameObject gameOverCanvas;
     [SerializeField] private bool gameOverCanvasOnStart = false;
 
+    private void Awake()
+    {
+        BlockScript.canBreak = true;
+    }
+
     void Start()
     {
         AudioController.Instance.PlayMusic("GameMusic");
@@ -74,6 +79,7 @@ public class GameStateControl : MonoBehaviour
             gameOverCanvas.SetActive(true);
 
         }
+
         AddBlocksToList();
 
         SetInitialMoves();
@@ -92,10 +98,6 @@ public class GameStateControl : MonoBehaviour
         if (gameOverCanvas.activeSelf)
         {
             BlockScript.canBreak = false;
-        }
-        else
-        {
-            BlockScript.canBreak = true;
         }
     }
     private void CheckScoreOnWin()

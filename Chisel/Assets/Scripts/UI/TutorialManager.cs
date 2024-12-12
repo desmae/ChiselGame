@@ -5,9 +5,7 @@ using TMPro;
 
 public class TutorialManager : MonoBehaviour
 {
-    public GameObject tutorialPanel; // The tutorial panel
-    public TextMeshProUGUI tutorialText; // The text component for displaying tutorial pages
-    public string[] tutorialPages; // An array to hold all tutorial pages
+    public GameObject[] tutorialPages; // An array to hold all tutorial pages
     private int currentPage = 0; // Keeps track of the current tutorial page
 
     void Start()
@@ -15,12 +13,15 @@ public class TutorialManager : MonoBehaviour
         // Initialize tutorial
         if (tutorialPages.Length > 1)
         {
-            ShowTutorialPage(3); // Show the first page
+            ShowTutorialPage(0); // Show the first page
         }
         else
         {
             Debug.LogError("No tutorial pages found!");
         }
+
+        // Disable play until tutorial is finished
+        BlockScript.canBreak = false;
     }
 
     public void ShowNextPage()
@@ -32,24 +33,22 @@ public class TutorialManager : MonoBehaviour
         }
         else
         {
-            CloseTutorial(); // Close if on the last page
+            CloseTutorialPage(); // Close if on the last page
         }
     }
 
     private void ShowTutorialPage(int pageIndex)
     {
-        tutorialText.text = tutorialPages[pageIndex]; // Update the tutorial text
+        tutorialPages[pageIndex].gameObject.SetActive(true); // Show next page
     }
 
-    public void CloseTutorial()
+    public void CloseTutorialPage()
     {
-        tutorialPanel.SetActive(false); // Hide the tutorial panel
-    }
+        tutorialPages[currentPage].gameObject.SetActive(false); // Hide prev page
 
-    public void OpenTutorial()
-    {
-        tutorialPanel.SetActive(true);
-        currentPage = 0;
-        ShowTutorialPage(0); // Reset to the first page when reopening
+        if (currentPage == tutorialPages.Length - 1)
+        {
+            BlockScript.canBreak = true;
+        }
     }
 }
