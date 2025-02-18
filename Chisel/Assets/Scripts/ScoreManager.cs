@@ -58,10 +58,6 @@ public class ScoreManager : MonoBehaviour
     {
         StartCoroutine(DecrementComboBar());
 
-        if (comboMultTextLight == null || comboMultTextDark == null)
-        {
-            Debug.LogError("[ScoreManager] ERROR: Combo multiplier UI text is NULL. Assign it in the Inspector!");
-        }
     }
 
 
@@ -82,19 +78,14 @@ public class ScoreManager : MonoBehaviour
 
         if (comboMultTextLight != null && comboMultTextDark != null)
         {
-            int displayMultiplier = Mathf.FloorToInt(currentMultiplier); // Ensure it's an integer
+            int displayMultiplier = Mathf.FloorToInt(currentMultiplier); 
             comboMultTextDark.text = $"x{displayMultiplier}";
             comboMultTextLight.text = $"x{displayMultiplier}";
 
-            // Force UI text to refresh
             comboMultTextDark.ForceMeshUpdate();
             comboMultTextLight.ForceMeshUpdate();
 
             Debug.Log($"[ScoreManager] UI Updated: Multiplier Display = x{displayMultiplier}");
-        }
-        else
-        {
-            Debug.LogError("[ScoreManager] ERROR: One or both multiplier text objects are NULL!");
         }
     }
 
@@ -106,10 +97,37 @@ public class ScoreManager : MonoBehaviour
             {
                 comboBarScore = Mathf.Max(0, comboBarScore - comboDrainRate);
                 UpdateComboBar();
+
+                // Check and update the multiplier when the bar decreases
+                UpdateMultiplierBasedOnComboBar();
             }
             yield return new WaitForSeconds(1f);
         }
     }
+    private void UpdateMultiplierBasedOnComboBar()
+    {
+        float percentageFull = (float)comboBarScore / maxComboBarScore;
+        float newMultiplier = 1f;
+
+        if (percentageFull >= 0.8f)
+            newMultiplier = 5f; // 80%+ x5
+        else if (percentageFull >= 0.6f)
+            newMultiplier = 4f; // 60%+ x4
+        else if (percentageFull >= 0.4f)
+            newMultiplier = 3f; // 40%+ x3
+        else if (percentageFull >= 0.2f)
+            newMultiplier = 2f; // 20%+ x2
+        else
+            newMultiplier = 1f; // Default (below 20%)
+
+        if (currentMultiplier != newMultiplier)
+        {
+            currentMultiplier = newMultiplier;
+            Debug.Log($"[ScoreManager] Multiplier Updated: {currentMultiplier} | ComboBar: {comboBarScore}/{maxComboBarScore} ({percentageFull * 100:F1}%)");
+            UpdateComboAnimation(); 
+        }
+    }
+
 
     void AddScore(int scoreToAdd)
     {
@@ -145,33 +163,17 @@ public class ScoreManager : MonoBehaviour
             currentComboCount = 0;
         }
 
-        int baseScore = scoreAmount; // Base score before any multipliers
+        int baseScore = scoreAmount; 
         int finalScore = baseScore;
 
-        // Add base score to combo bar (capped at 25,000)
         comboBarScore = Mathf.Min(comboBarScore + baseScore, maxComboBarScore);
 
-        // Determine Multiplier
-        float percentageFull = (float)comboBarScore / maxComboBarScore;
-        if (percentageFull >= 0.8f)
-            currentMultiplier = 5f; // 80%+ x5
-        else if (percentageFull >= 0.6f)
-            currentMultiplier = 4f; // 60%+ x4
-        else if (percentageFull >= 0.4f)
-            currentMultiplier = 3f; // 40%+ x3
-        else if (percentageFull >= 0.2f)
-            currentMultiplier = 2f; // 20%+ x2
-        else
-            currentMultiplier = 1f; // Default
+        UpdateMultiplierBasedOnComboBar();
 
-        Debug.Log($"[ScoreManager] Multiplier Updated: {currentMultiplier} | ComboBar: {comboBarScore}/{maxComboBarScore} ({percentageFull * 100:F1}%)");
-
-        // Apply multiplier
         finalScore *= (int)currentMultiplier;
 
-        // Update Score and UI
         AddScore(finalScore);
-        UpdateComboAnimation();  // Ensure UI is updated immediately
+        UpdateComboAnimation(); 
 
         currentComboCount++;
         comboAccumulatedScore += finalScore;
