@@ -1,269 +1,299 @@
 { "cat":"", "pid":12345, "tid":0, "ts":0, "ph":"M", "name":"process_name", "args": { "name":"bee_backend" } }
-,{ "pid":12345, "tid":0, "ts":1733971081143889, "dur":18693, "ph":"X", "name": "DriverInitData",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1733971081162588, "dur":120, "ph":"X", "name": "RemoveStaleOutputs",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1733971081162762, "dur":312, "ph":"X", "name": "BuildQueueInit",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1733971081163227, "dur":82, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/level5" }}
-,{ "pid":12345, "tid":0, "ts":1733971081163392, "dur":64, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Resources/unity_builtin_extra" }}
-,{ "pid":12345, "tid":0, "ts":1733971081163674, "dur":75, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/sharedassets6.assets" }}
-,{ "pid":12345, "tid":0, "ts":1733971081163090, "dur":2965, "ph":"X", "name": "EnqueueRequestedNodes",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1733971081166056, "dur":2991996, "ph":"X", "name": "WaitForBuildFinished", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1733971084158053, "dur":400, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1733971084158579, "dur":34032, "ph":"X", "name": "Tundra",  "args": { "detail":"Write AllBuiltNodes" }}
-,{ "pid":12345, "tid":1, "ts":1733971081164048, "dur":2122, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1733971081166172, "dur":332, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1733971081166504, "dur":934, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1733971081363211, "dur":83878, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/MonoBleedingEdge/etc/mono/mconfig/config.xml" }}
-,{ "pid":12345, "tid":1, "ts":1733971081447150, "dur":227400, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Managed/System.dll" }}
-,{ "pid":12345, "tid":1, "ts":1733971081674569, "dur":82628, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Managed/System.Numerics.dll" }}
-,{ "pid":12345, "tid":1, "ts":1733971081757225, "dur":86009, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Managed/System.Data.dll" }}
-,{ "pid":12345, "tid":1, "ts":1733971081843250, "dur":8817, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Managed/Unity.2D.Common.Runtime.dll" }}
-,{ "pid":12345, "tid":1, "ts":1733971081852098, "dur":8704, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Managed/Unity.2D.Animation.Runtime.dll" }}
-,{ "pid":12345, "tid":1, "ts":1733971081860823, "dur":3509, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Managed/UnityEngine.VRModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1733971081864361, "dur":98006, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Managed/UnityEngine.UmbraModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1733971081962416, "dur":8786, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Managed/UnityEngine.SpriteMaskModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1733971081971241, "dur":100415, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Managed/UnityEngine.ParticleSystemModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1733971082071684, "dur":9780, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Managed/UnityEngine.DirectorModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1733971082081512, "dur":206204, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Managed/UnityEngine.AIModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1733971082287854, "dur":308715, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/sharedassets0.assets" }}
-,{ "pid":12345, "tid":1, "ts":1733971082596597, "dur":1234234, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/level7" }}
-,{ "pid":12345, "tid":1, "ts":1733971083830855, "dur":327231, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1733971081163489, "dur":2575, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1733971081166065, "dur":256, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1733971081166321, "dur":1124, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1733971081184270, "dur":82002, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/MonoBleedingEdge/etc/mono/4.5/settings.map" }}
-,{ "pid":12345, "tid":2, "ts":1733971081290914, "dur":56108, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/MonoBleedingEdge/etc/mono/4.0/Browsers/Compat.browser" }}
-,{ "pid":12345, "tid":2, "ts":1733971081363192, "dur":164815, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/MonoBleedingEdge/EmbedRuntime/MonoPosixHelper.dll" }}
-,{ "pid":12345, "tid":2, "ts":1733971081546607, "dur":127887, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Managed/System.Xml.Linq.dll" }}
-,{ "pid":12345, "tid":2, "ts":1733971081674532, "dur":84217, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Managed/System.Runtime.Serialization.dll" }}
-,{ "pid":12345, "tid":2, "ts":1733971081758783, "dur":82762, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Managed/System.ComponentModel.Composition.dll" }}
-,{ "pid":12345, "tid":2, "ts":1733971081841571, "dur":11006, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Managed/Unity.VisualScripting.State.dll" }}
-,{ "pid":12345, "tid":2, "ts":1733971081852613, "dur":9500, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Managed/Unity.VisualScripting.Core.dll" }}
-,{ "pid":12345, "tid":2, "ts":1733971081862135, "dur":97873, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Managed/UnityEngine.UnityAnalyticsModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1733971081960044, "dur":11317, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Managed/UnityEngine.SubsystemsModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1733971081971386, "dur":102016, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Managed/UnityEngine.ImageConversionModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1733971082073435, "dur":30145, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Managed/UnityEngine.AssetBundleModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1733971082103611, "dur":702675, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/sharedassets0.assets.resS" }}
-,{ "pid":12345, "tid":2, "ts":1733971082806386, "dur":1024450, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/level3" }}
-,{ "pid":12345, "tid":2, "ts":1733971083830854, "dur":327196, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1733971081164220, "dur":1975, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1733971081166195, "dur":1253, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1733971081363959, "dur":164059, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/MonoBleedingEdge/etc/mono/4.5/machine.config" }}
-,{ "pid":12345, "tid":3, "ts":1733971081546612, "dur":122262, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Managed/System.Transactions.dll" }}
-,{ "pid":12345, "tid":3, "ts":1733971081668933, "dur":89989, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Managed/System.Security.dll" }}
-,{ "pid":12345, "tid":3, "ts":1733971081758954, "dur":83003, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Managed/netstandard.dll" }}
-,{ "pid":12345, "tid":3, "ts":1733971081841984, "dur":12140, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Managed/Unity.Collections.dll" }}
-,{ "pid":12345, "tid":3, "ts":1733971081854171, "dur":7636, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Managed/UnityEngine.VirtualTexturingModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1733971081861866, "dur":98146, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Managed/UnityEngine.UnityWebRequestAudioModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1733971081960045, "dur":11214, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Managed/UnityEngine.SubstanceModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1733971081971292, "dur":101356, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Managed/UnityEngine.InputModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1733971082072669, "dur":30726, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Managed/UnityEngine.ContentLoadModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1733971082103453, "dur":303560, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/sharedassets4.assets" }}
-,{ "pid":12345, "tid":3, "ts":1733971082407101, "dur":913902, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/resources.assets.resS" }}
-,{ "pid":12345, "tid":3, "ts":1733971083321028, "dur":559089, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/globalgamemanagers.assets" }}
-,{ "pid":12345, "tid":3, "ts":1733971083880130, "dur":277954, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1733971081163485, "dur":2575, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1733971081166061, "dur":1369, "ph":"X", "name": "CheckDagSignatures",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1733971081959748, "dur":6359, "ph":"X", "name": "WriteText",  "args": { "detail":"Library/Bee/artifacts/csharpactions/boot.config_tyr4.info" }}
-,{ "pid":12345, "tid":4, "ts":1733971081966112, "dur":65, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\PlayerDataCache\\Win64\\Data\\boot.config" }}
-,{ "pid":12345, "tid":4, "ts":1733971081966187, "dur":82, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\PlayerDataCache\\Win64\\Data\\ScriptingAssemblies.json" }}
-,{ "pid":12345, "tid":4, "ts":1733971081966496, "dur":128, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\Player6c2c6bf2-inputdata.json" }}
-,{ "pid":12345, "tid":4, "ts":1733971081966111, "dur":587, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"AddBootConfigGUID Library/Bee/artifacts/WinPlayerBuildProgram/boot.config" }}
-,{ "pid":12345, "tid":4, "ts":1733971081967674, "dur":66, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1733971081969746, "dur":444150, "ph":"X", "name": "AddBootConfigGUID",  "args": { "detail":"Library/Bee/artifacts/WinPlayerBuildProgram/boot.config" }}
-,{ "pid":12345, "tid":4, "ts":1733971082415234, "dur":93, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\boot.config" }}
-,{ "pid":12345, "tid":4, "ts":1733971082415233, "dur":95, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/boot.config" }}
-,{ "pid":12345, "tid":4, "ts":1733971082415341, "dur":1003732, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/boot.config" }}
-,{ "pid":12345, "tid":4, "ts":1733971083419077, "dur":739013, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1733971081163527, "dur":2541, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1733971081166070, "dur":235, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1733971081166305, "dur":1174, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1733971081757219, "dur":83232, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/MonoBleedingEdge/etc/mono/4.0/settings.map" }}
-,{ "pid":12345, "tid":5, "ts":1733971081840482, "dur":9356, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Managed/Unity.VisualScripting.Antlr3.Runtime.dll" }}
-,{ "pid":12345, "tid":5, "ts":1733971081849866, "dur":10131, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Managed/Unity.InternalAPIEngineBridge.001.dll" }}
-,{ "pid":12345, "tid":5, "ts":1733971081860025, "dur":2592, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Managed/UnityEngine.VideoModule.dll" }}
-,{ "pid":12345, "tid":5, "ts":1733971081862643, "dur":98369, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Managed/UnityEngine.UnityAnalyticsCommonModule.dll" }}
-,{ "pid":12345, "tid":5, "ts":1733971081961046, "dur":10182, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Managed/UnityEngine.StreamingModule.dll" }}
-,{ "pid":12345, "tid":5, "ts":1733971081971269, "dur":102142, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Managed/UnityEngine.JSONSerializeModule.dll" }}
-,{ "pid":12345, "tid":5, "ts":1733971082073457, "dur":30097, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Managed/UnityEngine.AnimationModule.dll" }}
-,{ "pid":12345, "tid":5, "ts":1733971082103577, "dur":303446, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/sharedassets1.assets" }}
-,{ "pid":12345, "tid":5, "ts":1733971082407066, "dur":913944, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/resources.assets" }}
-,{ "pid":12345, "tid":5, "ts":1733971083321032, "dur":527452, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/globalgamemanagers" }}
-,{ "pid":12345, "tid":5, "ts":1733971083848508, "dur":309568, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1733971081163802, "dur":2312, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1733971081166116, "dur":376, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1733971081166492, "dur":947, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1733971081183162, "dur":83126, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/MonoBleedingEdge/etc/mono/config" }}
-,{ "pid":12345, "tid":6, "ts":1733971081289787, "dur":43793, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/MonoBleedingEdge/etc/mono/2.0/web.config" }}
-,{ "pid":12345, "tid":6, "ts":1733971081334993, "dur":106242, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/MonoBleedingEdge/etc/mono/2.0/Browsers/Compat.browser" }}
-,{ "pid":12345, "tid":6, "ts":1733971081489724, "dur":265354, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Managed/mscorlib.dll" }}
-,{ "pid":12345, "tid":6, "ts":1733971081755118, "dur":3811, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Managed/System.EnterpriseServices.dll" }}
-,{ "pid":12345, "tid":6, "ts":1733971081758964, "dur":82597, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Managed/System.Runtime.dll" }}
-,{ "pid":12345, "tid":6, "ts":1733971081841580, "dur":12475, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Managed/Unity.Mathematics.dll" }}
-,{ "pid":12345, "tid":6, "ts":1733971081854100, "dur":7705, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Managed/Assembly-CSharp.dll" }}
-,{ "pid":12345, "tid":6, "ts":1733971081861874, "dur":4813, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Managed/UnityEngine.UnityWebRequestModule.dll" }}
-,{ "pid":12345, "tid":6, "ts":1733971081866745, "dur":103817, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Managed/UnityEngine.TerrainModule.dll" }}
-,{ "pid":12345, "tid":6, "ts":1733971081970646, "dur":101049, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Managed/UnityEngine.ProfilerModule.dll" }}
-,{ "pid":12345, "tid":6, "ts":1733971082071744, "dur":31800, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Managed/UnityEngine.CoreModule.dll" }}
-,{ "pid":12345, "tid":6, "ts":1733971082103569, "dur":303470, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/sharedassets10.assets" }}
-,{ "pid":12345, "tid":6, "ts":1733971082407114, "dur":716733, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/level8" }}
-,{ "pid":12345, "tid":6, "ts":1733971083123891, "dur":855778, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/globalgamemanagers.assets.resS" }}
-,{ "pid":12345, "tid":6, "ts":1733971083979685, "dur":178480, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1733971081164024, "dur":2136, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1733971081166162, "dur":337, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1733971081166499, "dur":995, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1733971081841513, "dur":10368, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/MonoBleedingEdge/etc/mono/4.0/DefaultWsdlHelpGenerator.aspx" }}
-,{ "pid":12345, "tid":7, "ts":1733971081851907, "dur":8892, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Managed/Unity.2D.Tilemap.Extras.dll" }}
-,{ "pid":12345, "tid":7, "ts":1733971081860820, "dur":4427, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Managed/UnityEngine.VehiclesModule.dll" }}
-,{ "pid":12345, "tid":7, "ts":1733971081865277, "dur":97156, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Managed/UnityEngine.UIModule.dll" }}
-,{ "pid":12345, "tid":7, "ts":1733971081962461, "dur":8752, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Managed/UnityEngine.SharedInternalsModule.dll" }}
-,{ "pid":12345, "tid":7, "ts":1733971081971264, "dur":101387, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Managed/UnityEngine.NVIDIAModule.dll" }}
-,{ "pid":12345, "tid":7, "ts":1733971082072671, "dur":30868, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Managed/UnityEngine.ClusterRendererModule.dll" }}
-,{ "pid":12345, "tid":7, "ts":1733971082103583, "dur":303434, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/sharedassets2.assets" }}
-,{ "pid":12345, "tid":7, "ts":1733971082407104, "dur":1441377, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/resources.resource" }}
-,{ "pid":12345, "tid":7, "ts":1733971083848513, "dur":309580, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1733971081163613, "dur":2459, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1733971081166074, "dur":302, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1733971081166377, "dur":1074, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1733971081333914, "dur":29626, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/MonoBleedingEdge/etc/mono/4.5/Browsers/Compat.browser" }}
-,{ "pid":12345, "tid":8, "ts":1733971081363569, "dur":164443, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel.exe" }}
-,{ "pid":12345, "tid":8, "ts":1733971081546602, "dur":206198, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Managed/System.Xml.dll" }}
-,{ "pid":12345, "tid":8, "ts":1733971081752844, "dur":5036, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Managed/System.IO.Compression.FileSystem.dll" }}
-,{ "pid":12345, "tid":8, "ts":1733971081757897, "dur":83286, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Managed/System.Data.DataSetExtensions.dll" }}
-,{ "pid":12345, "tid":8, "ts":1733971081841215, "dur":10218, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Managed/Unity.Collections.LowLevel.ILSupport.dll" }}
-,{ "pid":12345, "tid":8, "ts":1733971081851498, "dur":10316, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Managed/Unity.VisualScripting.Flow.dll" }}
-,{ "pid":12345, "tid":8, "ts":1733971081861856, "dur":4780, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Managed/UnityEngine.UnityWebRequestAssetBundleModule.dll" }}
-,{ "pid":12345, "tid":8, "ts":1733971081970558, "dur":72, "ph":"X", "name": "EmitNodeFinish",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1733971081866683, "dur":103955, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Managed/UnityEngine.TextCoreFontEngineModule.dll" }}
-,{ "pid":12345, "tid":8, "ts":1733971081970666, "dur":101022, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Managed/UnityEngine.PhysicsModule.dll" }}
-,{ "pid":12345, "tid":8, "ts":1733971082071742, "dur":10370, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Managed/UnityEngine.CrashReportingModule.dll" }}
-,{ "pid":12345, "tid":8, "ts":1733971082287679, "dur":56, "ph":"X", "name": "EmitNodeFinish",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1733971082082138, "dur":205704, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/sharedassets8.assets" }}
-,{ "pid":12345, "tid":8, "ts":1733971082287900, "dur":474761, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Resources/unity_builtin_extra" }}
-,{ "pid":12345, "tid":8, "ts":1733971082762688, "dur":1068153, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/level4" }}
-,{ "pid":12345, "tid":8, "ts":1733971083830859, "dur":327189, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":9, "ts":1733971081163734, "dur":2375, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":9, "ts":1733971081166112, "dur":349, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":9, "ts":1733971081166461, "dur":993, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":9, "ts":1733971081674524, "dur":83929, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/MonoBleedingEdge/etc/mono/4.0/web.config" }}
-,{ "pid":12345, "tid":9, "ts":1733971081758471, "dur":83274, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Managed/System.Configuration.dll" }}
-,{ "pid":12345, "tid":9, "ts":1733971081841764, "dur":10809, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Managed/Unity.2D.PixelPerfect.dll" }}
-,{ "pid":12345, "tid":9, "ts":1733971081852616, "dur":9186, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Managed/Unity.Burst.dll" }}
-,{ "pid":12345, "tid":9, "ts":1733971081861849, "dur":4832, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Managed/UnityEngine.UnityWebRequestTextureModule.dll" }}
-,{ "pid":12345, "tid":9, "ts":1733971081866718, "dur":103825, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Managed/UnityEngine.TerrainPhysicsModule.dll" }}
-,{ "pid":12345, "tid":9, "ts":1733971081970564, "dur":73, "ph":"X", "name": "EmitNodeStart",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":9, "ts":1733971081970641, "dur":100996, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Managed/UnityEngine.PropertiesModule.dll" }}
-,{ "pid":12345, "tid":9, "ts":1733971082071659, "dur":9762, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Managed/UnityEngine.GIModule.dll" }}
-,{ "pid":12345, "tid":9, "ts":1733971082081467, "dur":206359, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Managed/UnityEngine.ARModule.dll" }}
-,{ "pid":12345, "tid":9, "ts":1733971082287861, "dur":518522, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/RuntimeInitializeOnLoads.json" }}
-,{ "pid":12345, "tid":9, "ts":1733971082806485, "dur":1024348, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/level1" }}
-,{ "pid":12345, "tid":9, "ts":1733971083830855, "dur":327191, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":10, "ts":1733971081163884, "dur":2234, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":10, "ts":1733971081166120, "dur":359, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":10, "ts":1733971081166479, "dur":971, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":10, "ts":1733971081266124, "dur":57557, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx" }}
-,{ "pid":12345, "tid":10, "ts":1733971081323742, "dur":39511, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/MonoBleedingEdge/etc/mono/2.0/machine.config" }}
-,{ "pid":12345, "tid":10, "ts":1733971081363320, "dur":388107, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/MonoBleedingEdge/EmbedRuntime/mono-2.0-bdwgc.dll" }}
-,{ "pid":12345, "tid":10, "ts":1733971081751454, "dur":7301, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Managed/System.IO.Compression.dll" }}
-,{ "pid":12345, "tid":10, "ts":1733971081758790, "dur":83155, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Managed/Mono.Security.dll" }}
-,{ "pid":12345, "tid":10, "ts":1733971081841967, "dur":11518, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Managed/Unity.2D.SpriteShape.Runtime.dll" }}
-,{ "pid":12345, "tid":10, "ts":1733971081853507, "dur":7300, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Managed/Unity.2D.IK.Runtime.dll" }}
-,{ "pid":12345, "tid":10, "ts":1733971081860825, "dur":4564, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Managed/UnityEngine.VFXModule.dll" }}
-,{ "pid":12345, "tid":10, "ts":1733971081865425, "dur":105449, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Managed/UnityEngine.UIElementsModule.dll" }}
-,{ "pid":12345, "tid":10, "ts":1733971081970902, "dur":100726, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Managed/UnityEngine.PerformanceReportingModule.dll" }}
-,{ "pid":12345, "tid":10, "ts":1733971082071652, "dur":9771, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Managed/UnityEngine.GameCenterModule.dll" }}
-,{ "pid":12345, "tid":10, "ts":1733971082081514, "dur":2076498, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/UnityPlayer.dll" }}
-,{ "pid":12345, "tid":11, "ts":1733971081164090, "dur":2089, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":11, "ts":1733971081166180, "dur":1262, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":11, "ts":1733971081184828, "dur":81704, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/MonoBleedingEdge/etc/mono/browscap.ini" }}
-,{ "pid":12345, "tid":11, "ts":1733971081266587, "dur":66435, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/MonoBleedingEdge/etc/mono/2.0/settings.map" }}
-,{ "pid":12345, "tid":11, "ts":1733971081333076, "dur":30469, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/MonoBleedingEdge/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx" }}
-,{ "pid":12345, "tid":11, "ts":1733971081447035, "dur":221835, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Resources/unity default resources" }}
-,{ "pid":12345, "tid":11, "ts":1733971081668908, "dur":90031, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Managed/System.ServiceModel.Internals.dll" }}
-,{ "pid":12345, "tid":11, "ts":1733971081759024, "dur":82525, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Managed/Unity.Burst.Unsafe.dll" }}
-,{ "pid":12345, "tid":11, "ts":1733971081841576, "dur":12488, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Managed/Unity.TextMeshPro.dll" }}
-,{ "pid":12345, "tid":11, "ts":1733971081854104, "dur":7671, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Managed/UnityEngine.dll" }}
-,{ "pid":12345, "tid":11, "ts":1733971081861819, "dur":4053, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Managed/UnityEngine.UnityWebRequestWWWModule.dll" }}
-,{ "pid":12345, "tid":11, "ts":1733971081865909, "dur":103835, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Managed/UnityEngine.TextRenderingModule.dll" }}
-,{ "pid":12345, "tid":11, "ts":1733971081969790, "dur":98748, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Managed/UnityEngine.ScreenCaptureModule.dll" }}
-,{ "pid":12345, "tid":11, "ts":1733971082068563, "dur":4970, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Managed/UnityEngine.IMGUIModule.dll" }}
-,{ "pid":12345, "tid":11, "ts":1733971082073559, "dur":29327, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Managed/UnityEngine.AndroidJNIModule.dll" }}
-,{ "pid":12345, "tid":11, "ts":1733971082102913, "dur":493830, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/sharedassets7.assets" }}
-,{ "pid":12345, "tid":11, "ts":1733971082596767, "dur":1251721, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/level5" }}
-,{ "pid":12345, "tid":11, "ts":1733971083848509, "dur":309549, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":12, "ts":1733971081164045, "dur":2120, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":12, "ts":1733971081166167, "dur":297, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":12, "ts":1733971081166464, "dur":1026, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":12, "ts":1733971081854051, "dur":7772, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/MonoBleedingEdge/etc/mono/4.0/machine.config" }}
-,{ "pid":12345, "tid":12, "ts":1733971081861877, "dur":5780, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Managed/UnityEngine.UnityConnectModule.dll" }}
-,{ "pid":12345, "tid":12, "ts":1733971081867679, "dur":103544, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Managed/UnityEngine.TLSModule.dll" }}
-,{ "pid":12345, "tid":12, "ts":1733971081971267, "dur":102128, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Managed/UnityEngine.LocalizationModule.dll" }}
-,{ "pid":12345, "tid":12, "ts":1733971082073440, "dur":30108, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Managed/UnityEngine.AudioModule.dll" }}
-,{ "pid":12345, "tid":12, "ts":1733971082103571, "dur":1876515, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/sharedassets1.assets.resS" }}
-,{ "pid":12345, "tid":12, "ts":1733971083980095, "dur":177952, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":13, "ts":1733971081164146, "dur":2045, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":13, "ts":1733971081166192, "dur":1243, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":13, "ts":1733971081658917, "dur":98286, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/app.info" }}
-,{ "pid":12345, "tid":13, "ts":1733971081757240, "dur":84928, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Managed/System.Drawing.dll" }}
-,{ "pid":12345, "tid":13, "ts":1733971081842218, "dur":11856, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Managed/Unity.Timeline.dll" }}
-,{ "pid":12345, "tid":13, "ts":1733971081854121, "dur":7698, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Managed/UnityEngine.WindModule.dll" }}
-,{ "pid":12345, "tid":13, "ts":1733971081861871, "dur":4768, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Managed/UnityEngine.UnityCurlModule.dll" }}
-,{ "pid":12345, "tid":13, "ts":1733971081970565, "dur":86, "ph":"X", "name": "EmitNodeFinish",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":13, "ts":1733971081866665, "dur":103997, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Managed/UnityEngine.TextCoreTextEngineModule.dll" }}
-,{ "pid":12345, "tid":13, "ts":1733971081970696, "dur":100986, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Managed/UnityEngine.Physics2DModule.dll" }}
-,{ "pid":12345, "tid":13, "ts":1733971082071734, "dur":10371, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Managed/UnityEngine.DSPGraphModule.dll" }}
-,{ "pid":12345, "tid":13, "ts":1733971082082126, "dur":205635, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/sharedassets9.assets" }}
-,{ "pid":12345, "tid":13, "ts":1733971082287821, "dur":308849, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/ScriptingAssemblies.json" }}
-,{ "pid":12345, "tid":13, "ts":1733971082596686, "dur":1243846, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/level6" }}
-,{ "pid":12345, "tid":13, "ts":1733971083840541, "dur":317544, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":14, "ts":1733971081164073, "dur":2101, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":14, "ts":1733971081166175, "dur":1262, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":14, "ts":1733971081167657, "dur":93, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\GitHub\\GameDevelopmentProjectI\\Chisel\\ChiselGame\\Chisel\\Library\\Bee\\PlayerScriptAssemblies\\Assembly-CSharp.dll" }}
-,{ "pid":12345, "tid":14, "ts":1733971081167751, "dur":64, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\GitHub\\GameDevelopmentProjectI\\Chisel\\ChiselGame\\Chisel\\Library\\Bee\\PlayerScriptAssemblies\\Unity.2D.IK.Runtime.dll" }}
-,{ "pid":12345, "tid":14, "ts":1733971081167816, "dur":231, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\GitHub\\GameDevelopmentProjectI\\Chisel\\ChiselGame\\Chisel\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Burst.dll" }}
-,{ "pid":12345, "tid":14, "ts":1733971081168048, "dur":386, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\GitHub\\GameDevelopmentProjectI\\Chisel\\ChiselGame\\Chisel\\Library\\Bee\\PlayerScriptAssemblies\\Unity.VisualScripting.Core.dll" }}
-,{ "pid":12345, "tid":14, "ts":1733971081168435, "dur":87, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\GitHub\\GameDevelopmentProjectI\\Chisel\\ChiselGame\\Chisel\\Library\\Bee\\PlayerScriptAssemblies\\Unity.2D.Animation.Runtime.dll" }}
-,{ "pid":12345, "tid":14, "ts":1733971081168523, "dur":58, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\GitHub\\GameDevelopmentProjectI\\Chisel\\ChiselGame\\Chisel\\Library\\Bee\\PlayerScriptAssemblies\\Unity.2D.Tilemap.Extras.dll" }}
-,{ "pid":12345, "tid":14, "ts":1733971081168582, "dur":231, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\GitHub\\GameDevelopmentProjectI\\Chisel\\ChiselGame\\Chisel\\Library\\Bee\\PlayerScriptAssemblies\\Unity.VisualScripting.Flow.dll" }}
-,{ "pid":12345, "tid":14, "ts":1733971081168858, "dur":58, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\GitHub\\GameDevelopmentProjectI\\Chisel\\ChiselGame\\Chisel\\Library\\Bee\\PlayerScriptAssemblies\\Unity.2D.Common.Runtime.dll" }}
-,{ "pid":12345, "tid":14, "ts":1733971081168916, "dur":166, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\GitHub\\GameDevelopmentProjectI\\Chisel\\ChiselGame\\Chisel\\Library\\Bee\\PlayerScriptAssemblies\\UnityEngine.UI.dll" }}
-,{ "pid":12345, "tid":14, "ts":1733971081169083, "dur":99, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\GitHub\\GameDevelopmentProjectI\\Chisel\\ChiselGame\\Chisel\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Timeline.dll" }}
-,{ "pid":12345, "tid":14, "ts":1733971081169183, "dur":216, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\GitHub\\GameDevelopmentProjectI\\Chisel\\ChiselGame\\Chisel\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Collections.dll" }}
-,{ "pid":12345, "tid":14, "ts":1733971081169400, "dur":108, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\GitHub\\GameDevelopmentProjectI\\Chisel\\ChiselGame\\Chisel\\Library\\Bee\\PlayerScriptAssemblies\\Unity.2D.SpriteShape.Runtime.dll" }}
-,{ "pid":12345, "tid":14, "ts":1733971081169554, "dur":415, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\GitHub\\GameDevelopmentProjectI\\Chisel\\ChiselGame\\Chisel\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Mathematics.dll" }}
-,{ "pid":12345, "tid":14, "ts":1733971081169970, "dur":223, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\GitHub\\GameDevelopmentProjectI\\Chisel\\ChiselGame\\Chisel\\Library\\Bee\\PlayerScriptAssemblies\\Unity.TextMeshPro.dll" }}
-,{ "pid":12345, "tid":14, "ts":1733971081170194, "dur":52, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\GitHub\\GameDevelopmentProjectI\\Chisel\\ChiselGame\\Chisel\\Library\\Bee\\PlayerScriptAssemblies\\Unity.VisualScripting.State.dll" }}
-,{ "pid":12345, "tid":14, "ts":1733971081167447, "dur":2859, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"GenerateNativePluginsForAssemblies Library/Bee/artifacts/WinPlayerBuildProgram/AsyncPluginsFromLinker" }}
-,{ "pid":12345, "tid":14, "ts":1733971081971628, "dur":98918, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Plugins/x86_64/lib_burst_generated.dll" }}
-,{ "pid":12345, "tid":14, "ts":1733971082070572, "dur":3867, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Managed/UnityEngine.GridModule.dll" }}
-,{ "pid":12345, "tid":14, "ts":1733971082074461, "dur":28910, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Managed/UnityEngine.AccessibilityModule.dll" }}
-,{ "pid":12345, "tid":14, "ts":1733971082103400, "dur":702879, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/sharedassets6.assets" }}
-,{ "pid":12345, "tid":14, "ts":1733971082806388, "dur":1024459, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/level2" }}
-,{ "pid":12345, "tid":14, "ts":1733971083830862, "dur":327218, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":15, "ts":1733971081164112, "dur":2071, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":15, "ts":1733971081166184, "dur":1260, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":15, "ts":1733971081167445, "dur":79, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles E:/UnityGames/(!)BUILDS/ChiselA3/MonoBleedingEdge/etc/mono/4.5/web.config" }}
-,{ "pid":12345, "tid":15, "ts":1733971081861802, "dur":4062, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/MonoBleedingEdge/etc/mono/4.5/web.config" }}
-,{ "pid":12345, "tid":15, "ts":1733971081865884, "dur":103908, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Managed/UnityEngine.TilemapModule.dll" }}
-,{ "pid":12345, "tid":15, "ts":1733971081969820, "dur":99533, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Managed/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll" }}
-,{ "pid":12345, "tid":15, "ts":1733971082069393, "dur":3948, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Managed/UnityEngine.HotReloadModule.dll" }}
-,{ "pid":12345, "tid":15, "ts":1733971082073411, "dur":29964, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Managed/UnityEngine.ClusterInputModule.dll" }}
-,{ "pid":12345, "tid":15, "ts":1733971082103402, "dur":702978, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/sharedassets5.assets" }}
-,{ "pid":12345, "tid":15, "ts":1733971082806445, "dur":1034083, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/level10" }}
-,{ "pid":12345, "tid":15, "ts":1733971083840539, "dur":317546, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":16, "ts":1733971081164129, "dur":2059, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":16, "ts":1733971081166188, "dur":1250, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":16, "ts":1733971081513679, "dur":161082, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/UnityCrashHandler64.exe" }}
-,{ "pid":12345, "tid":16, "ts":1733971081674783, "dur":83106, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Managed/System.Net.Http.dll" }}
-,{ "pid":12345, "tid":16, "ts":1733971081757918, "dur":84722, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Managed/System.Core.dll" }}
-,{ "pid":12345, "tid":16, "ts":1733971081842656, "dur":11413, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Managed/UnityEngine.UI.dll" }}
-,{ "pid":12345, "tid":16, "ts":1733971081854095, "dur":7716, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Managed/UnityEngine.XRModule.dll" }}
-,{ "pid":12345, "tid":16, "ts":1733971081861861, "dur":99176, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Managed/UnityEngine.UnityTestProtocolModule.dll" }}
-,{ "pid":12345, "tid":16, "ts":1733971081961058, "dur":10222, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Managed/UnityEngine.SpriteShapeModule.dll" }}
-,{ "pid":12345, "tid":16, "ts":1733971081971360, "dur":102016, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Managed/UnityEngine.InputLegacyModule.dll" }}
-,{ "pid":12345, "tid":16, "ts":1733971082073416, "dur":30118, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/Managed/UnityEngine.ClothModule.dll" }}
-,{ "pid":12345, "tid":16, "ts":1733971082103574, "dur":303453, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/sharedassets3.assets" }}
-,{ "pid":12345, "tid":16, "ts":1733971082407111, "dur":716679, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/level9" }}
-,{ "pid":12345, "tid":16, "ts":1733971083123827, "dur":724681, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselA3/Chisel_Data/level0" }}
-,{ "pid":12345, "tid":16, "ts":1733971083848525, "dur":309557, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1733971084262274, "dur":753, "ph":"X", "name": "ProfilerWriteOutput" }
+,{ "pid":12345, "tid":0, "ts":1734547039057836, "dur":45013, "ph":"X", "name": "DriverInitData",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1734547039102855, "dur":119, "ph":"X", "name": "RemoveStaleOutputs",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1734547039103017, "dur":314, "ph":"X", "name": "BuildQueueInit",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1734547039104036, "dur":86, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/UnityEngine.CoreModule.dll" }}
+,{ "pid":12345, "tid":0, "ts":1734547039124266, "dur":75, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/UnityEngine.UIModule.dll" }}
+,{ "pid":12345, "tid":0, "ts":1734547039124497, "dur":72, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/UnityEngine.VirtualTexturingModule.dll" }}
+,{ "pid":12345, "tid":0, "ts":1734547039124737, "dur":71, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/Unity.2D.SpriteShape.Runtime.dll" }}
+,{ "pid":12345, "tid":0, "ts":1734547039124855, "dur":73, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/Unity.VisualScripting.Antlr3.Runtime.dll" }}
+,{ "pid":12345, "tid":0, "ts":1734547039124972, "dur":75, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/Mono.Security.dll" }}
+,{ "pid":12345, "tid":0, "ts":1734547039125112, "dur":73, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/System.IO.Compression.FileSystem.dll" }}
+,{ "pid":12345, "tid":0, "ts":1734547039125232, "dur":68, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/System.ServiceModel.Internals.dll" }}
+,{ "pid":12345, "tid":0, "ts":1734547039125443, "dur":70, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles E:/UnityGames/(!)BUILDS/ChiselDemo1/MonoBleedingEdge/EmbedRuntime/MonoPosixHelper.dll" }}
+,{ "pid":12345, "tid":0, "ts":1734547039125558, "dur":77, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles E:/UnityGames/(!)BUILDS/ChiselDemo1/MonoBleedingEdge/etc/mono/4.0/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":0, "ts":1734547039125672, "dur":76, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles E:/UnityGames/(!)BUILDS/ChiselDemo1/MonoBleedingEdge/etc/mono/4.0/settings.map" }}
+,{ "pid":12345, "tid":0, "ts":1734547039125786, "dur":67, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles E:/UnityGames/(!)BUILDS/ChiselDemo1/MonoBleedingEdge/etc/mono/4.5/settings.map" }}
+,{ "pid":12345, "tid":0, "ts":1734547039125892, "dur":70, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles E:/UnityGames/(!)BUILDS/ChiselDemo1/UnityCrashHandler64.exe" }}
+,{ "pid":12345, "tid":0, "ts":1734547039103344, "dur":22629, "ph":"X", "name": "EnqueueRequestedNodes",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1734547039125974, "dur":9297507, "ph":"X", "name": "WaitForBuildFinished", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1734547048423482, "dur":448, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1734547048424055, "dur":4689, "ph":"X", "name": "Tundra",  "args": { "detail":"Write AllBuiltNodes" }}
+,{ "pid":12345, "tid":1, "ts":1734547039103982, "dur":22365, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1734547039126347, "dur":998, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1734547039127547, "dur":102, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\GitHub\\GameDevelopmentProjectI\\Chisel\\ChiselGame\\Chisel\\Library\\Bee\\PlayerScriptAssemblies\\Assembly-CSharp.dll" }}
+,{ "pid":12345, "tid":1, "ts":1734547039127650, "dur":101, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\GitHub\\GameDevelopmentProjectI\\Chisel\\ChiselGame\\Chisel\\Library\\Bee\\PlayerScriptAssemblies\\Unity.2D.IK.Runtime.dll" }}
+,{ "pid":12345, "tid":1, "ts":1734547039127752, "dur":276, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\GitHub\\GameDevelopmentProjectI\\Chisel\\ChiselGame\\Chisel\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Burst.dll" }}
+,{ "pid":12345, "tid":1, "ts":1734547039128028, "dur":377, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\GitHub\\GameDevelopmentProjectI\\Chisel\\ChiselGame\\Chisel\\Library\\Bee\\PlayerScriptAssemblies\\Unity.VisualScripting.Core.dll" }}
+,{ "pid":12345, "tid":1, "ts":1734547039128406, "dur":74, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\GitHub\\GameDevelopmentProjectI\\Chisel\\ChiselGame\\Chisel\\Library\\Bee\\PlayerScriptAssemblies\\Unity.2D.Animation.Runtime.dll" }}
+,{ "pid":12345, "tid":1, "ts":1734547039128481, "dur":55, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\GitHub\\GameDevelopmentProjectI\\Chisel\\ChiselGame\\Chisel\\Library\\Bee\\PlayerScriptAssemblies\\Unity.2D.Tilemap.Extras.dll" }}
+,{ "pid":12345, "tid":1, "ts":1734547039128537, "dur":226, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\GitHub\\GameDevelopmentProjectI\\Chisel\\ChiselGame\\Chisel\\Library\\Bee\\PlayerScriptAssemblies\\Unity.VisualScripting.Flow.dll" }}
+,{ "pid":12345, "tid":1, "ts":1734547039128809, "dur":55, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\GitHub\\GameDevelopmentProjectI\\Chisel\\ChiselGame\\Chisel\\Library\\Bee\\PlayerScriptAssemblies\\Unity.2D.Common.Runtime.dll" }}
+,{ "pid":12345, "tid":1, "ts":1734547039128865, "dur":203, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\GitHub\\GameDevelopmentProjectI\\Chisel\\ChiselGame\\Chisel\\Library\\Bee\\PlayerScriptAssemblies\\UnityEngine.UI.dll" }}
+,{ "pid":12345, "tid":1, "ts":1734547039129069, "dur":122, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\GitHub\\GameDevelopmentProjectI\\Chisel\\ChiselGame\\Chisel\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Timeline.dll" }}
+,{ "pid":12345, "tid":1, "ts":1734547039129191, "dur":225, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\GitHub\\GameDevelopmentProjectI\\Chisel\\ChiselGame\\Chisel\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Collections.dll" }}
+,{ "pid":12345, "tid":1, "ts":1734547039129416, "dur":103, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\GitHub\\GameDevelopmentProjectI\\Chisel\\ChiselGame\\Chisel\\Library\\Bee\\PlayerScriptAssemblies\\Unity.2D.SpriteShape.Runtime.dll" }}
+,{ "pid":12345, "tid":1, "ts":1734547039129562, "dur":404, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\GitHub\\GameDevelopmentProjectI\\Chisel\\ChiselGame\\Chisel\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Mathematics.dll" }}
+,{ "pid":12345, "tid":1, "ts":1734547039129966, "dur":235, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\GitHub\\GameDevelopmentProjectI\\Chisel\\ChiselGame\\Chisel\\Library\\Bee\\PlayerScriptAssemblies\\Unity.TextMeshPro.dll" }}
+,{ "pid":12345, "tid":1, "ts":1734547039130202, "dur":55, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\GitHub\\GameDevelopmentProjectI\\Chisel\\ChiselGame\\Chisel\\Library\\Bee\\PlayerScriptAssemblies\\Unity.VisualScripting.State.dll" }}
+,{ "pid":12345, "tid":1, "ts":1734547039127348, "dur":2974, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"GenerateNativePluginsForAssemblies Library/Bee/artifacts/WinPlayerBuildProgram/AsyncPluginsFromLinker" }}
+,{ "pid":12345, "tid":1, "ts":1734547039150018, "dur":65, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1734547040231098, "dur":8189213, "ph":"X", "name": "GenerateNativePluginsForAssemblies",  "args": { "detail":"Library/Bee/artifacts/WinPlayerBuildProgram/AsyncPluginsFromLinker" }}
+,{ "pid":12345, "tid":1, "ts":1734547048421596, "dur":1856, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Plugins/x86_64/lib_burst_generated.dll" }}
+,{ "pid":12345, "tid":2, "ts":1734547039103759, "dur":22444, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1734547039126205, "dur":253, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1734547039126458, "dur":932, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1734547039127391, "dur":21525, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles E:/UnityGames/(!)BUILDS/ChiselDemo1/MonoBleedingEdge/etc/mono/4.0/settings.map" }}
+,{ "pid":12345, "tid":2, "ts":1734547040283832, "dur":85024, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/MonoBleedingEdge/etc/mono/4.0/settings.map" }}
+,{ "pid":12345, "tid":2, "ts":1734547040368887, "dur":465148, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/Unity.2D.SpriteShape.Runtime.dll" }}
+,{ "pid":12345, "tid":2, "ts":1734547040834078, "dur":449604, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/Unity.2D.IK.Runtime.dll" }}
+,{ "pid":12345, "tid":2, "ts":1734547041283708, "dur":76389, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/UnityEngine.UnityWebRequestTextureModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1734547041360123, "dur":172203, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/UnityEngine.TextCoreFontEngineModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1734547041532364, "dur":80468, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/UnityEngine.PerformanceReportingModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1734547041612864, "dur":182166, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/UnityEngine.DSPGraphModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1734547041795070, "dur":433554, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/sharedassets9.assets" }}
+,{ "pid":12345, "tid":2, "ts":1734547042228670, "dur":695842, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/sharedassets1.assets" }}
+,{ "pid":12345, "tid":2, "ts":1734547042924534, "dur":1337547, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/level4" }}
+,{ "pid":12345, "tid":2, "ts":1734547044262115, "dur":4161362, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1734547039103637, "dur":22519, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1734547039126158, "dur":223, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1734547039126381, "dur":1006, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1734547039127388, "dur":65, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles E:/UnityGames/(!)BUILDS/ChiselDemo1/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":3, "ts":1734547039413292, "dur":54882, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":3, "ts":1734547039501780, "dur":213848, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/System.Xml.Linq.dll" }}
+,{ "pid":12345, "tid":3, "ts":1734547039715652, "dur":485773, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/System.Security.dll" }}
+,{ "pid":12345, "tid":3, "ts":1734547040201456, "dur":195905, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/netstandard.dll" }}
+,{ "pid":12345, "tid":3, "ts":1734547040397398, "dur":853690, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/UnityEngine.UI.dll" }}
+,{ "pid":12345, "tid":3, "ts":1734547041251143, "dur":38275, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/UnityEngine.UnityWebRequestWWWModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1734547041289479, "dur":216271, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/UnityEngine.UIElementsModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1734547041505815, "dur":62972, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1734547041568807, "dur":210264, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/UnityEngine.DirectorModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1734547041779105, "dur":90, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\Unity\\2022.3.16f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\win64_player_nondevelopment_mono\\UnityPlayer.dll" }}
+,{ "pid":12345, "tid":3, "ts":1734547041779103, "dur":94, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles E:/UnityGames/(!)BUILDS/ChiselDemo1/UnityPlayer.dll" }}
+,{ "pid":12345, "tid":3, "ts":1734547041779219, "dur":2239173, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/UnityPlayer.dll" }}
+,{ "pid":12345, "tid":3, "ts":1734547044018445, "dur":288404, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/globalgamemanagers" }}
+,{ "pid":12345, "tid":3, "ts":1734547044306865, "dur":4116643, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1734547039103539, "dur":22527, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1734547039126068, "dur":172, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1734547039126240, "dur":339, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1734547039126579, "dur":771, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1734547039127356, "dur":54, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\Unity\\2022.3.16f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\win64_player_nondevelopment_mono\\MonoBleedingEdge\\etc\\mono\\mconfig\\config.xml" }}
+,{ "pid":12345, "tid":4, "ts":1734547039127351, "dur":60, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles E:/UnityGames/(!)BUILDS/ChiselDemo1/MonoBleedingEdge/etc/mono/mconfig/config.xml" }}
+,{ "pid":12345, "tid":4, "ts":1734547039239789, "dur":14205, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/MonoBleedingEdge/etc/mono/mconfig/config.xml" }}
+,{ "pid":12345, "tid":4, "ts":1734547039254035, "dur":156729, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/MonoBleedingEdge/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":4, "ts":1734547039462582, "dur":584214, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Resources/unity default resources" }}
+,{ "pid":12345, "tid":4, "ts":1734547040201319, "dur":64, "ph":"X", "name": "EmitNodeFinish",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1734547040046820, "dur":154574, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/System.IO.Compression.dll" }}
+,{ "pid":12345, "tid":4, "ts":1734547040201433, "dur":131683, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/System.ComponentModel.Composition.dll" }}
+,{ "pid":12345, "tid":4, "ts":1734547040333161, "dur":613282, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/Unity.Mathematics.dll" }}
+,{ "pid":12345, "tid":4, "ts":1734547040946471, "dur":339114, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/UnityEngine.XRModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1734547041285658, "dur":189757, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/UnityEngine.UnityCurlModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1734547041475440, "dur":63757, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/UnityEngine.SubstanceModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1734547041539239, "dur":108520, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/UnityEngine.JSONSerializeModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1734547041647792, "dur":455423, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/UnityEngine.ClothModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1734547042103265, "dur":563618, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/sharedassets10.assets" }}
+,{ "pid":12345, "tid":4, "ts":1734547042666931, "dur":1549086, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/level7" }}
+,{ "pid":12345, "tid":4, "ts":1734547044216036, "dur":4207443, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1734547039103537, "dur":22491, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1734547039126030, "dur":1309, "ph":"X", "name": "CheckDagSignatures",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1734547039462650, "dur":248558, "ph":"X", "name": "WriteText",  "args": { "detail":"Library/Bee/artifacts/csharpactions/boot.config_tyr4.info" }}
+,{ "pid":12345, "tid":5, "ts":1734547039711215, "dur":88, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\PlayerDataCache\\Win64\\Data\\boot.config" }}
+,{ "pid":12345, "tid":5, "ts":1734547039711312, "dur":6566, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\PlayerDataCache\\Win64\\Data\\RuntimeInitializeOnLoads.json" }}
+,{ "pid":12345, "tid":5, "ts":1734547039717881, "dur":86, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\PlayerDataCache\\Win64\\Data\\ScriptingAssemblies.json" }}
+,{ "pid":12345, "tid":5, "ts":1734547039718139, "dur":74, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\Playera5b13d52-inputdata.json" }}
+,{ "pid":12345, "tid":5, "ts":1734547039711213, "dur":7072, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"AddBootConfigGUID Library/Bee/artifacts/WinPlayerBuildProgram/boot.config" }}
+,{ "pid":12345, "tid":5, "ts":1734547040101985, "dur":110447, "ph":"X", "name": "AddBootConfigGUID",  "args": { "detail":"Library/Bee/artifacts/WinPlayerBuildProgram/boot.config" }}
+,{ "pid":12345, "tid":5, "ts":1734547040213347, "dur":86, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\boot.config" }}
+,{ "pid":12345, "tid":5, "ts":1734547040213346, "dur":88, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/boot.config" }}
+,{ "pid":12345, "tid":5, "ts":1734547040213448, "dur":69681, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/boot.config" }}
+,{ "pid":12345, "tid":5, "ts":1734547040283151, "dur":251425, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/Unity.Collections.LowLevel.ILSupport.dll" }}
+,{ "pid":12345, "tid":5, "ts":1734547040534625, "dur":749866, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/Unity.VisualScripting.Core.dll" }}
+,{ "pid":12345, "tid":5, "ts":1734547041284508, "dur":115792, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/UnityEngine.UnityTestProtocolModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1734547041400327, "dur":137954, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/UnityEngine.TLSModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1734547041538312, "dur":84168, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/UnityEngine.ParticleSystemModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1734547041622517, "dur":301167, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/UnityEngine.CoreModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1734547042237036, "dur":51, "ph":"X", "name": "EmitNodeFinish",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1734547041923722, "dur":313394, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/sharedassets5.assets" }}
+,{ "pid":12345, "tid":5, "ts":1734547042237158, "dur":492241, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Resources/unity_builtin_extra" }}
+,{ "pid":12345, "tid":5, "ts":1734547042729433, "dur":1497513, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/level5" }}
+,{ "pid":12345, "tid":5, "ts":1734547044226966, "dur":4196518, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1734547039103865, "dur":22369, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1734547039126237, "dur":337, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1734547039126574, "dur":812, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1734547039127397, "dur":350, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\Unity\\2022.3.16f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\win64_player_nondevelopment_mono\\MonoBleedingEdge\\etc\\mono\\4.5\\machine.config" }}
+,{ "pid":12345, "tid":6, "ts":1734547039127387, "dur":361, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles E:/UnityGames/(!)BUILDS/ChiselDemo1/MonoBleedingEdge/etc/mono/4.5/machine.config" }}
+,{ "pid":12345, "tid":6, "ts":1734547040046792, "dur":59543, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/MonoBleedingEdge/etc/mono/4.5/machine.config" }}
+,{ "pid":12345, "tid":6, "ts":1734547040106358, "dur":108177, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/System.Drawing.dll" }}
+,{ "pid":12345, "tid":6, "ts":1734547040214562, "dur":203645, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/System.Runtime.dll" }}
+,{ "pid":12345, "tid":6, "ts":1734547040418248, "dur":812530, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/Unity.InternalAPIEngineBridge.001.dll" }}
+,{ "pid":12345, "tid":6, "ts":1734547041230819, "dur":120399, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/UnityEngine.VRModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1734547041351257, "dur":154498, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/UnityEngine.TextRenderingModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1734547041505791, "dur":62217, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/UnityEngine.PropertiesModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1734547041568069, "dur":210995, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/UnityEngine.GridModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1734547042237035, "dur":84, "ph":"X", "name": "EmitNodeFinish",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1734547041779115, "dur":458015, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/UnityEngine.AIModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1734547042237171, "dur":1552925, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/resources.assets" }}
+,{ "pid":12345, "tid":6, "ts":1734547043790140, "dur":513588, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/level0" }}
+,{ "pid":12345, "tid":6, "ts":1734547044303752, "dur":4119759, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1734547039103597, "dur":22523, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1734547039126123, "dur":178, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1734547039126302, "dur":314, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1734547039126616, "dur":730, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1734547039127348, "dur":53, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles E:/UnityGames/(!)BUILDS/ChiselDemo1/UnityCrashHandler64.exe" }}
+,{ "pid":12345, "tid":7, "ts":1734547039150685, "dur":75354, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/UnityCrashHandler64.exe" }}
+,{ "pid":12345, "tid":7, "ts":1734547039227620, "dur":24919, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/MonoBleedingEdge/etc/mono/4.0/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":7, "ts":1734547039252626, "dur":55747, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/MonoBleedingEdge/etc/mono/2.0/machine.config" }}
+,{ "pid":12345, "tid":7, "ts":1734547039308396, "dur":149964, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel.exe" }}
+,{ "pid":12345, "tid":7, "ts":1734547039460346, "dur":255288, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/System.dll" }}
+,{ "pid":12345, "tid":7, "ts":1734547039715657, "dur":499089, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/System.Runtime.Serialization.dll" }}
+,{ "pid":12345, "tid":7, "ts":1734547040214762, "dur":203506, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/Unity.Burst.Unsafe.dll" }}
+,{ "pid":12345, "tid":7, "ts":1734547040418307, "dur":812474, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/Unity.2D.Tilemap.Extras.dll" }}
+,{ "pid":12345, "tid":7, "ts":1734547041230821, "dur":96665, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/UnityEngine.VehiclesModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1734547041327511, "dur":178258, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/UnityEngine.TilemapModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1734547041505828, "dur":116089, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/UnityEngine.Physics2DModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1734547041621946, "dur":183971, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/UnityEngine.CrashReportingModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1734547041805939, "dur":196358, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/sharedassets8.assets" }}
+,{ "pid":12345, "tid":7, "ts":1734547042103226, "dur":563662, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/sharedassets3.assets" }}
+,{ "pid":12345, "tid":7, "ts":1734547042666930, "dur":1560047, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/level6" }}
+,{ "pid":12345, "tid":7, "ts":1734547044226995, "dur":4196488, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1734547039103889, "dur":22397, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1734547039126289, "dur":277, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1734547039126566, "dur":823, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1734547039127400, "dur":21656, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\Unity\\2022.3.16f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\win64_player_nondevelopment_mono\\MonoBleedingEdge\\etc\\mono\\4.0\\web.config" }}
+,{ "pid":12345, "tid":8, "ts":1734547039127390, "dur":21669, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles E:/UnityGames/(!)BUILDS/ChiselDemo1/MonoBleedingEdge/etc/mono/4.0/web.config" }}
+,{ "pid":12345, "tid":8, "ts":1734547040369342, "dur":163526, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/MonoBleedingEdge/etc/mono/4.0/web.config" }}
+,{ "pid":12345, "tid":8, "ts":1734547040532894, "dur":750791, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/Unity.2D.Animation.Runtime.dll" }}
+,{ "pid":12345, "tid":8, "ts":1734547041283708, "dur":76397, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/UnityEngine.UnityWebRequestModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1734547041360130, "dur":145628, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/UnityEngine.TerrainPhysicsModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1734547041505791, "dur":61002, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/UnityEngine.ProfilerModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1734547041566816, "dur":99933, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/UnityEngine.HotReloadModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1734547041666779, "dur":570331, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/UnityEngine.AssetBundleModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1734547042237136, "dur":1220351, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/RuntimeInitializeOnLoads.json" }}
+,{ "pid":12345, "tid":8, "ts":1734547043457532, "dur":808357, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/level3" }}
+,{ "pid":12345, "tid":8, "ts":1734547044265903, "dur":4157606, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1734547039103918, "dur":22404, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1734547039126324, "dur":249, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1734547039126573, "dur":780, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1734547039127354, "dur":52, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles E:/UnityGames/(!)BUILDS/ChiselDemo1/MonoBleedingEdge/etc/mono/config" }}
+,{ "pid":12345, "tid":9, "ts":1734547039182491, "dur":44675, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/MonoBleedingEdge/etc/mono/config" }}
+,{ "pid":12345, "tid":9, "ts":1734547039239584, "dur":47023, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/MonoBleedingEdge/etc/mono/2.0/web.config" }}
+,{ "pid":12345, "tid":9, "ts":1734547039306986, "dur":161210, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/MonoBleedingEdge/EmbedRuntime/MonoPosixHelper.dll" }}
+,{ "pid":12345, "tid":9, "ts":1734547039501854, "dur":213628, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/System.Transactions.dll" }}
+,{ "pid":12345, "tid":9, "ts":1734547039715510, "dur":482969, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/System.ServiceModel.Internals.dll" }}
+,{ "pid":12345, "tid":9, "ts":1734547040198541, "dur":84591, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/System.Data.dll" }}
+,{ "pid":12345, "tid":9, "ts":1734547040283161, "dur":550886, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/Unity.VisualScripting.State.dll" }}
+,{ "pid":12345, "tid":9, "ts":1734547040834094, "dur":450379, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/UnityEngine.dll" }}
+,{ "pid":12345, "tid":9, "ts":1734547041284503, "dur":94338, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/UnityEngine.UnityWebRequestAssetBundleModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1734547041378914, "dur":159700, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/UnityEngine.TerrainModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1734547041538649, "dur":99552, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/UnityEngine.LocalizationModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1734547041638231, "dur":285449, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/UnityEngine.ClusterRendererModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1734547042237037, "dur":70, "ph":"X", "name": "EmitNodeFinish",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1734547041923722, "dur":313397, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/sharedassets6.assets" }}
+,{ "pid":12345, "tid":9, "ts":1734547042237143, "dur":1693960, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/resources.assets.resS" }}
+,{ "pid":12345, "tid":9, "ts":1734547043931141, "dur":419769, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/globalgamemanagers.assets.resS" }}
+,{ "pid":12345, "tid":9, "ts":1734547044350926, "dur":4072579, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1734547039103942, "dur":22387, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1734547039126329, "dur":1055, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1734547039307816, "dur":150597, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/MonoBleedingEdge/etc/mono/4.5/settings.map" }}
+,{ "pid":12345, "tid":10, "ts":1734547039460349, "dur":255300, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/System.Xml.dll" }}
+,{ "pid":12345, "tid":10, "ts":1734547039715673, "dur":483860, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/System.Numerics.dll" }}
+,{ "pid":12345, "tid":10, "ts":1734547040199566, "dur":167866, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/System.Core.dll" }}
+,{ "pid":12345, "tid":10, "ts":1734547040367465, "dur":597127, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/Unity.2D.PixelPerfect.dll" }}
+,{ "pid":12345, "tid":10, "ts":1734547040964678, "dur":322279, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/UnityEngine.WindModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1734547041286976, "dur":191476, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/UnityEngine.UnityAnalyticsCommonModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1734547041478496, "dur":76627, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/UnityEngine.SpriteMaskModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1734547041555172, "dur":111605, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/UnityEngine.ImageConversionModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1734547041666812, "dur":663322, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/UnityEngine.AnimationModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1734547042330174, "dur":1600933, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/level9" }}
+,{ "pid":12345, "tid":10, "ts":1734547043931141, "dur":376929, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/globalgamemanagers.assets" }}
+,{ "pid":12345, "tid":10, "ts":1734547044308092, "dur":4115414, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1734547039103959, "dur":22375, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1734547039126335, "dur":1063, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1734547039127399, "dur":17348, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles E:/UnityGames/(!)BUILDS/ChiselDemo1/MonoBleedingEdge/etc/mono/4.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":11, "ts":1734547040201354, "dur":62768, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/MonoBleedingEdge/etc/mono/4.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":11, "ts":1734547040264177, "dur":133222, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/Unity.VisualScripting.Antlr3.Runtime.dll" }}
+,{ "pid":12345, "tid":11, "ts":1734547040397443, "dur":853441, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/Unity.2D.Common.Runtime.dll" }}
+,{ "pid":12345, "tid":11, "ts":1734547041250908, "dur":100383, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/UnityEngine.VFXModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1734547041351326, "dur":154436, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/UnityEngine.TextCoreTextEngineModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1734547041505824, "dur":62908, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/UnityEngine.PhysicsModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1734547041568753, "dur":106046, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/UnityEngine.GameCenterModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1734547042237038, "dur":60, "ph":"X", "name": "EmitNodeFinish",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1734547041674824, "dur":562289, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/UnityEngine.AccessibilityModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1734547042237145, "dur":2028737, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/resources.resource" }}
+,{ "pid":12345, "tid":11, "ts":1734547044265899, "dur":4157611, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1734547039103976, "dur":22365, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1734547039126341, "dur":1050, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1734547039127402, "dur":22021, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\Unity\\2022.3.16f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\win64_player_nondevelopment_mono\\MonoBleedingEdge\\etc\\mono\\4.0\\machine.config" }}
+,{ "pid":12345, "tid":12, "ts":1734547039127393, "dur":22032, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles E:/UnityGames/(!)BUILDS/ChiselDemo1/MonoBleedingEdge/etc/mono/4.0/machine.config" }}
+,{ "pid":12345, "tid":12, "ts":1734547040380861, "dur":156048, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/MonoBleedingEdge/etc/mono/4.0/machine.config" }}
+,{ "pid":12345, "tid":12, "ts":1734547040536929, "dur":748732, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/Unity.Burst.dll" }}
+,{ "pid":12345, "tid":12, "ts":1734547041285701, "dur":189733, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/UnityEngine.UnityConnectModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1734547041475451, "dur":64127, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/UnityEngine.SpriteShapeModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1734547041539625, "dur":108919, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/UnityEngine.InputLegacyModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1734547041648575, "dur":324415, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/UnityEngine.AudioModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1734547041973026, "dur":264049, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/sharedassets4.assets" }}
+,{ "pid":12345, "tid":12, "ts":1734547042237130, "dur":1552962, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/ScriptingAssemblies.json" }}
+,{ "pid":12345, "tid":12, "ts":1734547043790130, "dur":511914, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/level1" }}
+,{ "pid":12345, "tid":12, "ts":1734547044302062, "dur":4121446, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1734547039104066, "dur":22287, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1734547039126353, "dur":991, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1734547039127354, "dur":21275, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1734547040232346, "dur":148246, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/app.info" }}
+,{ "pid":12345, "tid":13, "ts":1734547040380601, "dur":585028, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/Unity.Timeline.dll" }}
+,{ "pid":12345, "tid":13, "ts":1734547040965672, "dur":323736, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/UnityEngine.VirtualTexturingModule.dll" }}
+,{ "pid":12345, "tid":13, "ts":1734547041289440, "dur":192712, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/UnityEngine.UmbraModule.dll" }}
+,{ "pid":12345, "tid":13, "ts":1734547041482191, "dur":86579, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/UnityEngine.SharedInternalsModule.dll" }}
+,{ "pid":12345, "tid":13, "ts":1734547041568795, "dur":126215, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/UnityEngine.GIModule.dll" }}
+,{ "pid":12345, "tid":13, "ts":1734547041695033, "dur":542033, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/UnityEngine.ARModule.dll" }}
+,{ "pid":12345, "tid":13, "ts":1734547042237124, "dur":1552936, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/sharedassets0.assets" }}
+,{ "pid":12345, "tid":13, "ts":1734547043790103, "dur":516755, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/level10" }}
+,{ "pid":12345, "tid":13, "ts":1734547044306872, "dur":4116643, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1734547039104343, "dur":22026, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1734547039126369, "dur":988, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1734547039127358, "dur":54, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles E:/UnityGames/(!)BUILDS/ChiselDemo1/MonoBleedingEdge/etc/mono/browscap.ini" }}
+,{ "pid":12345, "tid":14, "ts":1734547039252565, "dur":55643, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/MonoBleedingEdge/etc/mono/browscap.ini" }}
+,{ "pid":12345, "tid":14, "ts":1734547039308644, "dur":407014, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/MonoBleedingEdge/EmbedRuntime/mono-2.0-bdwgc.dll" }}
+,{ "pid":12345, "tid":14, "ts":1734547039715725, "dur":483804, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/System.Net.Http.dll" }}
+,{ "pid":12345, "tid":14, "ts":1734547040199558, "dur":84313, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/System.Data.DataSetExtensions.dll" }}
+,{ "pid":12345, "tid":14, "ts":1734547040283898, "dur":550144, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/Unity.TextMeshPro.dll" }}
+,{ "pid":12345, "tid":14, "ts":1734547040834084, "dur":449896, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/Assembly-CSharp.dll" }}
+,{ "pid":12345, "tid":14, "ts":1734547041284000, "dur":116308, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/UnityEngine.UnityWebRequestAudioModule.dll" }}
+,{ "pid":12345, "tid":14, "ts":1734547041400329, "dur":138281, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/UnityEngine.SubsystemsModule.dll" }}
+,{ "pid":12345, "tid":14, "ts":1734547041538637, "dur":94955, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/UnityEngine.NVIDIAModule.dll" }}
+,{ "pid":12345, "tid":14, "ts":1734547041633616, "dur":173825, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/UnityEngine.ContentLoadModule.dll" }}
+,{ "pid":12345, "tid":14, "ts":1734547041807464, "dur":421166, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/sharedassets7.assets" }}
+,{ "pid":12345, "tid":14, "ts":1734547042228670, "dur":1998303, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/sharedassets1.assets.resS" }}
+,{ "pid":12345, "tid":14, "ts":1734547044226989, "dur":4196496, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1734547039104158, "dur":22200, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1734547039126359, "dur":1002, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1734547039182913, "dur":45044, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/MonoBleedingEdge/etc/mono/4.5/web.config" }}
+,{ "pid":12345, "tid":15, "ts":1734547039228016, "dur":25980, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/MonoBleedingEdge/etc/mono/2.0/settings.map" }}
+,{ "pid":12345, "tid":15, "ts":1734547039306953, "dur":142325, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/MonoBleedingEdge/etc/mono/2.0/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":15, "ts":1734547039501746, "dur":603330, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/mscorlib.dll" }}
+,{ "pid":12345, "tid":15, "ts":1734547040105111, "dur":96301, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/System.EnterpriseServices.dll" }}
+,{ "pid":12345, "tid":15, "ts":1734547040201440, "dur":216786, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/Mono.Security.dll" }}
+,{ "pid":12345, "tid":15, "ts":1734547040418268, "dur":867595, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/Unity.VisualScripting.Flow.dll" }}
+,{ "pid":12345, "tid":15, "ts":1734547041285879, "dur":189551, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/UnityEngine.UnityAnalyticsModule.dll" }}
+,{ "pid":12345, "tid":15, "ts":1734547041475450, "dur":63792, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/UnityEngine.StreamingModule.dll" }}
+,{ "pid":12345, "tid":15, "ts":1734547041539271, "dur":107812, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/UnityEngine.InputModule.dll" }}
+,{ "pid":12345, "tid":15, "ts":1734547041647108, "dur":456097, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/UnityEngine.ClusterInputModule.dll" }}
+,{ "pid":12345, "tid":15, "ts":1734547042103261, "dur":473787, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/sharedassets2.assets" }}
+,{ "pid":12345, "tid":15, "ts":1734547042577073, "dur":1605382, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/level8" }}
+,{ "pid":12345, "tid":15, "ts":1734547044182471, "dur":4241009, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1734547039104311, "dur":22052, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1734547039126364, "dur":1024, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1734547039127389, "dur":172, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles E:/UnityGames/(!)BUILDS/ChiselDemo1/MonoBleedingEdge/etc/mono/4.5/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":16, "ts":1734547039715231, "dur":389638, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/MonoBleedingEdge/etc/mono/4.5/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":16, "ts":1734547040104915, "dur":96416, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/System.IO.Compression.FileSystem.dll" }}
+,{ "pid":12345, "tid":16, "ts":1734547040201389, "dur":177874, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/System.Configuration.dll" }}
+,{ "pid":12345, "tid":16, "ts":1734547040379284, "dur":658095, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/Unity.Collections.dll" }}
+,{ "pid":12345, "tid":16, "ts":1734547041037419, "dur":251992, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/UnityEngine.VideoModule.dll" }}
+,{ "pid":12345, "tid":16, "ts":1734547041289441, "dur":192727, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/UnityEngine.UIModule.dll" }}
+,{ "pid":12345, "tid":16, "ts":1734547041482198, "dur":72934, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/UnityEngine.ScreenCaptureModule.dll" }}
+,{ "pid":12345, "tid":16, "ts":1734547041555176, "dur":111607, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/UnityEngine.IMGUIModule.dll" }}
+,{ "pid":12345, "tid":16, "ts":1734547041666810, "dur":561832, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/Managed/UnityEngine.AndroidJNIModule.dll" }}
+,{ "pid":12345, "tid":16, "ts":1734547042228682, "dur":1486225, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/sharedassets0.assets.resS" }}
+,{ "pid":12345, "tid":16, "ts":1734547043714944, "dur":550942, "ph":"X", "name": "CopyFiles",  "args": { "detail":"E:/UnityGames/(!)BUILDS/ChiselDemo1/Chisel_Data/level2" }}
+,{ "pid":12345, "tid":16, "ts":1734547044265900, "dur":4157614, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1734547048473948, "dur":740, "ph":"X", "name": "ProfilerWriteOutput" }
 ,

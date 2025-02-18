@@ -100,7 +100,7 @@ public class BlockScript : MonoBehaviour
     {
         int currentHealth = blockHealth;
         animator.SetTrigger("GemBroken");
-        scoreManager.AddScoreForBlockBreak(100, currentHealth); // hard coded value, consider changing
+        scoreManager.AddScoreForBlockBreak(100);//,currentHealth); // hard coded value, consider changing
         ParticleSystem.EmitParams emitParams = new ParticleSystem.EmitParams
         {
             startColor = blockColorList[blockHealth - 1]
@@ -139,7 +139,6 @@ public class BlockScript : MonoBehaviour
         {
             // End of the chain reaction
             ResetHitBlocks();
-            scoreManager.ResetMultiplier();
         }
     }
     private IEnumerator WaitForChainEnd()
@@ -222,6 +221,7 @@ private bool CheckAdjacentBlock(Vector2 direction, int originalHealth)
     {
         int randomNumber = Random.Range(1, blockColorList.Count);
         blockHealth = randomNumber;
+
     }
 
     private void SetColorAndSprite()
