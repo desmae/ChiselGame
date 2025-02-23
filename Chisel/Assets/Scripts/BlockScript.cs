@@ -9,8 +9,8 @@ using UnityEngine;
      * Description: This code is written for individual block behaviours such as changing color, disappearing, and checking for
      * nearby block colors to see if they should change too.
      * 
-     * Last Changed by: Nicolas Kaplan
-     * Last Date Changed: 2024-11-21
+     * Last Changed by: Evan Robertson
+     * Last Date Changed: 2025-02-21
      * 
      * 
      *   -> 1.0 - Created BlockScript.cs and added basic block functionality,
@@ -35,6 +35,7 @@ using UnityEngine;
      *   -> 1.8 - Added the logic to increase the score when blocks change colour and break
      *   -> 1.9 - Changed location of click SFX so that it only plays once, added combo system functionality
      *   -> 2.0 - Blocks no longer Destroy(), but instead become invisible and untouchable
+     *   -> 2.1 - Added line to add block to the gem placing algorithm
      *   v2.0
      */
 public class BlockScript : MonoBehaviour
@@ -76,6 +77,12 @@ public class BlockScript : MonoBehaviour
         SetColorAndSprite();
         SetAnimationParams();
         scoreManager = FindObjectOfType<ScoreManager>();
+
+        GemPlacementManager manager = FindObjectOfType<GemPlacementManager>();
+        if (manager != null)
+        {
+            manager.allBlocks.Add(this);
+        }
     }
 
     void Update()
@@ -224,7 +231,7 @@ private bool CheckAdjacentBlock(Vector2 direction, int originalHealth)
 
     }
 
-    private void SetColorAndSprite()
+    public void SetColorAndSprite()
     {
         GetComponent<SpriteRenderer>().color = blockColorList[blockHealth];
         GetComponent<SpriteRenderer>().sprite = blockSpriteList[blockHealth].sprite;

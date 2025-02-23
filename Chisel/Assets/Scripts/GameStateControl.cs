@@ -14,8 +14,8 @@ public class GameStateControl : MonoBehaviour
      *              the amount of blocks left on screen. It will display a win / lose screen
      *              depending on whether the player's moves are 0 or no blocks are left.
      * 
-     * Last Changed by: Nicolas Kaplan
-     * Last Date Changed: 2024-11-21
+     * Last Changed by: Evan Robertson
+     * Last Date Changed: 2025-02-21
      * 
      * 
      *   -> 1.0 - Created GameStateControl.cs and created a basic win condition to
@@ -27,7 +27,9 @@ public class GameStateControl : MonoBehaviour
      *   -> 1.4 - Added canBreak static over here so players can't interact with game when gameover is on screen and
      *   added the LoadNextLevel() functionality, and a fallback as well as changing the music to the game's song.
      *   Finally, added animations for the moves counter.
-     *   v1.4
+     *   
+     *   -> 1.5 - Added call to regenerate gems using new gem placing algorithm
+     *   v1.5
      */
 
     private GameObject[] blocks;
@@ -130,6 +132,12 @@ public class GameStateControl : MonoBehaviour
         foreach (GameObject block in blocks)
         {
             blockList.Add(block);
+        }
+
+        GemPlacementManager manager = FindObjectOfType<GemPlacementManager>();
+        if (manager != null)
+        {
+            manager.AdjustGemsBasedOnDifficulty();
         }
     }
 
