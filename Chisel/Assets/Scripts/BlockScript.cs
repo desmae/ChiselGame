@@ -165,6 +165,9 @@ public class BlockScript : MonoBehaviour
     }
     private void CheckAdjacentBlocks(int originalHealth)
     {
+        // add a boolean check here to see if PowerUpManager.DiagonalBlocks is true
+        // if true, check for eight different directions, otherwise, check for just the
+        // cardinal directions
         Vector2[] directions = { Vector2.up, Vector2.down, Vector2.left, Vector2.right };
         bool foundAdjacentBlock = false;
 
