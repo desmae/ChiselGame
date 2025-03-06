@@ -9,8 +9,8 @@ using UnityEngine;
      * Description: This code is written for individual block behaviours such as changing color, disappearing, and checking for
      * nearby block colors to see if they should change too.
      * 
-     * Last Changed by: Evan Robertson
-     * Last Date Changed: 2025-02-21
+     * Last Changed by: Nicolas Kaplan
+     * Last Date Changed: 2025-03-08
      * 
      * 
      *   -> 1.0 - Created BlockScript.cs and added basic block functionality,
@@ -36,7 +36,8 @@ using UnityEngine;
      *   -> 1.9 - Changed location of click SFX so that it only plays once, added combo system functionality
      *   -> 2.0 - Blocks no longer Destroy(), but instead become invisible and untouchable
      *   -> 2.1 - Added line to add block to the gem placing algorithm
-     *   v2.0
+     *   -> 2.2 - Added diagonal gem power-up feature.
+     *   v2.2
      */
 public class BlockScript : MonoBehaviour
 {
@@ -168,7 +169,20 @@ public class BlockScript : MonoBehaviour
         // add a boolean check here to see if PowerUpManager.DiagonalBlocks is true
         // if true, check for eight different directions, otherwise, check for just the
         // cardinal directions
-        Vector2[] directions = { Vector2.up, Vector2.down, Vector2.left, Vector2.right };
+        Vector2[] directions;
+        if (PowerUpManager.diagonalGems)
+        {
+            directions = new Vector2[]{ Vector2.up, Vector2.down, Vector2.left, Vector2.right, 
+            new Vector2(1.4f, 1.4f), new Vector2(-1.4f, 1.4f), 
+            new Vector2(1.4f, -1.4f), new Vector2(-1.4f, -1.4f) };
+            // remember to add a visual for when the player has diagonal gems enabled
+            Debug.Log("Player can break blocks diagonally by the way!");
+        }
+        else
+        {
+            directions = new Vector2[]{ Vector2.up, Vector2.down, 
+            Vector2.left, Vector2.right };
+        }
         bool foundAdjacentBlock = false;
 
         foreach (Vector2 direction in directions)

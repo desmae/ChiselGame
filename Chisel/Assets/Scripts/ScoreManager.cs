@@ -12,7 +12,7 @@ using UnityEngine.UI;
      * Description: This code is written to increase the score as the player changes blocks colours, destroys blocks and completes combos
      * 
      * Last Changed by: Nicolas Kaplan
-     * Last Date Changed: 2025-02-17
+     * Last Date Changed: 2025-03-06
      * 
      * 
      *   -> 1.0 -Created ScoreManager and created the logic to get the score to change when a block changes colour or is destroyed.
@@ -21,7 +21,8 @@ using UnityEngine.UI;
      *   also added combo logic as well as UI functionality for combos.
      *   -> 1.2 Changed score text to not display a + before the score anymore, added moves back system
      *   -> 1.3 Changed combo text to be more cool, and added a multiplier feature with animations
-     *   v1.3
+     *   -> 1.4 Updated combo text to update on start
+     *   v1.4
      */
 public class ScoreManager : MonoBehaviour
 {
@@ -57,7 +58,11 @@ public class ScoreManager : MonoBehaviour
     private void Start()
     {
         StartCoroutine(DecrementComboBar());
-
+        if (comboBarScore > 0)
+        {
+            UpdateComboBar();
+            UpdateComboAnimation();
+        }
     }
 
 
@@ -131,7 +136,10 @@ public class ScoreManager : MonoBehaviour
 
     void AddScore(int scoreToAdd)
     {
-        score += scoreToAdd;
+        float finalScore = scoreToAdd * currentMultiplier;
+        finalScore += scoreToAdd + PowerUpManager.addedScore * PowerUpManager.scoreMultiplier;
+
+        score += (int)finalScore;
         UpdateScoreText();
     }
 

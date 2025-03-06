@@ -14,8 +14,8 @@ public class GameStateControl : MonoBehaviour
      *              the amount of blocks left on screen. It will display a win / lose screen
      *              depending on whether the player's moves are 0 or no blocks are left.
      * 
-     * Last Changed by: Evan Robertson
-     * Last Date Changed: 2025-02-21
+     * Last Changed by: Nicolas Kaplan
+     * Last Date Changed: 2025-03-06
      * 
      * 
      *   -> 1.0 - Created GameStateControl.cs and created a basic win condition to
@@ -29,7 +29,8 @@ public class GameStateControl : MonoBehaviour
      *   Finally, added animations for the moves counter.
      *   
      *   -> 1.5 - Added call to regenerate gems using new gem placing algorithm
-     *   v1.5
+     *   -> 1.6 - Added Power-up compatibility to moves count.
+     *   v1.6
      */
 
     private GameObject[] blocks;
@@ -149,7 +150,19 @@ public class GameStateControl : MonoBehaviour
     {
         if (blockList.Count <= 0)
         {
-            // TODO animations?
+            // TODO animations
+
+            // instead of displaying win screen, move towards a new stage.
+            // give bonus points to players with a 1-up remaining in their inventory
+            if (PowerUpManager.hasOneUp)
+            {
+                scoreManager.score += 20000; // 20k extra points for not wasting a 1up!
+            }
+            scoreManager.score += PowerUpManager.addedEndScore;
+            float finalScore = (float)scoreManager.score;
+            finalScore *= PowerUpManager.endScoreMultiplier;
+            scoreManager.score = (int)finalScore;
+
             DisplayWinScreen();
         }
     }
@@ -173,7 +186,14 @@ public class GameStateControl : MonoBehaviour
     }
     public void SetInitialMoves()
     {
-        moveCount = startingMoveCount;
+        float finalMoveCount = startingMoveCount + PowerUpManager.extraStartingMoves
+        * PowerUpManager.startingMovesMultiplier;
+        moveCount = (int)finalMoveCount;
+
+        if (PowerUpManager.extraStartingMoves != 0 || PowerUpManager.startingMovesMultiplier != 0)
+        {
+            // show a message or animation to the player that their moves are powered up
+        }
     }
     public void DisplayGameOverScreen()
     {
@@ -184,7 +204,15 @@ public class GameStateControl : MonoBehaviour
         if (moveCount <= 0)
         {
             // TODO Animations?
-            DisplayGameOverScreen();
+            if (PowerUpManager.hasOneUp)
+            {
+                Debug.Log("Make UI for 1-up working successfully, maybe even a sound effect");
+                moveCount = 20;
+            }
+            else
+            {
+                DisplayGameOverScreen();
+            }
         }
     }
 

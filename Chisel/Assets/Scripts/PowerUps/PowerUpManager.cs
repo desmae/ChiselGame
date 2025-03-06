@@ -10,22 +10,27 @@ using UnityEngine;
      *              throughout the game and changing them according to external power ups.
      * 
      * Last Changed by: Nicolas Kaplan
-     * Last Date Changed: 2025-03-05
+     * Last Date Changed: 2025-03-06
      *
      *  -> 1.0 - Created PowerUpManager.cs and wrote a couple of changeable stats.
-     *   v1.0
+     *  -> 1.1 - Changed some abilities' types from float to int, and added some new
+     *          abilities as well.
+     *   v1.1
      */
 public static class PowerUpManager
 {
     // Player stats that can be changed:
     public static int extraStartingMoves = 0; 
     public static float startingMovesMultiplier = 1.0f;
-    public static float addedEndScore = 0f;
+    public static int addedEndScore = 0;
     public static float endScoreMultiplier = 1.0f;
-    public static float addedScore = 0f;
+    public static int addedScore = 0;
     public static float scoreMultiplier = 1.0f; // ADD to this multiplier and any others.
 
-    public static int powerUpCapacity = 3; // How many power-ups the player can have
+    public static float addedComboAmount = 0f; // add the amount here to the total player combo
+    public static float comboAmountMultiplier = 1.0f; // add to this to multiply total player combo
+
+    public static int powerUpCapacity = 5; // How many power-ups the player can have
     public static float difficultyAdjustment = 0f;
     public static float difficultyAdjustmentMultiplier = 1.0f;
 
@@ -33,7 +38,7 @@ public static class PowerUpManager
     public static bool diagonalGems = false;
     public static bool chanceGemBombs = false;
     public static bool scoreSiphon = false;
-
+    public static bool hasOneUp = false;
     // List of active power-ups
     public static List<PowerUp> activePowerUps = new List<PowerUp>();
 
@@ -44,6 +49,10 @@ public static class PowerUpManager
         {
             activePowerUps.Add(powerUp);
             powerUp.ApplyPowerUp(); // Apply the effect immediately
+        }
+        else
+        {
+            // prompt user to replace a power up somehow.
         }
     }
     public static void OnPowerUpRemove(PowerUp powerUp)

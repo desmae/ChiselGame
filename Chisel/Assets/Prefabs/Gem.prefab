@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 2861975698538813084}
   - component: {fileID: 1094047781047159512}
   - component: {fileID: 2201201133470575693}
+  - component: {fileID: 2540044081500624698}
   m_Layer: 6
   m_Name: Gem
   m_TagString: Block
@@ -5013,3 +5014,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2540044081500624698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 757915621658026420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757f1d56d6ee83d1a5e81bfb10b7a06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DisplayName: Gem
+  Description: 'By left-clicking it, all adjacent gems of the same color will be
+    broken too. Gems change color in the order of: Purple > Blue > Green > Yellow
+    > Orange > Red > Broken.'
