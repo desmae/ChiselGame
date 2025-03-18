@@ -15,7 +15,7 @@ public class GameStateControl : MonoBehaviour
      *              depending on whether the player's moves are 0 or no blocks are left.
      * 
      * Last Changed by: Nicolas Kaplan
-     * Last Date Changed: 2025-03-06
+     * Last Date Changed: 2025-03-17
      * 
      * 
      *   -> 1.0 - Created GameStateControl.cs and created a basic win condition to
@@ -30,19 +30,36 @@ public class GameStateControl : MonoBehaviour
      *   
      *   -> 1.5 - Added call to regenerate gems using new gem placing algorithm
      *   -> 1.6 - Added Power-up compatibility to moves count.
-     *   v1.6
+     *   -> 1.7 - Added cross functionality with GameLoopManager.cs and changed win screen processes as well as other small changes.
+     *   v1.7
      */
 
     private GameObject[] blocks;
     public List<GameObject> blockList = new List<GameObject>();
     [SerializeField] private GameObject winCanvas;
-    [SerializeField] private bool winCanvasOnStart = false;
+    [SerializeField] private TextMeshProUGUI encouragingMessageText;
+    [SerializeField] private TextMeshProUGUI levelBeatenText;
+
+    [SerializeField]
+    private List<string> encouragingMessages = new List<string>
+    {
+        "Great job!",
+        "You rocked it!",
+        "Awesome work!",
+        "Way to go!",
+        "Incredible performance!"
+    };
+
+    private int lastLevelNumber = 1;
+    private int lastStageNumber = 1;
 
     [SerializeField] Animator movesAnimator;
 
     [SerializeField] private ScoreManager scoreManager;
     [SerializeField] private int startingMoveCount = 0;
+
     private static int moveCount;
+    private bool isStageActive = false;
 
     [SerializeField] private TextMeshProUGUI movesCountLight;
     [SerializeField] private TextMeshProUGUI movesCountDark;
@@ -55,6 +72,10 @@ public class GameStateControl : MonoBehaviour
     [SerializeField] private GameObject gameOverCanvas;
     [SerializeField] private bool gameOverCanvasOnStart = false;
 
+    // read-only public properties for GameLoopManager.cs
+    public GameObject WinCanvas => winCanvas;
+    public GameObject GameOverCanvas => gameOverCanvas;
+
     private void Awake()
     {
         BlockScript.canBreak = true;
@@ -62,46 +83,40 @@ public class GameStateControl : MonoBehaviour
 
     void Start()
     {
+        winCanvas.SetActive(false);
+        gameOverCanvas.SetActive(false);
+
         AudioController.Instance.PlayMusic("GameMusic");
-        if (!winCanvasOnStart)
-        {
-            winCanvas.SetActive(false);
-        }
-        else
-        {
-            winCanvas.SetActive(true);
-
-        }
-
-        if (!gameOverCanvasOnStart)
-        {
-            gameOverCanvas.SetActive(false);
-        }
-        else
-        {
-            gameOverCanvas.SetActive(true);
-
-        }
-
-        AddBlocksToList();
 
         SetInitialMoves();
-
         UpdateMovesText();
-
         SetTaskText();
     }
 
     void Update()
     {
-        CheckBlocksCleared();
-        CheckMovesCount();
+        if (isStageActive)
+        {
+            CheckBlocksCleared();
+            CheckMovesCount();
+        }
         UpdateMovesText();
 
         if (gameOverCanvas.activeSelf)
         {
             BlockScript.canBreak = false;
         }
+    }
+    public void SetLastLevelInfo(int level, int stage)
+    {
+        lastLevelNumber = level;
+        lastStageNumber = stage;
+    }
+    public void InitializeStage()
+    {
+        AddBlocksToList();
+        Debug.Log("Blocks found at stage init: " + blockList.Count);
+        isStageActive = true;
     }
     private void CheckScoreOnWin()
     {
@@ -129,6 +144,7 @@ public class GameStateControl : MonoBehaviour
 
     void AddBlocksToList()
     {
+        blockList.Clear();
         blocks = GameObject.FindGameObjectsWithTag("Block");
         foreach (GameObject block in blocks)
         {
@@ -138,16 +154,25 @@ public class GameStateControl : MonoBehaviour
         GemPlacementManager manager = FindObjectOfType<GemPlacementManager>();
         if (manager != null)
         {
+            manager.allBlocks.Clear();
+
             manager.AdjustGemsBasedOnDifficulty();
         }
     }
 
     void DisplayWinScreen()
     {
-        winCanvas.SetActive(true);
+        if (!winCanvas.activeSelf)
+        {
+            string randomMessage = encouragingMessages[Random.Range(0, encouragingMessages.Count)];
+            encouragingMessageText.text = randomMessage;
+            levelBeatenText.text = $"level {lastLevelNumber}-{lastStageNumber}";
+            winCanvas.SetActive(true);
+        }
     }
     void CheckBlocksCleared()
     {
+        Debug.Log("CheckBlocksCleared() called. blockList.Count = " + blockList.Count);
         if (blockList.Count <= 0)
         {
             // TODO animations

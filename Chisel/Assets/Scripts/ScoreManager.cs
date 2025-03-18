@@ -12,7 +12,7 @@ using UnityEngine.UI;
      * Description: This code is written to increase the score as the player changes blocks colours, destroys blocks and completes combos
      * 
      * Last Changed by: Nicolas Kaplan
-     * Last Date Changed: 2025-03-06
+     * Last Date Changed: 2025-03-17
      * 
      * 
      *   -> 1.0 -Created ScoreManager and created the logic to get the score to change when a block changes colour or is destroyed.
@@ -22,10 +22,14 @@ using UnityEngine.UI;
      *   -> 1.2 Changed score text to not display a + before the score anymore, added moves back system
      *   -> 1.3 Changed combo text to be more cool, and added a multiplier feature with animations
      *   -> 1.4 Updated combo text to update on start
-     *   v1.4
+     *   -> 1.5 Added cross functionality with GameLoopManager.cs to freeze the combo bar when the player isn't playing the game.
+     *   v1.5
      */
 public class ScoreManager : MonoBehaviour
 {
+
+    private GameLoopManager gameLoop;
+
     [SerializeField] private RectTransform comboFillImage;
     public int score = 0;
     private float currentMultiplier = 1f;
@@ -57,6 +61,7 @@ public class ScoreManager : MonoBehaviour
     [SerializeField] private Transform worldCanvas;
     private void Start()
     {
+        gameLoop = FindObjectOfType<GameLoopManager>();
         StartCoroutine(DecrementComboBar());
         if (comboBarScore > 0)
         {
@@ -72,6 +77,8 @@ public class ScoreManager : MonoBehaviour
         {
             UpdateComboBar();
             UpdateComboAnimation();
+            UpdateMultiplierBasedOnComboBar();
+
         }
     }
     private void UpdateComboAnimation()
@@ -98,11 +105,10 @@ public class ScoreManager : MonoBehaviour
     {
         while (true)
         {
-            if (comboBarScore > 0)
+            if (comboBarScore > 0 && gameLoop != null && gameLoop.CurrentStage == GameLoopManager.GameStage.Play)
             {
                 comboBarScore = Mathf.Max(0, comboBarScore - comboDrainRate);
                 UpdateComboBar();
-
                 // Check and update the multiplier when the bar decreases
                 UpdateMultiplierBasedOnComboBar();
             }
