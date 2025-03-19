@@ -11,13 +11,14 @@ using UnityEngine;
      *              to change certain player stats or enable new functionalities.
      * 
      * Last Changed by: Nicolas Kaplan
-     * Last Date Changed: 2025-03-06
+     * Last Date Changed: 2025-03-19
      * 
      *
      *   -> 1.0 Create PowerUp.cs and made a couple of starter power ups to set up
      *         a basic template for making more power ups.
      *   -> 1.1 Added 1up power-up and added Icon (Sprite) functionality to power-ups
-     *   v1.1
+     *   -> 1.2 Removed inventory capacity system and power up that changed it.
+     *   v1.2
      */
 public abstract class PowerUp
 {
@@ -114,24 +115,5 @@ public class OneUpPowerUp : PowerUp
     public override void OnPowerUpRemove()
     {
         PowerUpManager.hasOneUp = false;
-    }
-}
-public class InventoryUpgradePowerUp : PowerUp
-{
-    int inventoryAddAmount = 2;
-    public InventoryUpgradePowerUp()
-    {
-        Name = "Inventory Upgrade";
-        Description = "Upgrade inventory by +2, counting the space this power-up takes up.";
-        Rarity = 4.0f;
-        Icon = Resources.Load<Sprite>("Icons/DefaultPowerUp");;
-    }
-    public override void ApplyPowerUp()
-    {
-        PowerUpManager.powerUpCapacity += inventoryAddAmount;
-    }
-    public override void OnPowerUpRemove()
-    {
-        PowerUpManager.powerUpCapacity -= inventoryAddAmount;
     }
 }

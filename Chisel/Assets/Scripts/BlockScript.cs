@@ -37,7 +37,8 @@ using UnityEngine;
      *   -> 2.0 - Blocks no longer Destroy(), but instead become invisible and untouchable
      *   -> 2.1 - Added line to add block to the gem placing algorithm
      *   -> 2.2 - Added diagonal gem power-up feature.
-     *   v2.2
+     *   -> 2.3 - Added skip all reds function for corrupted gems
+     *   v2.3
      */
 public class BlockScript : MonoBehaviour
 {
@@ -230,6 +231,11 @@ private bool CheckAdjacentBlock(Vector2 direction, int originalHealth)
     private void ChangeBlockHealth(int newHealth)
     {
         int oldHealth = blockHealth;
+        if (newHealth < 2 && PowerUpManager.skipAllReds)
+        {
+            newHealth = 0;
+            Debug.Log("Corrupted Gem Detected, skipping reds.");
+        }
         blockHealth = Mathf.Clamp(newHealth, 0, blockColorList.Count - 1);
 
         if (blockHealth <= 0)
@@ -243,8 +249,17 @@ private bool CheckAdjacentBlock(Vector2 direction, int originalHealth)
 
     private void ChooseRandomColor()
     {
-        int randomNumber = Random.Range(1, blockColorList.Count);
-        blockHealth = randomNumber;
+        if (PowerUpManager.skipAllReds)
+        {
+            int randomNumber = Random.Range(2, blockColorList.Count);
+            blockHealth = randomNumber;
+        } 
+        else
+        {
+            int randomNumber = Random.Range(1, blockColorList.Count);
+            blockHealth = randomNumber;
+        }
+        
 
     }
 

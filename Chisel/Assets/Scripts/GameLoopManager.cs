@@ -34,6 +34,8 @@ public class GameLoopManager : MonoBehaviour
     private LevelOption selectedOption;
     public GemPlacementManager gemPlacementManager;
     public RewardPanel rewardPanel;
+    public CorruptedSelectionPanel corruptedSelectionPanel;
+
     public enum GameStage
     {
         ChooseLevel,
@@ -236,10 +238,7 @@ public class GameLoopManager : MonoBehaviour
         Debug.Log("Loading chosen level.");
         levelSelectionPanel.gameObject.SetActive(false);
 
-        if (currentLevelInstance != null)
-        {
-            Destroy(currentLevelInstance);
-        }
+        
 
         // reset score for round in case.
         ScoreManager scoreManager = FindObjectOfType<ScoreManager>();
@@ -335,8 +334,15 @@ public class GameLoopManager : MonoBehaviour
             hasSelectedReward = true;
         });
 
+        // destroy currentLevelInstance here so that levels are destroyed as soon as the reward screen is up
+        if (currentLevelInstance != null)
+        {
+            Destroy(currentLevelInstance);
+        }
+
         yield return new WaitUntil(() => hasSelectedReward);
 
+        hasSelectedReward = false;
         currentStageCount++;
         if (currentStageCount == 15)
         {
@@ -350,6 +356,7 @@ public class GameLoopManager : MonoBehaviour
         {
             currentStage = GameStage.ChooseLevel;
         }
+        
     }
     private PowerUp[] GenerateRandomPowerUps(int count)
     {
@@ -359,7 +366,6 @@ public class GameLoopManager : MonoBehaviour
         new DiagonalGemsPowerUp(),
         new MovesMultiplierPowerUp(),
         new OneUpPowerUp(),
-        new InventoryUpgradePowerUp()
     };
 
         PowerUp[] results = new PowerUp[count];
@@ -395,10 +401,6 @@ public class GameLoopManager : MonoBehaviour
             ? hardPrefabs[Random.Range(0, hardPrefabs.Length)]
             : veryHardPrefabs[Random.Range(0, veryHardPrefabs.Length)];
 
-        if (currentLevelInstance != null)
-        {
-            Destroy(currentLevelInstance);
-        }
 
         currentLevelInstance = Instantiate(chosenPrefab);
 
@@ -469,21 +471,57 @@ public class GameLoopManager : MonoBehaviour
             currentStage = GameStage.SpecialReward;
         }
     }
+    private bool hasChosenCorruptedGem = false;
+    private CorruptedGem chosenCorruptedGem = null;
     private IEnumerator SpecialReward()
     {
         Debug.Log("Giving special reward...");
-        // todo: show plasyer 3 corrupted gems with pros and cons each. each should have a simple description with what they do.
-        yield return new WaitUntil(() => SpecialRewardChosen());
 
+        CorruptedGem[] randomGems = GenerateRandomCorruptedGems(3);
+
+        hasChosenCorruptedGem = false;
+        chosenCorruptedGem = null;
+
+        corruptedSelectionPanel.SetupCorruptedGems(randomGems, (gem) =>
+        {
+            chosenCorruptedGem = gem;
+            hasChosenCorruptedGem = true;
+        });
+
+        if (currentLevelInstance != null)
+        {
+            Destroy(currentLevelInstance);
+        }
+
+        yield return new WaitUntil(() => hasChosenCorruptedGem);
+
+        if (chosenCorruptedGem != null)
+        {
+            PowerUpManager.ApplyCorruptedGem(chosenCorruptedGem);
+        }
         currentStageCount++;
         currentStage = GameStage.ChooseLevel;
     }
-
-    private bool SpecialRewardChosen()
+    private CorruptedGem[] GenerateRandomCorruptedGems(int count)
     {
-        // todo: implement proper input check
-        return Input.GetMouseButtonDown(0);
+        List<CorruptedGem> allGems = new List<CorruptedGem>
+    {
+        new RemoveRedsGem(),
+        new ComboCatalystGem(),
+        new ScorePlusMovesMinusGem(),
+        // etc. add more classes
+    };
+
+        CorruptedGem[] results = new CorruptedGem[count];
+        for (int i = 0; i < count; i++)
+        {
+            int randomIndex = Random.Range(0, allGems.Count);
+            results[i] = allGems[randomIndex];
+            allGems.RemoveAt(randomIndex); 
+        }
+        return results;
     }
+
 
     private IEnumerator FinalRound()
     {

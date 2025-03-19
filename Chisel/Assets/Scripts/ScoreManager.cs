@@ -152,6 +152,18 @@ public class ScoreManager : MonoBehaviour
         else
             newMultiplier = 1f; // Default (below 20%)
 
+        // alter if comboCatalyst is enabled
+        if (PowerUpManager.comboCatalyst)
+        {
+            if (newMultiplier > 1f)
+            {
+                newMultiplier *= 2f;
+            }
+            else
+            {
+                newMultiplier *= 0.5f;
+            }
+        }
         if (currentMultiplier != newMultiplier)
         {
             currentMultiplier = newMultiplier;
@@ -159,7 +171,7 @@ public class ScoreManager : MonoBehaviour
             UpdateComboAnimation(); 
         }
     }
-
+    
 
     void AddScore(int scoreToAdd)
     {

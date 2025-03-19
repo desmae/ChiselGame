@@ -43,6 +43,9 @@ public static class PowerUpManager
     public static bool scoreSiphon = false;
     public static bool hasOneUp = false;
 
+    public static bool skipAllReds = false;
+    public static bool comboCatalyst = false;
+
     public delegate void PowerUpListChanged();
     public static event PowerUpListChanged OnPowerUpListChanged;
     
@@ -72,6 +75,26 @@ public static class PowerUpManager
 
             OnPowerUpListChanged?.Invoke();
         }
+    }
+
+    public static List<CorruptedGem> activeCorruptedGems = new List<CorruptedGem>();
+
+    public static void ApplyCorruptedGem(CorruptedGem gem)
+    {
+        // The user picks it, or it’s forced upon them
+        activeCorruptedGems.Add(gem);
+        gem.ApplyCorruptedGem();
+    }
+
+    // No public method for removing a single gem, so user can’t remove them
+    // Instead, we only have a private or internal method for the game to remove them all
+    internal static void RemoveAllCorruptedGems()
+    {
+        foreach (var gem in activeCorruptedGems)
+        {
+            gem.OnCorruptedGemRemove(); // revert buff & nerf
+        }
+        activeCorruptedGems.Clear();
     }
 }
 

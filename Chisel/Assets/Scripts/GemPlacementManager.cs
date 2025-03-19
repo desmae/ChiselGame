@@ -11,15 +11,15 @@ using UnityEngine;
      * Description: This algorithm is used in regenerating gems based on the current difficulty level. The higher the difficulty, the less frequent
      * gems of the same health spawn next to each other
      * 
-     * Last Changed by: Evan Robertson
-     * Last Date Changed: 2025-02-23
+     * Last Changed by: Nicolas Kaplan
+     * Last Date Changed: 2025-03-18
      * 
      * 
      *   -> 1.0 - Created GemPlacementManager.cs and added global difficulty float and collection of 
      *   
      *   -> 1.1 - Added inpector elements for adjusting the lower and upper bounds of random events.
-     *      
-     *   v1.1
+     *   -> 1.2 - Added difficulty heightening depending on what level was chosen
+     *   v1.2
      */
 public class GemPlacementManager : MonoBehaviour
 {
