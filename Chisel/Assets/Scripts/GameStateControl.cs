@@ -120,7 +120,7 @@ public class GameStateControl : MonoBehaviour
     }
     private void CheckScoreOnWin()
     {
-        if (scoreManager.score >= scoreManager.minimumScoreForLevel)
+        if (scoreManager.totalScore >= scoreManager.minimumScoreForLevel)
         {
             DisplayGameOverScreen();
             winCanvas.SetActive(false);
@@ -181,12 +181,12 @@ public class GameStateControl : MonoBehaviour
             // give bonus points to players with a 1-up remaining in their inventory
             if (PowerUpManager.hasOneUp)
             {
-                scoreManager.score += 20000; // 20k extra points for not wasting a 1up!
+                scoreManager.totalScore += 20000; // 20k extra points for not wasting a 1up!
             }
-            scoreManager.score += PowerUpManager.addedEndScore;
-            float finalScore = (float)scoreManager.score;
+            scoreManager.totalScore += PowerUpManager.addedEndScore;
+            float finalScore = (float)scoreManager.totalScore;
             finalScore *= PowerUpManager.endScoreMultiplier;
-            scoreManager.score = (int)finalScore;
+            scoreManager.totalScore = (int)finalScore;
 
             DisplayWinScreen();
         }
@@ -238,6 +238,20 @@ public class GameStateControl : MonoBehaviour
             {
                 DisplayGameOverScreen();
             }
+        }
+    }
+    public void SetCustomTaskText(string line1, string line2 = "", string line3 = "")
+    {
+        tasksText1 = line1;
+        tasksText2 = line2;
+        tasksText3 = line3;
+        tasksTMP.text = $"{tasksText1}\n\n{tasksText2}\n\n{tasksText3}";
+    }
+    public void SetCustomWinText(string customText)
+    {
+        if (encouragingMessageText != null)
+        {
+            encouragingMessageText.text = customText;
         }
     }
 

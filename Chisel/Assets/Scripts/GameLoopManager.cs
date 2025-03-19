@@ -12,9 +12,9 @@ using UnityEngine.SceneManagement;
      * Last Changed by: Nicolas Kaplan
      * Last Date Changed: 2025-03-17
      * 
-     *   -> 1.0 - Created GameLoopManager.cs and implemented game states with transitions and placeholders.
-     *
-     *   v1.0
+     *   -> 1.0 - Created GameLoopManager.cs and implemented game states with proper transitions and some placeholders.
+     *   -> 1.1 - Added check for duplicates, if a duplicate level is loaded, it will reroll until the level is different.
+     *   v1.1
      */
 
 [System.Serializable]
@@ -24,6 +24,7 @@ public class LevelOption
     public Sprite levelImage;     // The preview image for this layout
     public GameObject levelPrefab; // Reference to the actual level layout prefab
     public int difficulty;        // You could extract or assign difficulty here
+    public string difficultyName; // "Easy", "Medium", "Hard", "Very Hard".
 }
 
 public class GameLoopManager : MonoBehaviour
@@ -39,12 +40,14 @@ public class GameLoopManager : MonoBehaviour
         LoadLevel,
         Play,
         Reward,
-        SpecialLevel,
+        LoadSpecialLevel,   
+        PlaySpecialLevel,   
         SpecialReward,
         FinalRound,
         UnlockFinalRewards,
         GameOver
     }
+
 
     private GameStage currentStage = GameStage.ChooseLevel;
     public GameStage CurrentStage => currentStage;
@@ -61,8 +64,8 @@ public class GameLoopManager : MonoBehaviour
     {
         while (true)
         {
-            switch (currentStage) 
-            { 
+            switch (currentStage)
+            {
                 case GameStage.ChooseLevel:
                     yield return StartCoroutine(ChooseLevel());
                     break;
@@ -75,8 +78,11 @@ public class GameLoopManager : MonoBehaviour
                 case GameStage.Reward:
                     yield return StartCoroutine(RewardPlayer());
                     break;
-                case GameStage.SpecialLevel:
-                    yield return StartCoroutine(SpecialLevel());
+                case GameStage.LoadSpecialLevel: 
+                    yield return StartCoroutine(LoadSpecialLevel());
+                    break;
+                case GameStage.PlaySpecialLevel:
+                    yield return StartCoroutine(PlaySpecialLevel());
                     break;
                 case GameStage.SpecialReward:
                     yield return StartCoroutine(SpecialReward());
@@ -90,11 +96,12 @@ public class GameLoopManager : MonoBehaviour
                 case GameStage.GameOver:
                     SavePlayerStats();
                     LoadTitleScreen();
-                    yield break; // exit loop, game over.
+                    yield break;
             }
             yield return null;
         }
     }
+
 
     private IEnumerator ChooseLevel()
     {
@@ -147,54 +154,67 @@ public class GameLoopManager : MonoBehaviour
 
         LevelOption[] options = new LevelOption[3];
 
-        for (int i = 0; i < options.Length; i++)
+        List<GameObject> usedPrefabs = new List<GameObject>();
+
+
+        for (int i = 0; i < 3; i++)
         {
-            float rand = Random.Range(0f, totalWeight);
-            int difficultyType = -1;  // 1 = Easy, 2 = Medium, 3 = Hard, 4 = Very Hard.
-
-            if (rand < weightEasy)
-            {
-                difficultyType = 1;
-            }
-            else if (rand < weightEasy + weightMedium)
-            {
-                difficultyType = 2;
-            }
-            else if (rand < weightEasy + weightMedium + weightHard)
-            {
-                difficultyType = 3;
-            }
-            else
-            {
-                difficultyType = 4;
-            }
-
             GameObject chosenPrefab = null;
-            switch (difficultyType)
+            Sprite previewSprite = null;
+            bool foundUnique = false;
+
+            int difficultyType = -1;
+            string difficultyName = "";
+
+            for (int attempts = 0; attempts < 50; attempts++)
             {
-                case 1:
+                float rand = Random.Range(0f, totalWeight);
+                if (rand < weightEasy)
+                {
+                    difficultyType = 1;
+                    difficultyName = "Easy";
                     chosenPrefab = easyPrefabs[Random.Range(0, easyPrefabs.Length)];
-                    break;
-                case 2:
+                }
+                else if (rand < weightEasy + weightMedium)
+                {
+                    difficultyType = 2;
+                    difficultyName = "Medium";
                     chosenPrefab = mediumPrefabs[Random.Range(0, mediumPrefabs.Length)];
-                    break;
-                case 3:
+                }
+                else if (rand < weightEasy + weightMedium + weightHard)
+                {
+                    difficultyType = 3;
+                    difficultyName = "Hard";
                     chosenPrefab = hardPrefabs[Random.Range(0, hardPrefabs.Length)];
-                    break;
-                case 4:
+                }
+                else
+                {
+                    difficultyType = 4;
+                    difficultyName = "Very Hard";
                     chosenPrefab = veryHardPrefabs[Random.Range(0, veryHardPrefabs.Length)];
+                }
+
+                if (!usedPrefabs.Contains(chosenPrefab))
+                {
+                    usedPrefabs.Add(chosenPrefab);
+                    foundUnique = true;
                     break;
+                }
             }
 
-            Sprite previewSprite = null;
+            // if we couldn't find a unique after 50 tries, allow duplicates or fallback
+            if (!foundUnique)
+            {
+                Debug.LogWarning("Couldn't find a unique prefab after 50 tries, allowing duplicates...");
+                difficultyType = 1;
+                difficultyName = "Easy";
+                chosenPrefab = easyPrefabs[0]; // fallback
+            }
+
             SpriteRenderer sr = chosenPrefab.GetComponent<SpriteRenderer>();
             if (sr != null)
             {
                 previewSprite = sr.sprite;
-            }
-            else
-            {
-                Debug.LogWarning($"Chosen prefab {chosenPrefab.name} does not have a SpriteRenderer component.");
             }
 
             options[i] = new LevelOption
@@ -202,9 +222,11 @@ public class GameLoopManager : MonoBehaviour
                 levelName = chosenPrefab.name,
                 levelPrefab = chosenPrefab,
                 difficulty = difficultyType,
+                difficultyName = difficultyName,  
                 levelImage = previewSprite
             };
         }
+
         return options;
     }
 
@@ -212,13 +234,20 @@ public class GameLoopManager : MonoBehaviour
     private IEnumerator LoadLevel()
     {
         Debug.Log("Loading chosen level.");
-        levelSelectionPanel.gameObject.SetActive(false); // replace with objects inside panel
+        levelSelectionPanel.gameObject.SetActive(false);
 
         if (currentLevelInstance != null)
         {
             Destroy(currentLevelInstance);
-            currentLevelInstance = null;
         }
+
+        // reset score for round in case.
+        ScoreManager scoreManager = FindObjectOfType<ScoreManager>();
+        if (scoreManager != null)
+        {
+            scoreManager.ResetStageScore();
+        }
+
 
         if (selectedOption != null && selectedOption.levelPrefab != null)
         {
@@ -229,7 +258,15 @@ public class GameLoopManager : MonoBehaviour
 
             int levelNumber = (currentStageCount - 1) / 3 + 1;
             int stageNumber = (currentStageCount - 1) % 3 + 1;
-
+            // if level 1, reset globalDifficulty to 1.
+            if (levelNumber == 1 && stageNumber == 1)
+            {
+                GemPlacementManager manager = FindObjectOfType<GemPlacementManager>();
+                if (manager != null)
+                {
+                    manager.globalDifficulty = 1f;
+                }
+            }
             GameStateControl gsc = FindObjectOfType<GameStateControl>();
             if (gsc != null)
             {
@@ -255,7 +292,6 @@ public class GameLoopManager : MonoBehaviour
     {
         Debug.Log("Playing level now.");
 
-        // Reference to your GameStateControl (assumes it's in the scene).
         GameStateControl gsc = FindObjectOfType<GameStateControl>();
         if (gsc == null)
         {
@@ -263,23 +299,28 @@ public class GameLoopManager : MonoBehaviour
             yield break;
         }
 
-        // Wait until either the winCanvas or gameOverCanvas becomes active.
         while (!gsc.WinCanvas.activeSelf && !gsc.GameOverCanvas.activeSelf)
         {
             yield return null;
         }
         if (gsc.GameOverCanvas.activeSelf)
         {
-            // Player lost
             currentStage = GameStage.GameOver;
         }
         if (gsc.WinCanvas.activeSelf)
         {
             yield return new WaitForSeconds(2);
+
+            gsc.WinCanvas.SetActive(false);
+            GemPlacementManager manager = FindObjectOfType<GemPlacementManager>();
+            if (manager != null)
+            {
+
+                manager.IncreaseGlobalDifficulty(selectedOption.difficulty);
+            }
             currentStage = GameStage.Reward;
         }
     }
-
 
     private bool hasSelectedReward = false;
 
@@ -303,7 +344,7 @@ public class GameLoopManager : MonoBehaviour
         }
         else if (currentStageCount % 3 == 0)
         {
-            currentStage = GameStage.SpecialLevel;
+            currentStage = GameStage.LoadSpecialLevel;
         }
         else
         {
@@ -331,16 +372,103 @@ public class GameLoopManager : MonoBehaviour
         }
         return results;
     }
-
-    private IEnumerator SpecialLevel()
+    private ISpecialGoal GetRandomSpecialGoal(int levelNumber)
     {
-        Debug.Log("Loading special level");
-        // set up a special layout and assign specific goal.
-        yield return new WaitForSeconds(1f);
+        List<ISpecialGoal> possibleGoals = new List<ISpecialGoal>();
 
-        currentStage = GameStage.SpecialLevel;
+        possibleGoals.Add(new ScoreCapGoal(levelNumber));
+        possibleGoals.Add(new ComboMultCapGoal(levelNumber));
+
+        int randomIndex = Random.Range(0, possibleGoals.Count);
+        return possibleGoals[randomIndex];
     }
 
+
+    private IEnumerator LoadSpecialLevel()
+    {
+        Debug.Log("Loading special level...");
+
+        GameObject[] hardPrefabs = Resources.LoadAll<GameObject>("Prefabs/GemLayouts/Hard");
+        GameObject[] veryHardPrefabs = Resources.LoadAll<GameObject>("Prefabs/GemLayouts/Very Hard");
+        bool pickHard = (Random.value < 0.5f);
+        GameObject chosenPrefab = pickHard
+            ? hardPrefabs[Random.Range(0, hardPrefabs.Length)]
+            : veryHardPrefabs[Random.Range(0, veryHardPrefabs.Length)];
+
+        if (currentLevelInstance != null)
+        {
+            Destroy(currentLevelInstance);
+        }
+
+        currentLevelInstance = Instantiate(chosenPrefab);
+
+        ScoreManager scoreManager = FindObjectOfType<ScoreManager>();
+        if (scoreManager != null)
+        {
+            scoreManager.ResetStageScore();
+        }
+        int levelNumber = (currentStageCount - 1) / 3 + 1;
+        int stageNumber = (currentStageCount - 1) % 3 + 1;
+        GameStateControl gsc = FindObjectOfType<GameStateControl>();
+        if (gsc != null)
+        {
+            gsc.SetLastLevelInfo(levelNumber, stageNumber);
+            gsc.InitializeStage();
+
+            if (gsc.WinCanvas.activeSelf)
+            {
+                gsc.WinCanvas.SetActive(false);
+            }
+        }
+        yield return null; // let them spawn
+
+        currentStage = GameStage.PlaySpecialLevel;
+    }
+
+    private IEnumerator PlaySpecialLevel()
+    {
+        Debug.Log("Playing special level now...");
+
+        int levelNumber = (currentStageCount - 1) / 3 + 1;
+        ISpecialGoal chosenGoal = GetRandomSpecialGoal(levelNumber);
+        chosenGoal.InitializeGoal();
+
+        GameStateControl gsc = FindObjectOfType<GameStateControl>();
+        if (gsc != null)
+        {
+            gsc.SetCustomTaskText(chosenGoal.GetGoalDescription());
+        }
+
+        while (!chosenGoal.IsGoalMet())
+        {
+            yield return null;
+        }
+
+        chosenGoal.OnGoalComplete();
+
+        while (!gsc.WinCanvas.activeSelf && !gsc.GameOverCanvas.activeSelf)
+        {
+            yield return null;
+        }
+
+        if (gsc.GameOverCanvas.activeSelf)
+        {
+            currentStage = GameStage.GameOver;
+        }
+        else if (gsc.WinCanvas.activeSelf)
+        {
+            yield return new WaitForSeconds(2);
+            gsc.WinCanvas.SetActive(false);
+
+            GemPlacementManager manager = FindObjectOfType<GemPlacementManager>();
+            if (manager != null && selectedOption != null)
+            {
+                manager.IncreaseGlobalDifficulty(selectedOption.difficulty);
+            }
+
+            currentStage = GameStage.SpecialReward;
+        }
+    }
     private IEnumerator SpecialReward()
     {
         Debug.Log("Giving special reward...");

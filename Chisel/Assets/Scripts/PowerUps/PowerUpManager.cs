@@ -10,15 +10,18 @@ using UnityEngine;
      *              throughout the game and changing them according to external power ups.
      * 
      * Last Changed by: Nicolas Kaplan
-     * Last Date Changed: 2025-03-06
+     * Last Date Changed: 2025-03-18
      *
      *  -> 1.0 - Created PowerUpManager.cs and wrote a couple of changeable stats.
      *  -> 1.1 - Changed some abilities' types from float to int, and added some new
      *          abilities as well.
-     *   v1.1
+     *  -> 1.2 - Added event to update UI, since PowerUpManager does not derive from MonoBehaviour.
+     *   v1.2
      */
 public static class PowerUpManager
 {
+    
+
     // Player stats that can be changed:
     public static int extraStartingMoves = 0; 
     public static float startingMovesMultiplier = 1.0f;
@@ -39,7 +42,13 @@ public static class PowerUpManager
     public static bool chanceGemBombs = false;
     public static bool scoreSiphon = false;
     public static bool hasOneUp = false;
+
+    public delegate void PowerUpListChanged();
+    public static event PowerUpListChanged OnPowerUpListChanged;
+    
     // List of active power-ups
+
+
     public static List<PowerUp> activePowerUps = new List<PowerUp>();
 
     // Method to add power-ups and apply their effects
@@ -48,19 +57,20 @@ public static class PowerUpManager
         if (activePowerUps.Count < powerUpCapacity)
         {
             activePowerUps.Add(powerUp);
-            powerUp.ApplyPowerUp(); // Apply the effect immediately
-        }
-        else
-        {
-            // prompt user to replace a power up somehow.
+            powerUp.ApplyPowerUp();
+
+            OnPowerUpListChanged?.Invoke();
         }
     }
+
     public static void OnPowerUpRemove(PowerUp powerUp)
     {
         if (activePowerUps.Contains(powerUp))
         {
             activePowerUps.Remove(powerUp);
             powerUp.OnPowerUpRemove();
+
+            OnPowerUpListChanged?.Invoke();
         }
     }
 }

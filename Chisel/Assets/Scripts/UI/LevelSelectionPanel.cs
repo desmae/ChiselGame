@@ -16,8 +16,8 @@ using static GameLoopManager;
      * Last Date Changed: 2025-03-17
      * 
      *   -> 1.0 - Created LevelSelectionPanel.cs and hooked it to GameLoopManager.cs to be used there.
-     *
-     *   v1.0
+     *   -> 1.1 - Now each level card displays the actual level difficulty instead of some arbitrary number
+     *   v1.1
      */
 [Serializable]
 public class LevelOptionUI
@@ -44,7 +44,7 @@ public class LevelSelectionPanel : MonoBehaviour
             {
                 levelOptions[i].previewImage.sprite = options[i].levelImage;
                 levelOptions[i].levelNameText.text = options[i].levelName;
-                levelOptions[i].difficultyText.text = "Difficulty: " + options[i].difficulty;
+                levelOptions[i].difficultyText.text = options[i].difficultyName;
                 int index = i; 
                 levelOptions[i].selectButton.onClick.RemoveAllListeners();
                 levelOptions[i].selectButton.onClick.AddListener(() => OptionSelected(options[index]));

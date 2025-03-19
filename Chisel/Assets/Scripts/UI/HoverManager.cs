@@ -76,13 +76,21 @@ public class HoverManager : MonoBehaviour
 
     public void ShowInfoCard()
     {
+        // if no object or if object is empty, don’t show card
+        if (currentHoverObject == null) return;
+        if (string.IsNullOrEmpty(currentHoverObject.DisplayName) && string.IsNullOrEmpty(currentHoverObject.Description))
+        {
+            return;
+        }
+
         infoCardVisible = true;
         infoCardUI.SetActive(true);
         nameText.text = currentHoverObject.DisplayName;
         descriptionText.text = currentHoverObject.Description;
 
-        LayoutRebuilder.ForceRebuildLayoutImmediate(cardRectTransform); 
+        LayoutRebuilder.ForceRebuildLayoutImmediate(cardRectTransform);
     }
+
 
     public void HideInfoCard()
     {

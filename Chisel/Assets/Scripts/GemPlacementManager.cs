@@ -69,6 +69,33 @@ public class GemPlacementManager : MonoBehaviour
         //}
     }
 
+    public void IncreaseGlobalDifficulty(int difficultyType)
+    {
+        float increaseAmount = 0f;
+
+        switch (difficultyType)
+        {
+            case 1: // Easy
+                increaseAmount = 0.4f;
+                break;
+            case 2: // Medium
+                increaseAmount = 0.3f;
+                break;
+            case 3: // Hard
+                increaseAmount = 0.25f;
+                break;
+            case 4: // Very Hard
+                increaseAmount = 0.2f;
+                break;
+        }
+
+        globalDifficulty += increaseAmount;
+
+        globalDifficulty = Mathf.Clamp(globalDifficulty, 1f, 5f);
+
+        Debug.Log($"GlobalDifficulty increased by {increaseAmount} to {globalDifficulty}, after beating difficulty {difficultyType}.");
+    }
+
     private bool ShouldChangeColor(BlockScript block)
     {
         int similarCount = 0;
