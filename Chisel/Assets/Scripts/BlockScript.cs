@@ -9,8 +9,8 @@ using UnityEngine;
      * Description: This code is written for individual block behaviours such as changing color, disappearing, and checking for
      * nearby block colors to see if they should change too.
      * 
-     * Last Changed by: Nicolas Kaplan
-     * Last Date Changed: 2025-03-08
+     * Last Changed by: Evan Robertson
+     * Last Date Changed: 2025-03-21
      * 
      * 
      *   -> 1.0 - Created BlockScript.cs and added basic block functionality,
@@ -38,6 +38,7 @@ using UnityEngine;
      *   -> 2.1 - Added line to add block to the gem placing algorithm
      *   -> 2.2 - Added diagonal gem power-up feature.
      *   -> 2.3 - Added skip all reds function for corrupted gems
+     *   -> 2.4 - Added stat tracking for save file
      *   v2.3
      */
 public class BlockScript : MonoBehaviour
@@ -282,6 +283,9 @@ private bool CheckAdjacentBlock(Vector2 direction, int originalHealth)
         //Destroy(gameObject);
         GetComponent<BoxCollider2D>().enabled = false;
         GetComponent<SpriteRenderer>().enabled = false;
+
+        // Update total gems broken in save file
+        SaveDataManager.Instance.gemsBroken++;
     }
 
     

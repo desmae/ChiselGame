@@ -20139,6 +20139,61 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2895329166533809671, guid: 4dabd8342b6507b428c00ba6fb80d2cd, type: 3}
   m_PrefabInstance: {fileID: 4412004704073259466}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1186369970
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1186369972}
+  - component: {fileID: 1186369971}
+  m_Layer: 0
+  m_Name: SaveManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1186369971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1186369970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ad7d31cffced96479217ecd1ddf3510, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AutoUnparentOnAwake: 0
+  gemsBroken: 0
+  powerupsCollected: 0
+  consumablesUsed: 0
+  corruptedGemsCollected: 0
+  levelsCleared: 0
+  highscore: 0
+  mostMoves: 0
+  bossesDefeated: 0
+  wins: 0
+  gamesPlayed: 0
+--- !u!4 &1186369972
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1186369970}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1235952946
 GameObject:
   m_ObjectHideFlags: 0
@@ -29565,7 +29620,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 46.924988, y: -85.025}
+  m_AnchoredPosition: {x: 46.924988, y: -85.02501}
   m_SizeDelta: {x: 89.1, y: 111.91}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2097309718
@@ -31078,3 +31133,4 @@ SceneRoots:
   - {fileID: 1318988875}
   - {fileID: 1865501014}
   - {fileID: 1946302901}
+  - {fileID: 1186369972}

@@ -9,11 +9,12 @@ using UnityEngine.SceneManagement;
      * 
      * Description: This script is in charge of the game loop using the enum GameStage.
      * 
-     * Last Changed by: Nicolas Kaplan
-     * Last Date Changed: 2025-03-17
+     * Last Changed by: Evan Robertson
+     * Last Date Changed: 2025-03-21
      * 
      *   -> 1.0 - Created GameLoopManager.cs and implemented game states with proper transitions and some placeholders.
      *   -> 1.1 - Added check for duplicates, if a duplicate level is loaded, it will reroll until the level is different.
+     *   -> 1.2 - Added stat tracking for save file
      *   v1.1
      */
 
@@ -311,6 +312,9 @@ public class GameLoopManager : MonoBehaviour
             yield return new WaitForSeconds(2);
 
             gsc.WinCanvas.SetActive(false);
+
+            SaveDataManager.Instance.levelsCleared++;
+
             GemPlacementManager manager = FindObjectOfType<GemPlacementManager>();
             if (manager != null)
             {
@@ -560,6 +564,9 @@ public class GameLoopManager : MonoBehaviour
     {
         // todo: save stats permanently, these should persist and can be reset through the settings menu. maybe implement save FILES too.
         Debug.Log("Saving player stats...");
+
+        // Save game stats
+        SaveDataManager.Instance.SaveGame();
     }
     private void LoadTitleScreen()
     {

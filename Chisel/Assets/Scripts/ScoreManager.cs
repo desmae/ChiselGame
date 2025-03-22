@@ -179,6 +179,10 @@ public class ScoreManager : MonoBehaviour
         finalScore += scoreToAdd + PowerUpManager.addedScore * PowerUpManager.scoreMultiplier;
 
         totalScore += (int)finalScore;
+
+        // Update highscore
+        SaveDataManager.Instance.highscore = Mathf.Max(totalScore, SaveDataManager.Instance.highscore);
+
         UpdateScoreText();
     }
 

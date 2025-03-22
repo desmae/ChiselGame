@@ -14,8 +14,8 @@ public class GameStateControl : MonoBehaviour
      *              the amount of blocks left on screen. It will display a win / lose screen
      *              depending on whether the player's moves are 0 or no blocks are left.
      * 
-     * Last Changed by: Nicolas Kaplan
-     * Last Date Changed: 2025-03-17
+     * Last Changed by: Evan Robertson
+     * Last Date Changed: 2025-03-21
      * 
      * 
      *   -> 1.0 - Created GameStateControl.cs and created a basic win condition to
@@ -31,6 +31,7 @@ public class GameStateControl : MonoBehaviour
      *   -> 1.5 - Added call to regenerate gems using new gem placing algorithm
      *   -> 1.6 - Added Power-up compatibility to moves count.
      *   -> 1.7 - Added cross functionality with GameLoopManager.cs and changed win screen processes as well as other small changes.
+     *   -> 1.8 - Added stat tracking for save file
      *   v1.7
      */
 
@@ -208,6 +209,9 @@ public class GameStateControl : MonoBehaviour
     {
         moveCount += movesToAdd;
         movesAnimator.SetTrigger("MovesAdded");
+
+        // Update most moves held
+        SaveDataManager.Instance.mostMoves = Mathf.Max(moveCount, SaveDataManager.Instance.mostMoves);
     }
     public void SetInitialMoves()
     {

@@ -10,12 +10,13 @@ using UnityEngine;
      *              class. They will essentially send messages to the PowerUpManager
      *              to change certain player stats or enable new functionalities.
      * 
-     * Last Changed by: Nicolas Kaplan
-     * Last Date Changed: 2025-03-19
+     * Last Changed by: Evan Robertson
+     * Last Date Changed: 2025-03-21
      * 
      *
      *   -> 1.0 Create CorruptedGem.cs and made a couple of starter corrupted gems to set up
      *         a basic template for making more power ups.
+     *   -> 1.1 Added stat tracking for save file
      *   v1.0
      */
 public abstract class CorruptedGem
@@ -35,6 +36,14 @@ public abstract class CorruptedGem
     }
     public abstract void ApplyCorruptedGem();
     public abstract void OnCorruptedGemRemove();
+
+    // Update stats in save manager
+    protected void UpdateStats(string name)
+    {
+        SaveDataManager.Instance.corruptedGemsCollected++;
+
+        //todo - keep track of how many times each corrupt gem is selected
+    }
 }
 
 // Note: All power-up names are not final and are placeholders until a permanent name
@@ -55,6 +64,8 @@ public class ScorePlusMovesMinusGem : CorruptedGem
     {
         PowerUpManager.scoreMultiplier += 0.2f;
         PowerUpManager.extraStartingMoves -= 5;
+
+        UpdateStats(Name);
     }
 
     public override void OnCorruptedGemRemove()
@@ -79,6 +90,8 @@ public class RemoveRedsGem : CorruptedGem
     public override void ApplyCorruptedGem()
     {
         PowerUpManager.skipAllReds = true;
+
+        UpdateStats(Name);
     }
 
     public override void OnCorruptedGemRemove()
@@ -102,6 +115,8 @@ public class ComboCatalystGem : CorruptedGem
     public override void ApplyCorruptedGem()
     {
         PowerUpManager.comboCatalyst = true;
+
+        UpdateStats(Name);
     }
 
     public override void OnCorruptedGemRemove()

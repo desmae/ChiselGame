@@ -10,14 +10,15 @@ using UnityEngine;
      *              class. They will essentially send messages to the PowerUpManager
      *              to change certain player stats or enable new functionalities.
      * 
-     * Last Changed by: Nicolas Kaplan
-     * Last Date Changed: 2025-03-19
+     * Last Changed by: Evan Robertson
+     * Last Date Changed: 2025-03-21
      * 
      *
      *   -> 1.0 Create PowerUp.cs and made a couple of starter power ups to set up
      *         a basic template for making more power ups.
      *   -> 1.1 Added 1up power-up and added Icon (Sprite) functionality to power-ups
      *   -> 1.2 Removed inventory capacity system and power up that changed it.
+     *   -> 1.3 Added stat tracking for save file
      *   v1.2
      */
 public abstract class PowerUp
@@ -32,6 +33,14 @@ public abstract class PowerUp
     }
     public abstract void ApplyPowerUp();
     public abstract void OnPowerUpRemove();
+
+    // Update stats in save manager
+    protected void UpdateStats(string name)
+    {
+        SaveDataManager.Instance.powerupsCollected++;
+
+        //todo - keep track of how many times each powerup is selected 
+    }
 }
 // Note: All power-up names are not final and are placeholders until a permanent name
 // is decided upon.
@@ -51,6 +60,8 @@ public class ScoreMultiplierPowerUp : PowerUp
     public override void ApplyPowerUp()
     {
         PowerUpManager.scoreMultiplier += scoreMultAmount; // 10% multiplier each time
+
+        UpdateStats(Name);
     }
     public override void OnPowerUpRemove()
     {
@@ -71,6 +82,8 @@ public class DiagonalGemsPowerUp : PowerUp
     {
         // set bool to true, send message to console saying it did it properly.
         PowerUpManager.diagonalGems = true;
+
+        UpdateStats(Name);
     }
     public override void OnPowerUpRemove()
     {
@@ -92,6 +105,8 @@ public class MovesMultiplierPowerUp : PowerUp
     {
         // set bool to true, send message to console saying it did it properly.
         PowerUpManager.startingMovesMultiplier += movesMultAmount;
+
+        UpdateStats(Name);
     }
     public override void OnPowerUpRemove()
     {
@@ -111,6 +126,8 @@ public class OneUpPowerUp : PowerUp
     public override void ApplyPowerUp()
     {
         PowerUpManager.hasOneUp = true;
+
+        UpdateStats(Name);
     }
     public override void OnPowerUpRemove()
     {
