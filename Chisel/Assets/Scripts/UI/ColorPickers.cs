@@ -58,10 +58,19 @@ public class ColorPickers : MonoBehaviour
         return colors;
     }
 
-    public void SetDefaultColors()
+    public void SetDefaultColors(List<Color> colors)
     {
-        colors = new List<Color>(SettingsManager.Instance.GetDefaultColors());
-        AssignSliderValues(colors);
+        if (colors.Count == 0)
+        {
+            this.colors = new List<Color>(SettingsManager.Instance.GetDefaultColors());
+        }
+        else
+        {
+            this.colors = new List<Color>(colors);
+
+        }
+        AssignSliderValues(this.colors);
+
     }
 
     void AssignSliderValues(List<Color> colors)

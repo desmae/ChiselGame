@@ -97,6 +97,7 @@ public class GameLoopManager : MonoBehaviour
                     yield return StartCoroutine(UnlockFinalRewards());
                     break;
                 case GameStage.GameOver:
+                    SaveDataManager.Instance.gamesPlayed++;
                     SavePlayerStats();
                     LoadTitleScreen();
                     yield break;
