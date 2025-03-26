@@ -314,7 +314,14 @@ public class GameLoopManager : MonoBehaviour
 
             gsc.WinCanvas.SetActive(false);
 
+            // Update stats
             SaveDataManager.Instance.levelsCleared++;
+
+            // Check achievement
+            if (selectedOption.difficultyName == "Very Hard")
+            {
+                AchievementManager.Instance.UnlockAchievement(AchievementID.TooEasy, 1);
+            }
 
             GemPlacementManager manager = FindObjectOfType<GemPlacementManager>();
             if (manager != null)

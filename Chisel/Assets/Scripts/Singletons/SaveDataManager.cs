@@ -12,12 +12,14 @@ using UnityEngine;
      * game-sessions through JSON serialization.
      * 
      * Last Changed by: Evan Robertson
-     * Last Date Changed: 2025-03-24
+     * Last Date Changed: 2025-03-26
      *
      *  -> 1.0 - Created SaveDataManager.cs and created some stats to track.
      *  -> 1.1 - Added saving and loading methods.
      *  -> 1.2 - Added saving and loading settings.
-     *   v1.2
+     *  -> 1.3 - Added default values for audio settings to prevent no audio when no save file is detected
+     *  -> 1.4 - Added saving and loading achievements and achievement progress
+     *   v1.4
      */
 public class SaveDataManager : PersistentSingleton<SaveDataManager>
 {
@@ -35,8 +37,11 @@ public class SaveDataManager : PersistentSingleton<SaveDataManager>
 
     // Settings
     public List<Color> colors = new();
-    public float sfxVol;
-    public float musicVol;
+    public float sfxVol = 1;
+    public float musicVol = 1;
+
+    // Achievements
+    public List<Achievement> achievements = new();
 
     // Stat Dictionary for UI
     public Dictionary<string, int> playerStats = new Dictionary<string, int>();
@@ -90,6 +95,9 @@ public class SaveDataManager : PersistentSingleton<SaveDataManager>
         saveData.sfxVol = sfxVol;
         saveData.musicVol = musicVol;
 
+        // Save achievements
+        saveData.achievements = achievements;
+
         string json = JsonUtility.ToJson(saveData);
         File.WriteAllText(path, json);
 
@@ -129,6 +137,9 @@ public class SaveDataManager : PersistentSingleton<SaveDataManager>
         // Load audio settings
         sfxVol = saveData.sfxVol;
         musicVol = saveData.musicVol;
+
+        // Load achievements
+        achievements = saveData.achievements;
 
         print($"Loaded from {Application.persistentDataPath}");
     }

@@ -32,7 +32,8 @@ public class GameStateControl : MonoBehaviour
      *   -> 1.6 - Added Power-up compatibility to moves count.
      *   -> 1.7 - Added cross functionality with GameLoopManager.cs and changed win screen processes as well as other small changes.
      *   -> 1.8 - Added stat tracking for save file
-     *   v1.7
+     *   -> 1.9 - Added achievement tracking
+     *   v1.9
      */
 
     private GameObject[] blocks;
@@ -211,7 +212,12 @@ public class GameStateControl : MonoBehaviour
         movesAnimator.SetTrigger("MovesAdded");
 
         // Update most moves held
-        SaveDataManager.Instance.mostMoves = Mathf.Max(moveCount, SaveDataManager.Instance.mostMoves);
+        int moves = Mathf.Max(moveCount, SaveDataManager.Instance.mostMoves);
+
+        SaveDataManager.Instance.mostMoves = moves;
+
+        // Set (not add) moves to achievement tracking
+        AchievementManager.Instance.UnlockAchievement(AchievementID.Mover, moves, false);
     }
     public void SetInitialMoves()
     {

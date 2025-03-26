@@ -181,7 +181,10 @@ public class ScoreManager : MonoBehaviour
         totalScore += (int)finalScore;
 
         // Update highscore
-        SaveDataManager.Instance.highscore = Mathf.Max(totalScore, SaveDataManager.Instance.highscore);
+        int highscore = Mathf.Max(totalScore, SaveDataManager.Instance.highscore);
+
+        SaveDataManager.Instance.highscore = highscore;
+        AchievementManager.Instance.UnlockAchievement(AchievementID.BigScores, highscore, false);
 
         UpdateScoreText();
     }

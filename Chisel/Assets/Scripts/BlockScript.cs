@@ -10,7 +10,7 @@ using UnityEngine;
      * nearby block colors to see if they should change too.
      * 
      * Last Changed by: Evan Robertson
-     * Last Date Changed: 2025-03-21
+     * Last Date Changed: 2025-03-26
      * 
      * 
      *   -> 1.0 - Created BlockScript.cs and added basic block functionality,
@@ -39,7 +39,8 @@ using UnityEngine;
      *   -> 2.2 - Added diagonal gem power-up feature.
      *   -> 2.3 - Added skip all reds function for corrupted gems
      *   -> 2.4 - Added stat tracking for save file
-     *   v2.3
+     *   -> 2.5 - Added achievement tracking
+     *   v2.5
      */
 public class BlockScript : MonoBehaviour
 {
@@ -286,6 +287,9 @@ private bool CheckAdjacentBlock(Vector2 direction, int originalHealth)
 
         // Update total gems broken in save file
         SaveDataManager.Instance.gemsBroken++;
+
+        // Update achievement progress
+        AchievementManager.Instance.UnlockAchievement(AchievementID.GemBreaker, 1);
     }
 
     

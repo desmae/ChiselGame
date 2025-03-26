@@ -3153,7 +3153,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 247.4516, y: -33.743423}
+  m_AnchoredPosition: {x: 247.4516, y: -33.74341}
   m_SizeDelta: {x: -607.38, y: -179.96}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &634203485
@@ -3389,7 +3389,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.000061035156, y: -33.743423}
+  m_AnchoredPosition: {x: -0.000061035156, y: -33.74341}
   m_SizeDelta: {x: -607.38, y: -179.96}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &681181674
@@ -25235,6 +25235,10 @@ MonoBehaviour:
   bossesDefeated: 0
   wins: 0
   gamesPlayed: 0
+  colors: []
+  sfxVol: 1
+  musicVol: 1
+  achievements: []
 --- !u!4 &1186369972
 Transform:
   m_ObjectHideFlags: 0
@@ -30365,7 +30369,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -241.82788, y: -16.871704}
+  m_AnchoredPosition: {x: -241.82791, y: -16.871704}
   m_SizeDelta: {x: -573.64, y: -146.21}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1292999800
@@ -32847,7 +32851,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -241.82788, y: -16.871704}
+  m_AnchoredPosition: {x: -241.82791, y: -16.871704}
   m_SizeDelta: {x: -573.64, y: -146.21}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1879140865
@@ -33374,7 +33378,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -247.45166, y: -33.743423}
+  m_AnchoredPosition: {x: -247.45169, y: -33.74341}
   m_SizeDelta: {x: -607.38, y: -179.96}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1943312828

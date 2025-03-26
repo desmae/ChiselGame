@@ -10,11 +10,12 @@ using UnityEngine;
      * Description: A serializable data container for storing all important game statistics
      * 
      * Last Changed by: Evan Robertson
-     * Last Date Changed: 2025-03-24
+     * Last Date Changed: 2025-03-25
      *
      *  -> 1.0 - Created SaveData.cs and created some stats to track.
      *  -> 1.1 - Added tracking settings like custom colors and audio volumes.
-     *   v1.1
+     *  -> 1.2 - Added achievements
+     *   v1.2
      */
 [System.Serializable]
 public class SaveData
@@ -32,6 +33,7 @@ public class SaveData
     public List<SerializableColor> colors;
     public float sfxVol;
     public float musicVol;
+    public List<Achievement> achievements;
 }
 
 
