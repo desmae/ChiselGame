@@ -17,7 +17,7 @@ using UnityEngine;
      *   -> 1.0 Create CorruptedGem.cs and made a couple of starter corrupted gems to set up
      *         a basic template for making more power ups.
      *   -> 1.1 Added stat tracking for save file
-     *   v1.0
+     *   v1.1
      */
 public abstract class CorruptedGem
 {

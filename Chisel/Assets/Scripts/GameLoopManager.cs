@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -15,7 +15,7 @@ using UnityEngine.SceneManagement;
      *   -> 1.0 - Created GameLoopManager.cs and implemented game states with proper transitions and some placeholders.
      *   -> 1.1 - Added check for duplicates, if a duplicate level is loaded, it will reroll until the level is different.
      *   -> 1.2 - Added stat tracking for save file
-     *   v1.1
+     *   v1.2
      */
 
 [System.Serializable]
@@ -164,11 +164,13 @@ public class GameLoopManager : MonoBehaviour
         for (int i = 0; i < 3; i++)
         {
             GameObject chosenPrefab = null;
-            Sprite previewSprite = null;
+            Sprite previewSprite;
             bool foundUnique = false;
 
             int difficultyType = -1;
             string difficultyName = "";
+
+            previewSprite = Resources.Load<Sprite>("GemIcons/default");
 
             for (int attempts = 0; attempts < 50; attempts++)
             {
@@ -178,24 +180,64 @@ public class GameLoopManager : MonoBehaviour
                     difficultyType = 1;
                     difficultyName = "Easy";
                     chosenPrefab = easyPrefabs[Random.Range(0, easyPrefabs.Length)];
+                    previewSprite = Resources.Load<Sprite>("GemIcons/" + chosenPrefab.name);
+                    if (previewSprite == null)
+                    {
+                        Debug.LogWarning("No gem icon found for " + chosenPrefab.name + ". Falling back to the prefab sprite.");
+                        SpriteRenderer sprite = chosenPrefab.GetComponent<SpriteRenderer>();
+                        if (sprite != null)
+                        {
+                            previewSprite = sprite.sprite;
+                        }
+                    }
                 }
                 else if (rand < weightEasy + weightMedium)
                 {
                     difficultyType = 2;
                     difficultyName = "Medium";
                     chosenPrefab = mediumPrefabs[Random.Range(0, mediumPrefabs.Length)];
+                    previewSprite = Resources.Load<Sprite>("GemIcons/" + chosenPrefab.name);
+                    if (previewSprite == null)
+                    {
+                        Debug.LogWarning("No gem icon found for " + chosenPrefab.name + ". Falling back to the prefab sprite.");
+                        SpriteRenderer sprite = chosenPrefab.GetComponent<SpriteRenderer>();
+                        if (sprite != null)
+                        {
+                            previewSprite = sprite.sprite;
+                        }
+                    }
                 }
                 else if (rand < weightEasy + weightMedium + weightHard)
                 {
                     difficultyType = 3;
                     difficultyName = "Hard";
                     chosenPrefab = hardPrefabs[Random.Range(0, hardPrefabs.Length)];
+                    previewSprite = Resources.Load<Sprite>("GemIcons/" + chosenPrefab.name);
+                    if (previewSprite == null)
+                    {
+                        Debug.LogWarning("No gem icon found for " + chosenPrefab.name + ". Falling back to the prefab sprite.");
+                        SpriteRenderer sprite = chosenPrefab.GetComponent<SpriteRenderer>();
+                        if (sprite != null)
+                        {
+                            previewSprite = sprite.sprite;
+                        }
+                    }
                 }
                 else
                 {
                     difficultyType = 4;
                     difficultyName = "Very Hard";
                     chosenPrefab = veryHardPrefabs[Random.Range(0, veryHardPrefabs.Length)];
+                    previewSprite = Resources.Load<Sprite>("GemIcons/" + chosenPrefab.name);
+                    if (previewSprite == null)
+                    {
+                        Debug.LogWarning("No gem icon found for " + chosenPrefab.name + ". Falling back to the prefab sprite.");
+                        SpriteRenderer sprite = chosenPrefab.GetComponent<SpriteRenderer>();
+                        if (sprite != null)
+                        {
+                            previewSprite = sprite.sprite;
+                        }
+                    }
                 }
 
                 if (!usedPrefabs.Contains(chosenPrefab))
@@ -240,8 +282,6 @@ public class GameLoopManager : MonoBehaviour
         Debug.Log("Loading chosen level.");
         levelSelectionPanel.gameObject.SetActive(false);
 
-        
-
         // reset score for round in case.
         ScoreManager scoreManager = FindObjectOfType<ScoreManager>();
         if (scoreManager != null)
@@ -268,6 +308,8 @@ public class GameLoopManager : MonoBehaviour
                     manager.globalDifficulty = 1f;
                 }
             }
+            StartCoroutine(MovesCountMultiplier());
+            StartCoroutine(ScoreMultiplier());
             GameStateControl gsc = FindObjectOfType<GameStateControl>();
             if (gsc != null)
             {
@@ -289,6 +331,27 @@ public class GameLoopManager : MonoBehaviour
         currentStage = GameStage.Play;
     }
 
+    private IEnumerator MovesCountMultiplier()
+    {
+        yield return new WaitForSeconds(1f);
+        GameStateControl gsc = FindObjectOfType<GameStateControl>();
+        GameStateControl.moveCountFloat *= PowerUpManager.startingMovesMultiplier;
+        Debug.Log($"moveCountFloat *= startingMovesMultiplier: {GameStateControl.moveCountFloat}");
+        GameStateControl.moveCount = Mathf.FloorToInt(GameStateControl.moveCountFloat);
+        Debug.Log($"moveCount = moveCountFloat: {GameStateControl.moveCount}");
+        gsc.movesAnimator.SetTrigger("MovesAdded");
+    }
+    private IEnumerator ScoreMultiplier()
+    {
+        yield return new WaitForSeconds(1f);
+        GameStateControl gsc = FindObjectOfType<GameStateControl>();
+        ScoreManager scoreManager = FindObjectOfType<ScoreManager>();
+        scoreManager.totalScoreFloat *= PowerUpManager.scoreMultiplier;
+        Debug.Log($"totalScoreFloat *= scoreMultiplier: {scoreManager.totalScoreFloat}");
+        scoreManager.totalScore = Mathf.FloorToInt(scoreManager.totalScoreFloat);
+        Debug.Log($"totalScore = totalScoreFloat: {scoreManager.totalScore}");
+        gsc.movesAnimator.SetTrigger("MovesAdded");
+    }
     private IEnumerator PlayLevel()
     {
         Debug.Log("Playing level now.");
@@ -342,6 +405,7 @@ public class GameLoopManager : MonoBehaviour
         PowerUp[] randomPowerUps = GenerateRandomPowerUps(3);
 
         rewardPanel.SetupRewardOptions(randomPowerUps, (selectedPowerUp) => {
+            Debug.Log($"RewardPlayer - selectedPowerUp: {selectedPowerUp?.Name} ({selectedPowerUp?.GetType()})");
             PowerUpManager.ApplyPowerUp(selectedPowerUp);
             hasSelectedReward = true;
         });
@@ -455,6 +519,21 @@ public class GameLoopManager : MonoBehaviour
 
         while (!chosenGoal.IsGoalMet())
         {
+            if (GameStateControl.moveCount <= 0)
+            {
+                if (PowerUpManager.hasOneUp)
+                {
+                    Debug.Log("Special level 1‑up triggered: resetting moves to 20 and consuming one‑up.");
+                    GameStateControl.moveCount = 20;
+                    GameStateControl.moveCountFloat = 20;
+                    PowerUpManager.hasOneUp = false;
+                }
+                else
+                {
+                    Debug.Log("No moves left in special level, game over.");
+                    gsc.GameOverCanvas.SetActive(true);
+                }
+            }
             yield return null;
         }
 
@@ -483,6 +562,7 @@ public class GameLoopManager : MonoBehaviour
             currentStage = GameStage.SpecialReward;
         }
     }
+
     private bool hasChosenCorruptedGem = false;
     private CorruptedGem chosenCorruptedGem = null;
     private IEnumerator SpecialReward()

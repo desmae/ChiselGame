@@ -12,7 +12,7 @@ using UnityEngine.UI;
      * Description: This code is written to increase the score as the player changes blocks colours, destroys blocks and completes combos
      * 
      * Last Changed by: Nicolas Kaplan
-     * Last Date Changed: 2025-03-18
+     * Last Date Changed: 2025-04-08
      * 
      * 
      *   -> 1.0 -Created ScoreManager and created the logic to get the score to change when a block changes colour or is destroyed.
@@ -24,7 +24,9 @@ using UnityEngine.UI;
      *   -> 1.4 Updated combo text to update on start
      *   -> 1.5 Added cross functionality with GameLoopManager.cs to freeze the combo bar when the player isn't playing the game.
      *   -> 1.6 Changed score to totalScore, and added stageStartScore to track both totalScore and score per stage
-     *   v1.6
+     *   -> 1.7 movesBackChance is now a variable and can be accessed publicly
+     *   
+     *   v1.7
      */
 public class ScoreManager : MonoBehaviour
 {
@@ -34,6 +36,7 @@ public class ScoreManager : MonoBehaviour
     [SerializeField] private RectTransform comboFillImage;
     
     public int totalScore = 0;
+    public float totalScoreFloat = 0; // for power up
     private int stageStartScore = 0;
 
     private float currentMultiplier = 1f;
@@ -54,6 +57,7 @@ public class ScoreManager : MonoBehaviour
     private int comboAccumulatedScore = 0;
     private int currentComboCount = 0;
     private int minimumComboForMoves = 10;
+    public int movesBackChance = 6; // 60% chance to get a move back default
     public delegate void OnMoveGained();
     public static event OnMoveGained MoveGained;
     private bool isInCombo = false;
@@ -97,7 +101,7 @@ public class ScoreManager : MonoBehaviour
         return totalScore - stageStartScore;
     }
 
-    private void UpdateComboAnimation()
+    public void UpdateComboAnimation()
     {
         if (comboAnimator != null)
         {
@@ -233,7 +237,10 @@ public class ScoreManager : MonoBehaviour
         comboAccumulatedScore += finalScore;
         if (currentComboCount >= minimumComboForMoves)
         {
-            AwardExtraMove();
+            if (Random.Range(0, 10) > PowerUpManager.movesBackChance)
+            {
+                AwardExtraMove();
+            }
         }
         UpdateComboBar();
     }

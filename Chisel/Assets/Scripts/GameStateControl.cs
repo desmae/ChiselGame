@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -55,12 +55,13 @@ public class GameStateControl : MonoBehaviour
     private int lastLevelNumber = 1;
     private int lastStageNumber = 1;
 
-    [SerializeField] Animator movesAnimator;
+    public Animator movesAnimator;
 
     [SerializeField] private ScoreManager scoreManager;
     [SerializeField] private int startingMoveCount = 0;
 
-    private static int moveCount;
+    public static int moveCount;
+    public static float moveCountFloat; // only in movesMultiplier case
     private bool isStageActive = false;
 
     [SerializeField] private TextMeshProUGUI movesCountLight;
@@ -85,6 +86,8 @@ public class GameStateControl : MonoBehaviour
 
     void Start()
     {
+        Debug.Log($"Forced hasOneUp in Start: {PowerUpManager.hasOneUp}");
+
         winCanvas.SetActive(false);
         gameOverCanvas.SetActive(false);
 
@@ -99,8 +102,8 @@ public class GameStateControl : MonoBehaviour
     {
         if (isStageActive)
         {
-            CheckBlocksCleared();
-            CheckMovesCount();
+            CheckMovesCount(); 
+            CheckBlocksCleared();     
         }
         UpdateMovesText();
 
@@ -109,6 +112,7 @@ public class GameStateControl : MonoBehaviour
             BlockScript.canBreak = false;
         }
     }
+
     public void SetLastLevelInfo(int level, int stage)
     {
         lastLevelNumber = level;
@@ -172,19 +176,17 @@ public class GameStateControl : MonoBehaviour
             winCanvas.SetActive(true);
         }
     }
-    void CheckBlocksCleared()
+    public void CheckBlocksCleared()
     {
         Debug.Log("CheckBlocksCleared() called. blockList.Count = " + blockList.Count);
         if (blockList.Count <= 0)
         {
-            // TODO animations
+            // Do NOT consume the one-up here.
+            // (Optional) Award bonus points for finishing the level, but leave one-up intact.
+            // For example, you might want to award extra points without affecting the one-up flag:
+            // int bonusPoints = PowerUpManager.hasOneUp ? 20000 : 0;
+            // scoreManager.totalScore += bonusPoints;
 
-            // instead of displaying win screen, move towards a new stage.
-            // give bonus points to players with a 1-up remaining in their inventory
-            if (PowerUpManager.hasOneUp)
-            {
-                scoreManager.totalScore += 20000; // 20k extra points for not wasting a 1up!
-            }
             scoreManager.totalScore += PowerUpManager.addedEndScore;
             float finalScore = (float)scoreManager.totalScore;
             finalScore *= PowerUpManager.endScoreMultiplier;
@@ -194,21 +196,42 @@ public class GameStateControl : MonoBehaviour
         }
     }
 
+
+
     // Moves methods & game over
 
     void UpdateMovesText()
     {
+        int moveAnimatorCount;
+        moveAnimatorCount = moveCount;
         movesCountDark.text = $"{moveCount}";
         movesCountLight.text = $"{moveCount}";
-        movesAnimator.SetInteger("movesCount", moveCount);
+        movesAnimator.SetInteger("movesCount", moveAnimatorCount);
     }
     public void DecrementMoves()
     {
-        moveCount--; // we're only ever decreasing the moves by 1 each time.
+        Debug.Log($"[DecrementMoves] Called: moveCount = {moveCount}, hasOneUp = {PowerUpManager.hasOneUp}");
+
+        if (moveCount <= 1 && PowerUpManager.hasOneUp)
+        {
+            Debug.Log("OneUp rescue triggered: awarding 20 extra moves and consuming the one‑up.");
+            moveCount = 20;
+            moveCountFloat = 20;
+            PowerUpManager.hasOneUp = false;
+            Debug.Log($"[DecrementMoves] After rescue: moveCount = {moveCount}");
+            return;
+        }
+
+        moveCount--;
+        moveCountFloat = moveCount;
+        Debug.Log($"[DecrementMoves] After decrement: moveCount = {moveCount}");
     }
+
+
     public void IncrementMoves(int movesToAdd)
     {
         moveCount += movesToAdd;
+        moveCountFloat = moveCount; 
         movesAnimator.SetTrigger("MovesAdded");
 
         // Update most moves held
@@ -224,7 +247,7 @@ public class GameStateControl : MonoBehaviour
         float finalMoveCount = startingMoveCount + PowerUpManager.extraStartingMoves
         * PowerUpManager.startingMovesMultiplier;
         moveCount = (int)finalMoveCount;
-
+        moveCountFloat = finalMoveCount;
         if (PowerUpManager.extraStartingMoves != 0 || PowerUpManager.startingMovesMultiplier != 0)
         {
             // show a message or animation to the player that their moves are powered up
@@ -238,18 +261,26 @@ public class GameStateControl : MonoBehaviour
     {
         if (moveCount <= 0)
         {
-            // TODO Animations?
             if (PowerUpManager.hasOneUp)
             {
-                Debug.Log("Make UI for 1-up working successfully, maybe even a sound effect");
+                Debug.Log("1‑up activated: awarding 20 extra moves and consuming the one‑up.");
                 moveCount = 20;
+                moveCountFloat = 20;
+                PowerUpManager.hasOneUp = false;
+                return;
             }
             else
             {
-                DisplayGameOverScreen();
+                if (!gameOverCanvas.activeSelf)
+                {
+                    DisplayGameOverScreen();
+                }
             }
         }
     }
+
+
+
     public void SetCustomTaskText(string line1, string line2 = "", string line3 = "")
     {
         tasksText1 = line1;
