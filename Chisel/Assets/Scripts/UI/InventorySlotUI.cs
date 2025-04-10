@@ -12,6 +12,7 @@ public class InventorySlotUI : MonoBehaviour
     {
         slotImage.sprite = powerUp.Icon;
         slotImage.enabled = true;
+        slotImage.color = powerUp.powerUpColor;
 
         hoverable.DisplayName = powerUp.Name;
         hoverable.Description = powerUp.Description;

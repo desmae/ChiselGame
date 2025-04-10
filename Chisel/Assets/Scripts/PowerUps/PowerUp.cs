@@ -30,10 +30,14 @@ public abstract class PowerUp
     public Sprite Icon;
     public bool unique = false; // if true, only one of this power-up can be obtained.
     public Color powerUpColor = Color.white;
+
+    public static HashSet<string> obtainedUniquePowerUpNames = new HashSet<string>();
+
     public PowerUp()
     {
         Icon = null; // set to null if no icon is found
     }
+
     public abstract void ApplyPowerUp();
     public abstract void OnPowerUpRemove();
 
@@ -42,13 +46,17 @@ public abstract class PowerUp
     {
         SaveDataManager.Instance.powerupsCollected++;
 
-        //todo - keep track of how many times each powerup is selected 
+        // If this power-up is unique and hasn't been recorded yet,
+        // add its name to the set so it won't be offered again.
+        if (unique && !obtainedUniquePowerUpNames.Contains(name))
+        {
+            obtainedUniquePowerUpNames.Add(name);
+        }
+
+        // todo - keep track of how many times each powerup is selected 
     }
 }
-// Note: All power-up names are not final and are placeholders until a permanent name
-// is decided upon.
 
-// Score Multiplier Power-Up
 public class ScoreMultiplierPowerUp : PowerUp
 {
     float scoreMultAmount = 0.1f;
@@ -73,7 +81,6 @@ public class ScoreMultiplierPowerUp : PowerUp
         PowerUpManager.scoreMultiplier -= scoreMultAmount; // -10% multiplier each time
     }
 }
-
 public class DiagonalGemsPowerUp : PowerUp
 {
     public DiagonalGemsPowerUp()
@@ -104,7 +111,7 @@ public class MovesMultiplierPowerUp : PowerUp
     public MovesMultiplierPowerUp()
     {
         Name = "Tempered Baguette Topaz";
-        Description = "Moves are multiplied by 1.1x at the beginning of the round.";
+        Description = "Moves are multiplied by 1.1x at the beginning of the round. (Stackable)";
         Rarity = 3.0f;
         Icon = Resources.Load<Sprite>("Icons/Tempered Baguette Topaz");
         unique = false;
@@ -155,7 +162,7 @@ public class MovesBackChancePowerUp : PowerUp
         Description = "The chance of you getting your moves back during a large combo are increased by 10%.";
         Rarity = 4.0f;
         Icon = Resources.Load<Sprite>("Icons/Pear Drop Peridot");
-        unique = true;
+        unique = false;
         powerUpColor = new Color(.6f, 1f, .35f);
     }
     public override void ApplyPowerUp()
@@ -166,5 +173,29 @@ public class MovesBackChancePowerUp : PowerUp
     public override void OnPowerUpRemove()
     {
         PowerUpManager.movesBackChance -= 0.1f; 
+    }
+}
+public class RedExplosionPowerUp : PowerUp
+{
+    public RedExplosionPowerUp()
+    {
+        Name = "Round Ruby";
+        Description = "When active, any red block you hit explodes immediately without causing a chain reaction.";
+        Rarity = 4.0f;
+        Icon = Resources.Load<Sprite>("Icons/Round Ruby");  
+        unique = true;
+        powerUpColor = new Color(1f, 0.15f, 0.2f);
+    }
+
+    public override void ApplyPowerUp()
+    {
+        Debug.Log("RedExplosionPowerUp applied: redExplosionActive set to true.");
+        PowerUpManager.redExplosionActive = true;
+        UpdateStats(Name);
+    }
+
+    public override void OnPowerUpRemove()
+    {
+        PowerUpManager.redExplosionActive = false;
     }
 }

@@ -69,6 +69,11 @@ public class ScoreManager : MonoBehaviour
     [SerializeField] private Transform worldCanvas;
 
     public float CurrentMultiplier => currentMultiplier;
+    public int StageStartScore
+    {
+        get { return stageStartScore; }
+    }
+
     private void Start()
     {
         gameLoop = FindObjectOfType<GameLoopManager>();
@@ -237,19 +242,41 @@ public class ScoreManager : MonoBehaviour
         comboAccumulatedScore += finalScore;
         if (currentComboCount >= minimumComboForMoves)
         {
-            if (Random.Range(0, 10) > PowerUpManager.movesBackChance)
+            int roll = Random.Range(0, 10); // roll is 0 to 9
+            if (PowerUpManager.movesBackModifierActive)
             {
-                AwardExtraMove();
+                if (roll > 8)
+                {
+                    AwardExtraMove();
+                }
+            }
+            else
+            {
+                if (roll > PowerUpManager.movesBackChance)
+                {
+                    AwardExtraMove();
+                }
             }
         }
+
         UpdateComboBar();
     }
 
 
     private void AwardExtraMove()
     {
-        MoveGained?.Invoke();
+        if (PowerUpManager.movesBackModifierActive)
+        {
+            GameStateControl gsc = FindObjectOfType<GameStateControl>();
+            gsc.IncrementMoves(PowerUpManager.extraMoveBackAward);
+            Debug.Log($"Awarded {PowerUpManager.extraMoveBackAward} moves due to modifier effect.");
+        }
+        else
+        {
+            MoveGained?.Invoke();
+        }
     }
+
 
     public void EndCombo()
     {

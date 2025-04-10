@@ -47,12 +47,29 @@ public static class PowerUpManager
     public static bool skipAllReds = false;
     public static bool comboCatalyst = false;
 
+    public static bool redExplosionActive = false;
+
+    public static bool timeDrainActive = false;
+
+    public static bool movesBackModifierActive = false;
+    public static int extraMoveBackAward = 1; 
+
     public delegate void PowerUpListChanged();
     public static event PowerUpListChanged OnPowerUpListChanged;
     
     // List of active power-ups
 
     public static List<PowerUp> activePowerUps = new List<PowerUp>();
+
+    public static void RemoveAllPowerUps()
+    {
+        Debug.Log("Removing all active power-ups as the game has reset (Level 1 Stage 1).");
+        foreach (var powerUp in activePowerUps)
+        {
+            powerUp.OnPowerUpRemove();
+        }
+        activePowerUps.Clear();
+    }
 
     // Method to add power-ups and apply their effects
     public static void ApplyPowerUp(PowerUp powerUp)

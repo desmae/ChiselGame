@@ -98,20 +98,23 @@ public class BlockScript : MonoBehaviour
             {
                 if (canBreak)
                 {
-                    gameStateControl.DecrementMoves();
+                    if (!PowerUpManager.timeDrainActive)
+                    {
+                        gameStateControl.DecrementMoves();
+                    }
                     AudioController.Instance.PlaySFX("Click");
-
                     OnBreak();
                 }
             }
         }
+
     }
 
     public void OnBreak()
     {
         int currentHealth = blockHealth;
         animator.SetTrigger("GemBroken");
-        scoreManager.AddScoreForBlockBreak(100);//,currentHealth); // hard coded value, consider changing
+        scoreManager.AddScoreForBlockBreak(100); // hard coded value, consider changing
         ParticleSystem.EmitParams emitParams = new ParticleSystem.EmitParams
         {
             startColor = blockColorList[blockHealth - 1]
@@ -119,14 +122,21 @@ public class BlockScript : MonoBehaviour
 
         GetComponent<ParticleSystem>().Emit(emitParams, 1);
 
+        if (PowerUpManager.redExplosionActive && IsRedBlock())
+        {
+            Debug.Log("RedExplosionPowerUp active: red block exploded without branching.");
+            ExplodeAdjacentBlocks();
+            StartCoroutine(DestroyNextFrame());
+            return;
+        }
+
         if (hitBlocks.Contains(this))
         {
-            return; 
+            return;
         }
 
         if (!isChainReactionInProgress)
         {
-            // Start of a new chain reaction
             isChainReactionInProgress = true;
             hitBlocks.Clear();
         }
@@ -136,22 +146,47 @@ public class BlockScript : MonoBehaviour
         int currentBlockHealth = blockHealth;
         ChangeBlockHealth(currentBlockHealth - 1);
 
-        //scoreManager.AddScoreForBlockBreak(100, blockHealth);
-
         if (chainEndCoroutine != null)
         {
             StopCoroutine(chainEndCoroutine);
         }
         chainEndCoroutine = StartCoroutine(WaitForChainEnd());
-        // Check and change health of adjacent blocks
         CheckAdjacentBlocks(currentBlockHealth);
 
         if (!isChainReactionInProgress)
         {
-            // End of the chain reaction
             ResetHitBlocks();
         }
     }
+    private void ExplodeAdjacentBlocks()
+    {
+        Vector2[] directions = new Vector2[]
+        {
+        Vector2.up, Vector2.down, Vector2.left, Vector2.right,
+        new Vector2(1f, 1f), new Vector2(-1f, 1f), new Vector2(1f, -1f), new Vector2(-1f, -1f)
+        };
+
+        Vector2 origin = transform.position;
+        foreach (Vector2 direction in directions)
+        {
+            RaycastHit2D hit = Physics2D.Raycast(origin + direction, direction, 0.5f, blockLayer);
+            if (hit.collider != null)
+            {
+                BlockScript adjacentBlock = hit.collider.gameObject.GetComponent<BlockScript>();
+                if (adjacentBlock != null)
+                {
+                    int newHealth = Mathf.Max(adjacentBlock.blockHealth - 2, 0);
+                    adjacentBlock.ChangeBlockHealth(newHealth);
+                }
+            }
+        }
+    }
+
+    private bool IsRedBlock()
+    {
+        return blockHealth == 1;
+    }
+
     private IEnumerator WaitForChainEnd()
     {
         yield return new WaitForSeconds(0.05f);
@@ -176,8 +211,8 @@ public class BlockScript : MonoBehaviour
         if (PowerUpManager.diagonalGems)
         {
             directions = new Vector2[]{ Vector2.up, Vector2.down, Vector2.left, Vector2.right, 
-            new Vector2(1.4f, 1.4f), new Vector2(-1.4f, 1.4f), 
-            new Vector2(1.4f, -1.4f), new Vector2(-1.4f, -1.4f) };
+            new Vector2(1f, 1f), new Vector2(-1f, 1f), 
+            new Vector2(1f, -1f), new Vector2(-1f, -1f) };
             // remember to add a visual for when the player has diagonal gems enabled
             Debug.Log("Player can break blocks diagonally by the way!");
         }

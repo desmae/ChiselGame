@@ -28,7 +28,14 @@ public class ScoreCapGoal : ISpecialGoal
 
     public string GetGoalDescription()
     {
-        return $"Reach at least {scoreCap} points!";
+        ScoreManager scoreManager = GameObject.FindObjectOfType<ScoreManager>();
+        if (scoreManager != null)
+        {
+            // Calculate the target score: starting score + requiredIncrement.
+            int targetScore = scoreManager.StageStartScore + scoreCap;
+            return $"Reach at least {targetScore:N0} score";
+        }
+        return $"Reach at least {scoreCap:N0} score";
     }
     public void InitializeGoal()
     {
@@ -38,9 +45,12 @@ public class ScoreCapGoal : ISpecialGoal
 
     public bool IsGoalMet()
     {
-        if (scoreManager == null) return false;
-        int currentStageScore = scoreManager.GetStageScore();
-        return (currentStageScore >= scoreCap);
+        ScoreManager scoreManager = GameObject.FindObjectOfType<ScoreManager>();
+        if (scoreManager != null)
+        {
+            return scoreManager.totalScore >= scoreManager.StageStartScore + scoreCap;
+        }
+        return false;
     }
 
 

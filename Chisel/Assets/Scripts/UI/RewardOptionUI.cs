@@ -24,6 +24,7 @@ public class RewardOptionUI : MonoBehaviour
     public TextMeshProUGUI nameText;
     public TextMeshProUGUI descriptionText;
     public Button selectButton;
+    public Color color;
 
     private PowerUp myPowerUp;
     private Action<PowerUp> onSelectedCallback;
@@ -34,6 +35,8 @@ public class RewardOptionUI : MonoBehaviour
         onSelectedCallback = callback;
 
         iconImage.sprite = powerUp.Icon;
+        iconImage.color = powerUp.powerUpColor;
+
         nameText.text = powerUp.Name;
         descriptionText.text = powerUp.Description;
 

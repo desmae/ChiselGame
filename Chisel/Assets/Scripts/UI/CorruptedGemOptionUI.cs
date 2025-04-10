@@ -24,6 +24,8 @@ public class CorruptedGemOptionUI : MonoBehaviour
 
         rewardImage.sprite = gem.Icon;
         rewardName.text = gem.Name;
+        rewardImage.color = gem.Color; 
+
         buffText.text = gem.BuffDescription;
         nerfText.text = gem.NerfDescription;
 

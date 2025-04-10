@@ -299,6 +299,8 @@ public class GameLoopManager : MonoBehaviour
 
             int levelNumber = (currentStageCount - 1) / 3 + 1;
             int stageNumber = (currentStageCount - 1) % 3 + 1;
+
+
             // if level 1, reset globalDifficulty to 1.
             if (levelNumber == 1 && stageNumber == 1)
             {
@@ -307,13 +309,17 @@ public class GameLoopManager : MonoBehaviour
                 {
                     manager.globalDifficulty = 1f;
                 }
+                PowerUpManager.RemoveAllPowerUps();
             }
             StartCoroutine(MovesCountMultiplier());
             StartCoroutine(ScoreMultiplier());
             GameStateControl gsc = FindObjectOfType<GameStateControl>();
+
+            gsc.SetLastLevelInfo(levelNumber, stageNumber, selectedOption.levelName);
+
             if (gsc != null)
             {
-                gsc.SetLastLevelInfo(levelNumber, stageNumber);
+                gsc.SetLastLevelInfo(levelNumber, stageNumber, selectedOption.levelPrefab.name);
                 gsc.InitializeStage();
             }
             if (gsc.WinCanvas.activeSelf)
@@ -362,7 +368,12 @@ public class GameLoopManager : MonoBehaviour
             Debug.LogError("No GameStateControl found in the scene.");
             yield break;
         }
-
+        else
+        {
+            gsc.SetCustomTaskText("Break all the blocks!");
+            if (gsc.WinCanvas.activeSelf)
+                gsc.WinCanvas.SetActive(false);
+        }
         while (!gsc.WinCanvas.activeSelf && !gsc.GameOverCanvas.activeSelf)
         {
             yield return null;
@@ -420,11 +431,8 @@ public class GameLoopManager : MonoBehaviour
 
         hasSelectedReward = false;
         currentStageCount++;
-        if (currentStageCount == 15)
-        {
-            currentStage = GameStage.FinalRound;
-        }
-        else if (currentStageCount % 3 == 0)
+        
+        if (currentStageCount % 3 == 0)
         {
             currentStage = GameStage.LoadSpecialLevel;
         }
@@ -437,23 +445,37 @@ public class GameLoopManager : MonoBehaviour
     private PowerUp[] GenerateRandomPowerUps(int count)
     {
         List<PowerUp> allPowerUps = new List<PowerUp>
-    {
-        new ScoreMultiplierPowerUp(),
-        new DiagonalGemsPowerUp(),
-        new MovesMultiplierPowerUp(),
-        new OneUpPowerUp(),
-    };
-
-        PowerUp[] results = new PowerUp[count];
-        for (int i = 0; i < count; i++)
         {
-            int randomIndex = Random.Range(0, allPowerUps.Count);
-            results[i] = allPowerUps[randomIndex];
+            new ScoreMultiplierPowerUp(),
+            new DiagonalGemsPowerUp(),
+            new MovesMultiplierPowerUp(),
+            new OneUpPowerUp(),
+            new MovesBackChancePowerUp(),
+            new RedExplosionPowerUp(),
+        };
 
-            allPowerUps.RemoveAt(randomIndex);
+        List<PowerUp> filteredPool = new List<PowerUp>();
+        foreach (var powerUp in allPowerUps)
+        {
+            if (powerUp.unique && PowerUp.obtainedUniquePowerUpNames.Contains(powerUp.Name))
+            {
+                continue;
+            }
+            filteredPool.Add(powerUp);
+        }
+
+        int selectionCount = Mathf.Min(count, filteredPool.Count);
+        PowerUp[] results = new PowerUp[selectionCount];
+
+        for (int i = 0; i < selectionCount; i++)
+        {
+            int randomIndex = Random.Range(0, filteredPool.Count);
+            results[i] = filteredPool[randomIndex];
+            filteredPool.RemoveAt(randomIndex);
         }
         return results;
     }
+
     private ISpecialGoal GetRandomSpecialGoal(int levelNumber)
     {
         List<ISpecialGoal> possibleGoals = new List<ISpecialGoal>();
@@ -490,7 +512,7 @@ public class GameLoopManager : MonoBehaviour
         GameStateControl gsc = FindObjectOfType<GameStateControl>();
         if (gsc != null)
         {
-            gsc.SetLastLevelInfo(levelNumber, stageNumber);
+            gsc.SetLastLevelInfo(levelNumber, stageNumber, chosenPrefab.name);
             gsc.InitializeStage();
 
             if (gsc.WinCanvas.activeSelf)
@@ -499,7 +521,8 @@ public class GameLoopManager : MonoBehaviour
             }
         }
         yield return null; // let them spawn
-
+        StartCoroutine(MovesCountMultiplier());
+        StartCoroutine(ScoreMultiplier());
         currentStage = GameStage.PlaySpecialLevel;
     }
 
@@ -512,13 +535,19 @@ public class GameLoopManager : MonoBehaviour
         chosenGoal.InitializeGoal();
 
         GameStateControl gsc = FindObjectOfType<GameStateControl>();
+
         if (gsc != null)
         {
             gsc.SetCustomTaskText(chosenGoal.GetGoalDescription());
+            // For special levels, ensure the win screen is off from the start.
+            if (gsc.WinCanvas.activeSelf)
+                gsc.WinCanvas.SetActive(false);
         }
 
+        // Main loop: continue until the special goal is met.
         while (!chosenGoal.IsGoalMet())
         {
+            // If moves run out, try to rescue with one-up.
             if (GameStateControl.moveCount <= 0)
             {
                 if (PowerUpManager.hasOneUp)
@@ -530,10 +559,23 @@ public class GameLoopManager : MonoBehaviour
                 }
                 else
                 {
-                    Debug.Log("No moves left in special level, game over.");
+                    Debug.Log("No moves left in special level, triggering game over.");
+                    // Ensure win screen is off.
+                    if (gsc.WinCanvas.activeSelf)
+                        gsc.WinCanvas.SetActive(false);
                     gsc.GameOverCanvas.SetActive(true);
                 }
             }
+
+            // NEW: If all blocks are cleared but the goal is not met, trigger game over.
+            if (gsc.blockList.Count <= 0 && !chosenGoal.IsGoalMet())
+            {
+                Debug.Log("Special level: All blocks cleared but special goal not met, forcing game over.");
+                if (gsc.WinCanvas.activeSelf)
+                    gsc.WinCanvas.SetActive(false);
+                gsc.GameOverCanvas.SetActive(true);
+            }
+
             yield return null;
         }
 
@@ -563,6 +605,8 @@ public class GameLoopManager : MonoBehaviour
         }
     }
 
+
+
     private bool hasChosenCorruptedGem = false;
     private CorruptedGem chosenCorruptedGem = null;
     private IEnumerator SpecialReward()
@@ -591,27 +635,65 @@ public class GameLoopManager : MonoBehaviour
         {
             PowerUpManager.ApplyCorruptedGem(chosenCorruptedGem);
         }
-        currentStageCount++;
-        currentStage = GameStage.ChooseLevel;
+
+        if (currentStageCount >= 15)
+        {
+            currentStage = GameStage.GameOver;
+        }
+        else
+        {
+            currentStage = GameStage.ChooseLevel;
+        }
     }
-    private CorruptedGem[] GenerateRandomCorruptedGems(int count)
+
+    public CorruptedGem[] GenerateRandomCorruptedGems(int count)
     {
         List<CorruptedGem> allGems = new List<CorruptedGem>
-    {
-        new RemoveRedsGem(),
-        new ComboCatalystGem(),
-        new ScorePlusMovesMinusGem(),
-        // etc. add more classes
-    };
+        {
+            new RemoveRedsGem(),
+            new ComboCatalystGem(),
+            new ScorePlusMovesMinusGem(),
+            new ShufflePowerUpsGem(),
+            new TimeDrainGem(),
+            new MovesBackReworkGem(),
+            new LevelSkipGem()
+        };
 
         CorruptedGem[] results = new CorruptedGem[count];
         for (int i = 0; i < count; i++)
         {
             int randomIndex = Random.Range(0, allGems.Count);
             results[i] = allGems[randomIndex];
-            allGems.RemoveAt(randomIndex); 
+            allGems.RemoveAt(randomIndex);
         }
         return results;
+    }
+
+    public void SkipRewardAndAdvance()
+    {
+        Debug.Log("SkipRewardAndAdvance() called: Skipping reward and advancing levels.");
+        currentStageCount += 3;
+
+        if (currentStageCount % 3 == 0)
+        {
+            currentStage = GameStage.LoadSpecialLevel;
+        }
+        else
+        {
+            currentStage = GameStage.ChooseLevel;
+        }
+
+        // Hide the reward panel.
+        if (levelSelectionPanel != null)
+        {
+            levelSelectionPanel.gameObject.SetActive(false);
+        }
+
+        // Destroy current level instance if it exists.
+        if (currentLevelInstance != null)
+        {
+            Destroy(currentLevelInstance);
+        }
     }
 
 

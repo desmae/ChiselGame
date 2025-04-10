@@ -54,6 +54,7 @@ public class GameStateControl : MonoBehaviour
 
     private int lastLevelNumber = 1;
     private int lastStageNumber = 1;
+    private string lastLevelName;
 
     public Animator movesAnimator;
 
@@ -66,6 +67,9 @@ public class GameStateControl : MonoBehaviour
 
     [SerializeField] private TextMeshProUGUI movesCountLight;
     [SerializeField] private TextMeshProUGUI movesCountDark;
+
+    [SerializeField] private TextMeshProUGUI levelNameText;
+    [SerializeField] private TextMeshProUGUI levelNumberStageText;
 
     [SerializeField] private TextMeshProUGUI tasksTMP;
     [SerializeField] private string tasksText1;
@@ -113,11 +117,27 @@ public class GameStateControl : MonoBehaviour
         }
     }
 
-    public void SetLastLevelInfo(int level, int stage)
+    public void SetLastLevelInfo(int level, int stage, string levelName)
     {
         lastLevelNumber = level;
         lastStageNumber = stage;
+        lastLevelName = levelName;
+
+        UpdateLevelDisplay();
     }
+    private void UpdateLevelDisplay()
+    {
+        if (levelNameText != null)
+        {
+            levelNameText.text = lastLevelName;
+        }
+
+        if (levelNumberStageText != null)
+        {
+            levelNumberStageText.text = $"{lastLevelNumber}-{lastStageNumber}";
+        }
+    }
+
     public void InitializeStage()
     {
         AddBlocksToList();
